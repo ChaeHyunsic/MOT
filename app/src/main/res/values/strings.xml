@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">MOT</string>
     <string name="splash_text">단체 숙박 예약 서비스</string>
+    <string name="join_text"><u>회원가입</u></string>
 </resources>
