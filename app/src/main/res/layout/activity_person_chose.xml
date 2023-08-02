@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageButton
+        android:id="@+id/prev_btn"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:background="@null"
+        android:contentDescription="prev"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/prev_img" />
+
+    <TextView
+        android:id="@+id/title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="인원수 선택"
+        android:textAppearance="@style/title_style"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/prev_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/prev_btn" />
+
+    <TextView
+        android:id="@+id/anno_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
+        android:text="인원"
+        android:textAppearance="@style/title_style"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/prev_btn"
+        app:layout_constraintTop_toBottomOf="@+id/prev_btn" />
+
+    <TextView
+        android:id="@+id/anno_tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="정확한 인원수를 입력해주세요"
+        android:textAppearance="@style/anno_style"
+        app:layout_constraintStart_toStartOf="@+id/anno_tv"
+        app:layout_constraintTop_toBottomOf="@+id/anno_tv" />
+
+    <ImageView
+        android:id="@+id/minus_btn"
+        android:layout_width="27dp"
+        android:layout_height="27dp"
+        android:layout_marginEnd="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/anno_tv"
+        app:layout_constraintEnd_toStartOf="@+id/numberPicker"
+        app:layout_constraintTop_toTopOf="@+id/anno_tv"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/minus_img" />
+
+
+    <NumberPicker
+        android:id="@+id/numberPicker"
+        android:layout_width="27dp"
+        android:layout_height="27dp"
+        android:layout_marginEnd="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/minus_btn"
+        app:layout_constraintEnd_toStartOf="@+id/plus_btn"
+        app:layout_constraintTop_toTopOf="@+id/minus_btn"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/plus_btn"
+        android:layout_width="27dp"
+        android:layout_height="27dp"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintBottom_toBottomOf="@+id/numberPicker"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/numberPicker"
+        app:srcCompat="@drawable/plus_img" />
+
+    <android.widget.Button
+        android:id="@+id/chose_btn"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/btn_background"
+        android:text="15명"
+        android:textAppearance="@style/splash_style"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
