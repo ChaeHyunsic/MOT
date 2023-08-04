@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/tel_area_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="51dp"
+        android:layout_marginTop="203dp"
+        android:text="휴대전화번호입력 (‘-’ 제외)"
+        android:textAppearance="@style/gray_12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <ImageView
+        android:id="@+id/tel_line_iv"
+        android:layout_width="160dp"
+        android:layout_height="10dp"
+        android:src="@drawable/line_35"
+        android:layout_marginLeft="51dp"
+        android:layout_marginTop="231dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <ImageButton
+        android:id="@+id/tel_btn_ib"
+        android:layout_width="109dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="222dp"
+        android:layout_marginTop="192dp"
+        android:contentDescription="conf"
+        android:src="@drawable/tel_certifi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tel_btn_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="conf"
+        android:text="인증번호 받기"
+        android:textAppearance="@style/button_gray_13"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/tel_btn_ib"
+        app:layout_constraintEnd_toEndOf="@id/tel_btn_ib"
+        app:layout_constraintStart_toStartOf="@id/tel_btn_ib"
+        app:layout_constraintTop_toTopOf="@id/tel_btn_ib" />
+
+    <TextView
+        android:id="@+id/certifi_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="51dp"
+        android:layout_marginTop="259dp"
+        android:text="인증번호 입력"
+        android:textAppearance="@style/gray_12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <ImageView
+        android:id="@+id/certifi_line_iv"
+        android:layout_width="160dp"
+        android:layout_height="10dp"
+        android:src="@drawable/line_35"
+        android:layout_marginLeft="51dp"
+        android:layout_marginTop="286dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/time_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="186dp"
+        android:layout_marginTop="262dp"
+        android:text="3:51"
+        android:textAppearance="@style/red_10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <ImageButton
+        android:id="@+id/certifi_btn_ib"
+        android:layout_width="109dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="222dp"
+        android:layout_marginTop="246dp"
+        android:contentDescription="conf"
+        android:src="@drawable/tel_certifi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/certifi_btn_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="인증번호 확인"
+        android:textAppearance="@style/button_gray_13"
+        app:layout_constraintTop_toTopOf="@id/certifi_btn_ib"
+        app:layout_constraintBottom_toBottomOf="@id/certifi_btn_ib"
+        app:layout_constraintStart_toStartOf="@id/certifi_btn_ib"
+        app:layout_constraintEnd_toEndOf="@id/certifi_btn_ib"
+        />
+
+
+    <TextView
+        android:id="@+id/certifi_error_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="53dp"
+        android:layout_marginTop="292dp"
+        android:text="*인증번호가 일치하지 않습니다."
+        android:textAppearance="@style/unavailable_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btn_ib"
+        android:layout_width="360dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="551dp"
+        android:contentDescription="48dp"
+        android:src="@drawable/rectange_yellow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/btn_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="아이디 찾기"
+        android:textAppearance="@style/black_20"
+        android:gravity="center_horizontal|top"
+        app:layout_constraintTop_toTopOf="@id/btn_ib"
+        app:layout_constraintStart_toStartOf="@id/btn_ib"
+        app:layout_constraintEnd_toEndOf="@id/btn_ib"
+        app:layout_constraintBottom_toBottomOf="@id/btn_ib"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
