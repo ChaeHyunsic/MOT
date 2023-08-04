@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:id="@+id/scrollView3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <TextView
+                android:id="@+id/package_str"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="40dp"
+                android:text="패키지1"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/roominfo_str"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:text="6인 온돌룸, 소형 온돌룸, 3인 온돌룸"
+                android:textColor="#7E7E7E"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="@id/package_str"
+                app:layout_constraintTop_toBottomOf="@id/package_str" />
+
+            <View
+                android:id="@+id/line"
+                android:layout_width="match_parent"
+                android:layout_height="14dp"
+                android:layout_marginTop="20dp"
+                android:background="#f0f0f0"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/roominfo_str" />
+
+            <TextView
+                android:id="@+id/basic_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="기본정보"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@+id/line"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="25dp"/>
+            <TextView
+                android:id="@+id/details"
+                android:layout_width="340dp"
+                android:layout_height="60dp"
+                android:text="인원 추가 정보/\n-인원 기준 30명 / 최대 35명\n-인원추가요금: 1인 10,000원"
+                android:textSize="14sp"
+                android:textColor="#7E7E7E"
+                app:layout_constraintTop_toBottomOf="@id/basic_info"
+                android:layout_marginTop="35dp"
+                app:layout_constraintStart_toStartOf="@id/basic_info"
+                />
+            <TextView
+                android:id="@+id/details2"
+                android:layout_width="340dp"
+                android:layout_height="60dp"
+                android:text="객실정보                                                                                  6인 온돌룸, 소형온돌룸, 3인 온돌룸"
+                android:textSize="14sp"
+                android:textColor="#7E7E7E"
+                app:layout_constraintTop_toBottomOf="@id/details"
+                android:layout_marginTop="25dp"
+                app:layout_constraintStart_toStartOf="@id/basic_info"
+                />
+            <TextView
+                android:id="@+id/details3"
+                android:layout_width="340dp"
+                android:layout_height="60dp"
+                android:text="구비시설\n침대, 에어컨, tv, 취사시설, 식탁, 냉장고, 드라이기,\n샴푸, 린스, 바디워시"
+                android:textSize="14sp"
+                android:textColor="#7E7E7E"
+                app:layout_constraintTop_toBottomOf="@id/details2"
+                android:layout_marginTop="25dp"
+                app:layout_constraintStart_toStartOf="@id/basic_info"
+                />
+            <View
+                android:id="@+id/line2"
+                android:layout_width="match_parent"
+                android:layout_height="14dp"
+                android:layout_marginTop="30dp"
+                android:background="#f0f0f0"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/details3" />
+            <ImageView
+                android:id="@+id/picture"
+                android:layout_width="355dp"
+                android:layout_height="270dp"
+                android:src="@drawable/roompic"
+                android:padding="0dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="25dp"
+                app:layout_constraintTop_toBottomOf="@+id/line2"
+                android:layout_marginTop="40dp"/>
+            <ImageView
+                android:id="@+id/picture2"
+                android:layout_width="355dp"
+                android:layout_height="270dp"
+                android:src="@drawable/roompic"
+                android:padding="0dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="25dp"
+                app:layout_constraintTop_toBottomOf="@+id/picture"
+                android:layout_marginTop="40dp"/>
+            <ImageView
+                android:id="@+id/picture3"
+                android:layout_width="355dp"
+                android:layout_height="270dp"
+                android:src="@drawable/roompic"
+                android:padding="0dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="25dp"
+                app:layout_constraintTop_toBottomOf="@+id/picture2"
+                android:layout_marginTop="40dp"/>
+            <ImageView
+                android:id="@+id/picture4"
+                android:layout_width="355dp"
+                android:layout_height="270dp"
+                android:src="@drawable/roompic"
+                android:padding="0dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="25dp"
+                app:layout_constraintTop_toBottomOf="@+id/picture3"
+                android:layout_marginTop="40dp"/>
+            <ImageView
+                android:id="@+id/picture5"
+                android:layout_width="355dp"
+                android:layout_height="270dp"
+                android:src="@drawable/roompic"
+                android:padding="0dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="25dp"
+                app:layout_constraintTop_toBottomOf="@+id/picture4"
+                android:layout_marginTop="40dp"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
