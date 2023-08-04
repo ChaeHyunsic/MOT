@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/shadow"
+        app:layout_constraintBottom_toBottomOf="@+id/review_item"
+        app:layout_constraintEnd_toEndOf="@+id/review_item"
+        app:layout_constraintStart_toStartOf="@+id/review_item"
+        app:layout_constraintTop_toTopOf="@+id/review_item" />
+
+    <android.widget.Button
+        android:id="@+id/review_item"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:layout_margin="20dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/pick_list_shape"
+        android:drawablePadding="20dp"
+        android:gravity="top"
+
+        android:paddingStart="37dp"
+        android:paddingTop="20dp"
+        android:text="바다풍경팬션 부산"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RatingBar
+        android:id="@+id/myreview_grade"
+        style="@style/Widget.AppCompat.RatingBar.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="40dp"
+        android:isIndicator="true"
+        android:numStars="5"
+        android:progressTint="#FDE400"
+        android:rating="5"
+        android:stepSize="0.5"
+        app:layout_constraintStart_toStartOf="@+id/review_item"
+        app:layout_constraintTop_toTopOf="@+id/review_item" />
+
+    <TextView
+        android:id="@+id/review_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="지난주"
+        android:textColor="#525252"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toBottomOf="@+id/myreview_grade"
+        app:layout_constraintStart_toEndOf="@+id/myreview_grade"
+        app:layout_constraintTop_toTopOf="@+id/myreview_grade" />
+
+    <android.widget.Button
+        android:id="@+id/review_edit"
+        android:layout_width="35dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="60dp"
+        android:background="@drawable/edit_del_shape"
+        android:text="수정"
+        android:textColor="#525252"
+        android:textSize="8sp"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/view" />
+
+    <android.widget.Button
+        android:id="@+id/review_del"
+        android:layout_width="35dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/edit_del_shape"
+        android:text="삭제"
+        android:textColor="#525252"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toBottomOf="@+id/review_edit"
+        app:layout_constraintStart_toEndOf="@+id/review_edit"
+        app:layout_constraintTop_toTopOf="@+id/review_edit" />
+
+    <TextView
+        android:id="@+id/tv_myreview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:text="@string/my_review"
+        android:textColor="#000000"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/myreview_grade"
+        app:layout_constraintTop_toBottomOf="@+id/myreview_grade" />
+
+    <TextView
+        android:id="@+id/review_use_room"
+        android:layout_width="127dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="15dp"
+        android:text="패키지1 / 6인 온돌룸, 소형 온돌룸"
+        android:textColor="#525252"
+        android:textSize="7.5sp"
+        android:background="@drawable/use_room_shape"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="@+id/tv_myreview"
+        app:layout_constraintTop_toBottomOf="@+id/tv_myreview" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

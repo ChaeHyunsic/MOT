@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="145dp"
+        android:background="@drawable/shadow"
+        android:layout_margin="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_item"
+        app:layout_constraintEnd_toEndOf="@+id/btn_item"
+        app:layout_constraintStart_toStartOf="@+id/btn_item"
+        app:layout_constraintTop_toTopOf="@+id/btn_item" />
+    <Button
+        android:id="@+id/btn_item"
+        android:layout_width="match_parent"
+        android:layout_height="145dp"
+        android:background="@drawable/place_item_shape"
+        android:drawableLeft="@drawable/sample"
+        android:drawablePadding="20dp"
+        android:gravity="top"
+        android:padding="20dp"
+        android:text="바다풍경팬션 부산"
+        android:textColor="#000"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:elevation="5dp"
+        android:layout_margin="20dp"/>
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="20dp"
+        android:text="155,000원"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_item"
+        app:layout_constraintEnd_toEndOf="@+id/btn_item" />
+
+    <RatingBar
+        android:id="@+id/rv_grade"
+        style="@style/Widget.AppCompat.RatingBar.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="137dp"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_item"
+        app:layout_constraintStart_toStartOf="@+id/btn_item"
+        app:layout_constraintTop_toTopOf="@+id/btn_item"
+        android:progressTint="#FDE400"
+        android:numStars="5"
+        android:rating="1"
+        android:stepSize="0.5"/>
+
+    <TextView
+        android:id="@+id/tv_grade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:text="4.5"
+        android:textColor="#000000"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/rv_grade"
+        app:layout_constraintStart_toEndOf="@+id/rv_grade"
+        app:layout_constraintTop_toTopOf="@+id/rv_grade" />
+
+    <TextView
+        android:id="@+id/tv_gradecount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:text="(678)"
+        android:textColor="#000000"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_grade"
+        app:layout_constraintStart_toEndOf="@+id/tv_grade"
+        app:layout_constraintTop_toTopOf="@+id/tv_grade" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

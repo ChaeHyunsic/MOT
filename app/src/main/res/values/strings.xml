@@ -3,4 +3,12 @@
     <string name="splash_text">단체 숙박 예약 서비스</string>
     <string name="join_text"><u>회원가입</u></string>
     <string name="search_text"><u>지역이나 숙소를 입력해주세요</u></string>
+    <string name="use_date">7.13 (토) ~ 7.14 (일)\n패키지 / 6인 온돌룸, 소형 온돌룸</string>
+    <string name="review_write">숙소에 대한 리뷰를 써 주세요. ( 50자 내외 )</string>
+    <string name="my_review">뷰도 좋고 룸 컨디션도 좋은 짱짱짱인 숙소였습니다.\n다음번에도 꼭 찾아오고 싶은 숙소입니다!~!~!</string>
+    <!--my page menu -->
+    <string name="mypage_questions">문의 사항</string>
+    <string name="mypage_reservation">예약 내역</string>
+    <string name="mypage_lodging">관심 숙소</string>
+    <string name="mypage_review">나의 후기</string>
 </resources>

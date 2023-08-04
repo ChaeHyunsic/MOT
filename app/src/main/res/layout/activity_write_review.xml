@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_write_review"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:text="후기쓰기"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btn_back"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="30dp"
+        android:background="#00ff0000"
+        android:contentDescription="back"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_write_review"
+        app:layout_constraintEnd_toStartOf="@+id/tv_write_review"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_write_review"
+        app:srcCompat="@drawable/back" />
+
+    <TextView
+        android:id="@+id/tv_place_ttitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:text="바다 풍경 팬션 부산"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_write_review" />
+
+    <RatingBar
+        android:id="@+id/review_write_star"
+        style="@style/Widget.AppCompat.RatingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:contentDescription="rating"
+        android:numStars="5"
+        android:progressTint="#FDE400"
+        android:stepSize="0.5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_place_ttitle" />
+
+    <EditText
+        android:id="@+id/review_write_box"
+        android:layout_width="321dp"
+        android:layout_height="78dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/review_box_shape"
+        android:paddingStart="15dp"
+        android:hint="@string/review_write"
+        android:textColorHint="#D9D9D9"
+        android:textSize="13sp"
+        android:enabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/review_write_star" />
+
+    <android.widget.Button
+        android:id="@+id/btn_review_img"
+        android:layout_width="321dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="17dp"
+        android:background="@drawable/review_img_shape"
+        android:drawableLeft="@drawable/camera"
+        android:drawablePadding="10dp"
+        android:gravity="center_vertical"
+        android:paddingStart="100dp"
+        android:text="사진 첨부하기"
+        android:textColor="#2564DE"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="@+id/review_write_box"
+        app:layout_constraintStart_toStartOf="@+id/review_write_box"
+        app:layout_constraintTop_toBottomOf="@+id/review_write_box" />
+
+    <android.widget.Button
+        android:id="@+id/btn_write_done"
+        android:layout_width="360dp"
+        android:layout_height="56dp"
+        android:layout_marginBottom="25dp"
+        android:background="@drawable/write_done_shape"
+        android:text="완료"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
