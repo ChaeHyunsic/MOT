@@ -19,13 +19,12 @@
         android:id="@+id/btn_ib"
         android:layout_width="360dp"
         android:layout_height="56dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="551dp"
-        android:contentDescription="conf"
         android:src="@drawable/rectange_yellow"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="352dp"
+        android:contentDescription="chk"
+        app:layout_constraintTop_toBottomOf="@id/error_tv"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"/>
 
     <TextView
         android:id="@+id/btn_tv"
