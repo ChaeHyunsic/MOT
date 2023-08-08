@@ -23,6 +23,12 @@
 
         <activity android:name=".MainActivity"/>
         <activity android:name=".LoginActivity"/>
+        <activity android:name=".SearchActivity"/>
+        <activity android:name=".PersonChoseActivity"/>
+        <activity android:name=".DateChoseActivity"/>
+        <activity android:name=".SearchListActivity"/>
+        <activity android:name=".FitterActivity"/>
+
     </application>
 
 </manifest>

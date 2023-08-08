@@ -113,15 +113,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/title_tv2" />
 
-    <TextView
-        android:id="@+id/history_tv1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="30dp"
-        android:drawableLeft="@drawable/search_drawable"
-        android:drawablePadding="5dp"
-        android:text="부산 해운대"
-        app:layout_constraintStart_toStartOf="@+id/title_tv2"
+    <ListView
+        android:id="@+id/history_lv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title_tv2" />
 </androidx.constraintlayout.widget.ConstraintLayout>

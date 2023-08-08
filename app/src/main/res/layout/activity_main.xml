@@ -20,22 +20,24 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <androidx.appcompat.widget.SearchView
-                android:id="@+id/search_view"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+            <android.widget.Button
+                android:id="@+id/search_btn"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
                 android:layout_marginStart="30dp"
-                android:layout_marginTop="115dp"
+                android:layout_marginTop="95dp"
                 android:layout_marginEnd="30dp"
-                android:background="@drawable/search_background"
-                app:iconifiedByDefault="false"
+                android:background="@drawable/myplace_search"
+                android:drawableRight="@drawable/search"
+                android:gravity="center_vertical"
+                android:paddingLeft="23dp"
+                android:paddingEnd="20dp"
+                android:text="검색하시려면 여기를 눌러주세요"
+                android:textColor="#B5B5B5"
+                android:textSize="10sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:queryBackground="@drawable/search_background"
-                app:queryHint="@string/search_text">
-
-            </androidx.appcompat.widget.SearchView>
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/title1_tv"
@@ -44,8 +46,8 @@
                 android:layout_marginTop="60dp"
                 android:text="최근 본 숙소"
                 android:textAppearance="@style/title_style"
-                app:layout_constraintStart_toStartOf="@+id/search_view"
-                app:layout_constraintTop_toBottomOf="@+id/search_view" />
+                app:layout_constraintStart_toStartOf="@+id/search_btn"
+                app:layout_constraintTop_toBottomOf="@+id/search_btn" />
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/recent_img_view1"
