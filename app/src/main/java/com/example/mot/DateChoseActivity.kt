@@ -21,6 +21,10 @@ class DateChoseActivity : AppCompatActivity() {
         mBinding = ActivityDateChoseBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        mBinding!!.prevBtn.setOnClickListener {
+            finish()
+        }
+
         mBinding!!.calendarView.date = System.currentTimeMillis()
 
         mBinding!!.calendarView.setOnDateChangeListener { _, year, month, dayOfMonth ->
@@ -50,11 +54,12 @@ class DateChoseActivity : AppCompatActivity() {
 
         mBinding!!.choseBtn.setOnClickListener {
             if (mBinding!!.choseBtn.visibility == View.VISIBLE) {
-                val intent = Intent(this, SearchActivity::class.java)
+                val intent = Intent()
                 intent.putExtra("start_date", mBinding!!.startDate.text)
                 intent.putExtra("end_date", mBinding!!.endDate.text)
 
-                startActivity(intent)
+                setResult(RESULT_OK, intent)
+                finish()
             }
         }
 

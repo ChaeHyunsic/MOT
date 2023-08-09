@@ -45,8 +45,9 @@
                 android:layout_marginTop="35dp"
                 android:background="@drawable/search_result_btn_background"
                 android:drawableLeft="@drawable/date_drawable"
-                android:paddingLeft="20dp"
+                android:paddingLeft="15dp"
                 android:text="5월 13일 ~ 5월 17일"
+                android:textSize="10sp"
                 app:layout_constraintStart_toStartOf="@+id/prev_btn"
                 app:layout_constraintTop_toBottomOf="@+id/prev_btn" />
 
@@ -58,8 +59,9 @@
                 android:layout_marginEnd="30dp"
                 android:background="@drawable/search_result_btn_background"
                 android:drawableLeft="@drawable/person_drawable"
-                android:paddingLeft="20dp"
+                android:paddingLeft="15dp"
                 android:text="40명"
+                android:textSize="10sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/date_btn"
                 app:layout_constraintTop_toTopOf="@+id/date_btn" />

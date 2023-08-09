@@ -55,32 +55,34 @@
         android:id="@+id/minus_btn"
         android:layout_width="27dp"
         android:layout_height="27dp"
-        android:layout_marginEnd="12dp"
         app:layout_constraintBottom_toBottomOf="@+id/anno_tv"
-        app:layout_constraintEnd_toStartOf="@+id/numberPicker"
+        app:layout_constraintEnd_toStartOf="@+id/number_btn"
         app:layout_constraintTop_toTopOf="@+id/anno_tv"
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/minus_img" />
 
 
-    <NumberPicker
-        android:id="@+id/numberPicker"
-        android:layout_width="27dp"
-        android:layout_height="27dp"
-        android:layout_marginEnd="12dp"
+    <EditText
+        android:id="@+id/number_btn"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@null"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="number"
+        android:text="1"
         app:layout_constraintBottom_toBottomOf="@+id/minus_btn"
         app:layout_constraintEnd_toStartOf="@+id/plus_btn"
-        app:layout_constraintTop_toTopOf="@+id/minus_btn"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="@+id/minus_btn" />
 
     <ImageView
         android:id="@+id/plus_btn"
         android:layout_width="27dp"
         android:layout_height="27dp"
         android:layout_marginEnd="30dp"
-        app:layout_constraintBottom_toBottomOf="@+id/numberPicker"
+        app:layout_constraintBottom_toBottomOf="@+id/number_btn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/numberPicker"
+        app:layout_constraintTop_toTopOf="@+id/number_btn"
         app:srcCompat="@drawable/plus_img" />
 
     <android.widget.Button
@@ -91,7 +93,7 @@
         android:layout_marginEnd="5dp"
         android:layout_marginBottom="10dp"
         android:background="@drawable/btn_background"
-        android:text="15명"
+        android:text="인원 선택하기"
         android:textAppearance="@style/splash_style"
         android:textColor="#000000"
         android:textStyle="bold"

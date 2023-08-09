@@ -18,8 +18,47 @@ class FitterActivity : AppCompatActivity(){
         mBinding = ActivityFitterBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        val fitter1 = intent.getStringExtra("fitter 1")
+        val fitter2 = intent.getStringExtra("fitter 2")
+        val fitter3 = intent.getStringExtra("fitter 3")
+
+        val buttons = listOf(mBinding!!.choseFitter1,mBinding!!.choseFitter2,mBinding!!.choseFitter3,mBinding!!.choseFitter4,
+            mBinding!!.choseFitter5,mBinding!!.choseFitter6,mBinding!!.choseFitter7,mBinding!!.choseFitter8,mBinding!!.choseFitter9,
+            mBinding!!.choseFitter10,mBinding!!.choseFitter11,)
+
+        if (fitter1 != null) {
+            mBinding!!.chosenFitter1.visibility = View.VISIBLE
+            mBinding!!.chosenFitter1.setText(fitter1)
+
+            for (button in buttons) {
+                if(button.text == mBinding!!.chosenFitter1.text) {
+                    button.setBackgroundResource(R.drawable.btn_background)
+                }
+            }
+        }
+        if (fitter2 != null) {
+            mBinding!!.chosenFitter2.visibility = View.VISIBLE
+            mBinding!!.chosenFitter2.setText(fitter2)
+
+            for (button in buttons) {
+                if(button.text == mBinding!!.chosenFitter2.text) {
+                    button.setBackgroundResource(R.drawable.btn_background)
+                }
+            }
+        }
+        if (fitter3 != null) {
+            mBinding!!.chosenFitter3.visibility = View.VISIBLE
+            mBinding!!.chosenFitter3.setText(fitter3)
+
+            for (button in buttons) {
+                if(button.text == mBinding!!.chosenFitter3.text) {
+                    button.setBackgroundResource(R.drawable.btn_background)
+                }
+            }
+        }
+
         mBinding!!.prevBtn.setOnClickListener {
-            val intent = Intent(this, SearchActivity::class.java)
+            val intent = Intent()
             if (mBinding!!.chosenFitter1.visibility == View.VISIBLE) {
                 intent.putExtra("fitter 1", mBinding!!.chosenFitter1.text)
             }
@@ -30,7 +69,8 @@ class FitterActivity : AppCompatActivity(){
                 intent.putExtra("fitter 1", mBinding!!.chosenFitter3.text)
             }
 
-            startActivity(intent)
+            setResult(RESULT_OK, intent)
+            finish()
         }
 
         mBinding!!.choseFitter1.setOnClickListener{
@@ -230,10 +270,6 @@ class FitterActivity : AppCompatActivity(){
                 mBinding!!.choseFitter1.setBackgroundResource(R.drawable.btn_background)
             }
         }
-
-        val buttons = listOf(mBinding!!.choseFitter1,mBinding!!.choseFitter2,mBinding!!.choseFitter3,mBinding!!.choseFitter4,
-            mBinding!!.choseFitter5,mBinding!!.choseFitter6,mBinding!!.choseFitter7,mBinding!!.choseFitter8,mBinding!!.choseFitter9,
-            mBinding!!.choseFitter10,mBinding!!.choseFitter11,)
 
         mBinding!!.chosenFitter1.setOnClickListener {
             if (mBinding!!.chosenFitter1.visibility == View.VISIBLE) {

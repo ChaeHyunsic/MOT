@@ -95,4 +95,9 @@
         <item name="android:textColor">#FF0000</item>
     </style>
 
+    <style name="numberPicker_style">
+        <item name="android:textSize">26sp</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
 </resources>
