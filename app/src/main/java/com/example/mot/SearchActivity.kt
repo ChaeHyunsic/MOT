@@ -34,7 +34,7 @@ class SearchActivity : AppCompatActivity() {
         }
 
         recentSearches = mutableListOf()
-        adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, recentSearches)
+        adapter = ArrayAdapter(this, R.layout.activity_recent_search_item, R.id.search_tv, recentSearches)
         mBinding!!.historyLv.adapter = adapter
 
         mBinding!!.searchView.setOnClickListener {
