@@ -31,6 +31,19 @@
         app:layout_constraintStart_toStartOf="@id/id_input_et"
         />
 
+    <TextView
+        android:id="@+id/tel_unavailable_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="3dp"
+        android:text="*전화번호 양식에 맞지 않습니다."
+        android:textAppearance="@style/unavailable_tv"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/tel_input_et"
+        app:layout_constraintStart_toStartOf="@id/tel_input_et"
+        />
+
     <ImageButton
         android:id="@+id/tel_btn_ib"
         android:layout_width="109dp"
@@ -109,7 +122,20 @@
         android:layout_marginStart="3dp"
         android:layout_marginTop="10dp"
         android:text="*인증번호가 일치하지 않습니다."
+        android:visibility="gone"
         android:textAppearance="@style/unavailable_tv"
+        app:layout_constraintStart_toStartOf="@id/certifi_input_et"
+        app:layout_constraintTop_toBottomOf="@id/certifi_input_et" />
+
+    <TextView
+        android:id="@+id/certifi_chk_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="10dp"
+        android:text="*인증번호가 일치합니다."
+        android:visibility="gone"
+        android:textAppearance="@style/available_tv"
         app:layout_constraintStart_toStartOf="@id/certifi_input_et"
         app:layout_constraintTop_toBottomOf="@id/certifi_input_et" />
 

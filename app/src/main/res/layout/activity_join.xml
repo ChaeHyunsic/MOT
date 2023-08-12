@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".JoinActivity">
 
     <TextView
         android:id="@+id/title_tv"
@@ -61,6 +61,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:text="@string/id_unavailable_tv"
+        android:visibility="gone"
         android:textAppearance="@style/unavailable_tv"
         app:layout_constraintTop_toBottomOf="@id/id_input_et"
         app:layout_constraintStart_toStartOf="@id/id_input_et"/>
@@ -71,7 +72,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:text="@string/id_avavailable_tv"
-        android:textAppearance="@style/id_available_tv"
+        android:textAppearance="@style/available_tv"
         android:visibility="gone"
         app:layout_constraintTop_toBottomOf="@id/id_input_et"
         app:layout_constraintStart_toStartOf="@id/id_input_et" />
@@ -97,6 +98,7 @@
         android:layout_marginTop="5dp"
         android:text="@string/pw_unavailable_tv"
         android:textAppearance="@style/unavailable_tv"
+        android:visibility="gone"
         app:layout_constraintTop_toBottomOf="@id/pw_input_et"
         app:layout_constraintStart_toStartOf="@id/pw_input_et"
         />
@@ -121,6 +123,7 @@
         android:layout_marginTop="5dp"
         android:text="비밀번호가 일치하지 않습니다."
         android:textAppearance="@style/unavailable_tv"
+        android:visibility="gone"
         app:layout_constraintTop_toBottomOf="@id/pw_chk_input_et"
         app:layout_constraintStart_toStartOf="@id/pw_chk_input_et"
         />
@@ -136,6 +139,19 @@
         android:textAppearance="@style/dark_gray_13"
         app:layout_constraintStart_toStartOf="@id/pw_different_tv"
         app:layout_constraintTop_toBottomOf="@id/pw_different_tv" />
+
+    <TextView
+        android:id="@+id/tel_unavailable_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="3dp"
+        android:text="*전화번호 양식에 맞지 않습니다."
+        android:textAppearance="@style/unavailable_tv"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/tel_input_et"
+        app:layout_constraintStart_toStartOf="@id/tel_input_et"
+        />
 
     <ImageButton
         android:id="@+id/tel_btn_ib"

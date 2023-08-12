@@ -59,7 +59,7 @@
         <item name="android:textColor">#FF7373</item>
     </style>
 
-    <style name="id_available_tv">
+    <style name="available_tv">
         <item name="android:textSize">10sp</item>
         <item name="android:textColor">#30B4FF</item>
     </style>

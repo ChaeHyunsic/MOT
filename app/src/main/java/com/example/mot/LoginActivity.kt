@@ -18,7 +18,7 @@ class LoginActivity : AppCompatActivity() {
         setContentView(view)
 
         mBinding!!.findTv.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, ModifyActivity::class.java)
             startActivity(intent)
         }
 
@@ -28,7 +28,7 @@ class LoginActivity : AppCompatActivity() {
         }
 
         mBinding!!.joinTv.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, JoinActivity::class.java)
             startActivity(intent)
         }
 
