@@ -4,12 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+
     <ScrollView
         android:id="@+id/scrollView3"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="52dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout"
@@ -19,148 +23,207 @@
             app:layout_constraintTop_toTopOf="parent">
 
 
+            <android.widget.Button
+                android:id="@+id/package_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="430dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/roundrectangle"
+                android:contentDescription="+@id/package_btn"
+                android:drawableTop="@drawable/round_rectangle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
             <TextView
                 android:id="@+id/package_str"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="25dp"
-                android:layout_marginTop="40dp"
-                android:text="소형 온돌 룸"
+                android:layout_marginTop="160dp"
+                android:text="패키지1"
                 android:textColor="@color/black"
                 android:textSize="25sp"
                 android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintStart_toStartOf="@id/package_btn"
+                app:layout_constraintTop_toTopOf="@id/package_btn" />
 
-
-            <View
-                android:id="@+id/line"
-                android:layout_width="match_parent"
-                android:layout_height="14dp"
-                android:layout_marginTop="20dp"
-                android:background="#f0f0f0"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+            <TextView
+                android:id="@+id/room_info_str"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="2dp"
+                android:text="(큰 객실 2, 작은객실1)"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@id/package_btn"
                 app:layout_constraintTop_toBottomOf="@id/package_str" />
 
             <TextView
-                android:id="@+id/basic_info"
+                android:id="@+id/personnel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="기본정보"
-                android:textColor="@color/black"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                app:layout_constraintTop_toBottomOf="@+id/line"
-                app:layout_constraintStart_toStartOf="parent"
                 android:layout_marginStart="25dp"
-                android:layout_marginTop="25dp"/>
+                android:layout_marginTop="40dp"
+                android:text="기준 40명/ 최대 40명"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@id/package_btn"
+                app:layout_constraintTop_toBottomOf="@id/room_info_str" />
+
             <TextView
-                android:id="@+id/details"
-                android:layout_width="340dp"
-                android:layout_height="60dp"
-                android:text="인원 추가 정보\n-인원 기준 30명 / 최대 35명\n인원추가요금: 1인 10,000원"
-                android:textSize="14sp"
-                android:textColor="#7E7E7E"
-                app:layout_constraintTop_toBottomOf="@id/basic_info"
-                android:layout_marginTop="35dp"
-                app:layout_constraintStart_toStartOf="@id/basic_info"
-                />
+                android:id="@+id/price_person"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="40dp"
+                android:text="1인"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/package_btn"
+                app:layout_constraintTop_toBottomOf="@id/personnel" />
+
             <TextView
-                android:id="@+id/details2"
-                android:layout_width="340dp"
-                android:layout_height="60dp"
-                android:text="객실정보\n6인 온돌룸, 소형온돌룸, 3인 온돌룸"
-                android:textSize="14sp"
-                android:textColor="#7E7E7E"
-                app:layout_constraintTop_toBottomOf="@id/details"
-                android:layout_marginTop="25dp"
-                app:layout_constraintStart_toStartOf="@id/basic_info"
-                />
+                android:id="@+id/price_person_int"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="25dp"
+                android:text="25,000원"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@id/package_btn"
+                app:layout_constraintTop_toBottomOf="@id/personnel" />
+
             <TextView
-                android:id="@+id/details3"
-                android:layout_width="340dp"
-                android:layout_height="60dp"
-                android:text="구비시설\n침대, 에어컨, tv, 취사시설, 식탁, 냉장고, 드라이기,\n샴푸, 린스, 바디워시"
-                android:textSize="14sp"
-                android:textColor="#7E7E7E"
-                app:layout_constraintTop_toBottomOf="@id/details2"
-                android:layout_marginTop="25dp"
-                app:layout_constraintStart_toStartOf="@id/basic_info"
-                />
-            <View
-                android:id="@+id/line2"
-                android:layout_width="match_parent"
-                android:layout_height="14dp"
-                android:layout_marginTop="30dp"
-                android:background="#f0f0f0"
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="40dp"
+                android:text="합계 금액"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/package_btn"
+                app:layout_constraintTop_toBottomOf="@id/price_person" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="600,000원"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@id/price_person_int"
+                app:layout_constraintTop_toBottomOf="@id/price_person" />
+
+            <android.widget.Button
+                android:id="@+id/package_btn2"
+                android:layout_width="wrap_content"
+                android:layout_height="430dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/roundrectangle"
+                android:contentDescription="package_btn2"
+                android:drawableTop="@drawable/round_rectangle2"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/details3" />
-            <ImageView
-                android:id="@+id/picture"
-                android:layout_width="355dp"
-                android:layout_height="270dp"
-                android:src="@drawable/roompic"
-                android:padding="0dp"
-                android:scaleType="centerCrop"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/package_btn"
+                tools:layout_editor_absoluteX="45dp"
+                tools:layout_editor_absoluteY="395dp" />
+
+            <TextView
+                android:id="@+id/package_str2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="25dp"
-                app:layout_constraintTop_toBottomOf="@+id/line2"
-                android:layout_marginTop="40dp"/>
-            <ImageView
-                android:id="@+id/picture2"
-                android:layout_width="355dp"
-                android:layout_height="270dp"
-                android:src="@drawable/roompic"
-                android:padding="0dp"
-                android:scaleType="centerCrop"
-                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="160dp"
+                android:text="패키지2"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/package_btn2"
+                app:layout_constraintTop_toTopOf="@id/package_btn2" />
+
+            <TextView
+                android:id="@+id/room_info_str2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="25dp"
-                app:layout_constraintTop_toBottomOf="@+id/picture"
-                android:layout_marginTop="40dp"/>
-            <ImageView
-                android:id="@+id/picture3"
-                android:layout_width="355dp"
-                android:layout_height="270dp"
-                android:src="@drawable/roompic"
-                android:padding="0dp"
-                android:scaleType="centerCrop"
-                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="2dp"
+                android:text="(큰 객실 2, 작은객실1)"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@id/package_btn2"
+                app:layout_constraintTop_toBottomOf="@id/package_str2" />
+
+            <TextView
+                android:id="@+id/personnel2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="25dp"
-                app:layout_constraintTop_toBottomOf="@+id/picture2"
-                android:layout_marginTop="40dp"/>
-            <ImageView
-                android:id="@+id/picture4"
-                android:layout_width="355dp"
-                android:layout_height="270dp"
-                android:src="@drawable/roompic"
-                android:padding="0dp"
-                android:scaleType="centerCrop"
-                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="40dp"
+                android:text="기준 40명/ 최대 40명"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@id/package_btn2"
+                app:layout_constraintTop_toBottomOf="@id/room_info_str2" />
+
+            <TextView
+                android:id="@+id/price_person2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="25dp"
-                app:layout_constraintTop_toBottomOf="@+id/picture3"
-                android:layout_marginTop="40dp"/>
-            <ImageView
-                android:id="@+id/picture5"
-                android:layout_width="355dp"
-                android:layout_height="270dp"
-                android:src="@drawable/roompic"
-                android:padding="0dp"
-                android:scaleType="centerCrop"
-                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="40dp"
+                android:text="1인"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/package_btn2"
+                app:layout_constraintTop_toBottomOf="@id/personnel2" />
+
+            <TextView
+                android:id="@+id/price_person_int2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="25dp"
+                android:text="25,000원"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@id/package_btn2"
+                app:layout_constraintTop_toBottomOf="@id/personnel2" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="25dp"
-                app:layout_constraintTop_toBottomOf="@+id/picture4"
-                android:layout_marginTop="40dp"/>
+                android:layout_marginTop="40dp"
+                android:text="합계 금액"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/package_btn2"
+                app:layout_constraintTop_toBottomOf="@id/price_person2" />
 
-
-
-
-
-
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="600,000원"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@id/price_person_int2"
+                app:layout_constraintTop_toBottomOf="@id/price_person2" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
