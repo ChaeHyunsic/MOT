@@ -21,4 +21,6 @@
     <string name="id_avavailable_tv">*사용가능한 아이디입니다.</string>
     <string name="pw_unavailable_tv">*비밀번호는 최소 4 ~ 16자이며, 영문 대소문자, 숫자, 특수문자 강제</string>
     <string name="pw_setting_tv">비밀번호는 8~20자 내외의 영문 대문자, 소문자, 숫자,\n특수문자중 3가지이상을 조합해서 설정해 주세요.</string>
+    <string name="confirm">확인하기</string>
+    <string name="detail">보기</string>
 </resources>
