@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="100dp"
+        android:text="주소 등록"
+        android:textAppearance="@style/title_big_style"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/anno_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="숙소 주소를 입력해주세요"
+        android:textAppearance="@style/anno_style"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/title_tv"
+        app:layout_constraintTop_toBottomOf="@+id/title_tv" />
+
+    <TextView
+        android:id="@+id/chosen_location_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:text="서울특별시"
+        android:textAppearance="@style/title_style"
+        app:layout_constraintStart_toStartOf="@+id/anno_tv"
+        app:layout_constraintTop_toBottomOf="@+id/anno_tv" />
+
+    <EditText
+        android:id="@+id/address_tv"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:hint="주소를 검색하려면 눌러주세요"
+        android:inputType="text"
+        android:textAppearance="@style/anno_style"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/chosen_location_tv"
+        app:layout_constraintTop_toBottomOf="@+id/chosen_location_tv" />
+
+    <EditText
+        android:id="@+id/address_detail_tv"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
+        android:hint="상세 주소를 입력해주세요"
+        android:inputType="text"
+        android:textAppearance="@style/anno_style"
+        app:layout_constraintEnd_toEndOf="@+id/address_tv"
+        app:layout_constraintStart_toStartOf="@+id/address_tv"
+        app:layout_constraintTop_toBottomOf="@+id/address_tv" />
+
+    <android.widget.Button
+        android:id="@+id/confirm_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_weight="1"
+        android:background="@drawable/btn_background"
+        android:text="등록하기"
+        android:textAppearance="@style/splash_style"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="지역 선택"
+        android:textAppearance="@style/title_big_style"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.widget.Button
+        android:id="@+id/loc_btn"
+        android:layout_width="134dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/location_btn_background"
+        android:text="서울"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_tv" />
+
+    <android.widget.Button
+        android:id="@+id/loc_btn2"
+        android:layout_width="134dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="50dp"
+        android:background="@drawable/location_btn_background"
+        android:text="경기"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/loc_btn" />
+
+    <android.widget.Button
+        android:id="@+id/loc_btn3"
+        android:layout_width="134dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/location_btn_background"
+        android:text="부산"
+        app:layout_constraintStart_toStartOf="@+id/loc_btn"
+        app:layout_constraintTop_toBottomOf="@+id/loc_btn" />
+
+    <android.widget.Button
+        android:id="@+id/loc_btn4"
+        android:layout_width="134dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/location_btn_background"
+        android:text="대구/경산"
+        app:layout_constraintEnd_toEndOf="@+id/loc_btn2"
+        app:layout_constraintTop_toTopOf="@+id/loc_btn3" />
+
+    <android.widget.Button
+        android:id="@+id/loc_btn5"
+        android:layout_width="134dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/location_btn_background"
+        android:text="인천"
+        app:layout_constraintStart_toStartOf="@+id/loc_btn3"
+        app:layout_constraintTop_toBottomOf="@+id/loc_btn3" />
+
+    <android.widget.Button
+        android:id="@+id/loc_btn6"
+        android:layout_width="134dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/location_btn_background"
+        android:text="광주"
+        app:layout_constraintEnd_toEndOf="@+id/loc_btn4"
+        app:layout_constraintTop_toTopOf="@+id/loc_btn5" />
+
+    <android.widget.Button
+        android:id="@+id/loc_btn7"
+        android:layout_width="134dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/location_btn_background"
+        android:text="대전"
+        app:layout_constraintStart_toStartOf="@+id/loc_btn5"
+        app:layout_constraintTop_toBottomOf="@+id/loc_btn5" />
+
+    <android.widget.Button
+        android:id="@+id/loc_btn8"
+        android:layout_width="134dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/location_btn_background"
+        android:text="울산"
+        app:layout_constraintEnd_toEndOf="@+id/loc_btn6"
+        app:layout_constraintTop_toTopOf="@+id/loc_btn7" />
+
+    <android.widget.Button
+        android:id="@+id/loc_btn9"
+        android:layout_width="134dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/location_btn_background"
+        android:text="충남/세종"
+        app:layout_constraintStart_toStartOf="@+id/loc_btn7"
+        app:layout_constraintTop_toBottomOf="@+id/loc_btn7" />
+
+    <android.widget.Button
+        android:id="@+id/loc_btn10"
+        android:layout_width="134dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/location_btn_background"
+        android:text="강원"
+        app:layout_constraintEnd_toEndOf="@+id/loc_btn8"
+        app:layout_constraintTop_toTopOf="@+id/loc_btn9" />
+
+    <android.widget.Button
+        android:id="@+id/loc_btn11"
+        android:layout_width="134dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/location_btn_background"
+        android:text="충북"
+        app:layout_constraintStart_toStartOf="@+id/loc_btn9"
+        app:layout_constraintTop_toBottomOf="@+id/loc_btn9" />
+
+    <android.widget.Button
+        android:id="@+id/loc_btn12"
+        android:layout_width="134dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/location_btn_background"
+        android:text="전북"
+        app:layout_constraintEnd_toEndOf="@+id/loc_btn10"
+        app:layout_constraintTop_toTopOf="@+id/loc_btn11" />
+
+    <android.widget.Button
+        android:id="@+id/loc_btn13"
+        android:layout_width="134dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/location_btn_background"
+        android:text="전남"
+        app:layout_constraintStart_toStartOf="@+id/loc_btn11"
+        app:layout_constraintTop_toBottomOf="@+id/loc_btn11" />
+
+    <android.widget.Button
+        android:id="@+id/loc_btn14"
+        android:layout_width="134dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/location_btn_background"
+        android:text="경북"
+        app:layout_constraintEnd_toEndOf="@+id/loc_btn12"
+        app:layout_constraintTop_toTopOf="@+id/loc_btn13" />
+
+    <android.widget.Button
+        android:id="@+id/loc_btn15"
+        android:layout_width="134dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/location_btn_background"
+        android:text="경남"
+        app:layout_constraintStart_toStartOf="@+id/loc_btn13"
+        app:layout_constraintTop_toBottomOf="@+id/loc_btn13" />
+
+    <android.widget.Button
+        android:id="@+id/loc_btn16"
+        android:layout_width="134dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/location_btn_background"
+        android:text="제주"
+        app:layout_constraintEnd_toEndOf="@+id/loc_btn14"
+        app:layout_constraintTop_toTopOf="@+id/loc_btn15" />
+
+    <android.widget.Button
+        android:id="@+id/confirm_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_weight="1"
+        android:background="@drawable/btn_background"
+        android:text="@string/confirm"
+        android:textAppearance="@style/splash_style"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
