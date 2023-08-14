@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageButton
+        android:id="@+id/prev_btn"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:background="@null"
+        android:contentDescription="prev"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/prev_img" />
+
+    <TextView
+        android:id="@+id/title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="예약 내역"
+        android:textAppearance="@style/title_style"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/prev_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/prev_btn" />
+
+    <TextView
+        android:id="@+id/anno_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="예약 날짜"
+        android:textAppearance="@style/dark_gray_13"
+        app:layout_constraintStart_toStartOf="@+id/prev_btn"
+        app:layout_constraintTop_toBottomOf="@+id/prev_btn" />
+
+    <TextView
+        android:id="@+id/chosen_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="2023년 7월 15일 ~ 2023년 7월 16일"
+        android:textAppearance="@style/title_style"
+        app:layout_constraintStart_toStartOf="@+id/anno_tv"
+        app:layout_constraintTop_toBottomOf="@+id/anno_tv" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="30dp"
+        android:elevation="6dp"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chosen_date">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/res_img"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/search_background"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/room_picture" />
+
+            <TextView
+                android:id="@+id/res_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:text="패키지 1"
+                android:textAppearance="@style/title_style"
+                app:layout_constraintStart_toEndOf="@+id/res_img"
+                app:layout_constraintTop_toTopOf="@+id/res_img" />
+
+            <TextView
+                android:id="@+id/anno_tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="7.13 (토) ~ 7.17 (수)"
+                android:textAppearance="@style/anno_style"
+                app:layout_constraintStart_toStartOf="@+id/res_name"
+                app:layout_constraintTop_toBottomOf="@+id/res_name" />
+
+            <TextView
+                android:id="@+id/res_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="패키지1 / 6인 온돌룸, 소형 온돌룸"
+                android:textAppearance="@style/anno_style"
+                app:layout_constraintStart_toStartOf="@+id/anno_tv1"
+                app:layout_constraintTop_toBottomOf="@+id/anno_tv1" />
+
+            <TextView
+                android:id="@+id/res_person"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="인원 : 6명"
+                android:textAppearance="@style/anno_style"
+                app:layout_constraintStart_toStartOf="@+id/res_list"
+                app:layout_constraintTop_toBottomOf="@+id/res_list" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

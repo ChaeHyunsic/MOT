@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/del_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/x2" />
+
+    <TextView
+        android:id="@+id/title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="예약 상세"
+        android:textAppearance="@style/title_style"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/del_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/del_btn" />
+
+    <TextView
+        android:id="@+id/anno_tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="50dp"
+        android:text="예약 날짜"
+        android:textAppearance="@style/black_12"
+        app:layout_constraintStart_toStartOf="@+id/del_btn"
+        app:layout_constraintTop_toBottomOf="@+id/title_tv" />
+
+    <TextView
+        android:id="@+id/res_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="2023년 7월 13일 ~ 2023년 7월 17일"
+        android:textAppearance="@style/black_15"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/anno_tv1"
+        app:layout_constraintTop_toBottomOf="@+id/anno_tv1" />
+
+    <TextView
+        android:id="@+id/anno_tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="예약자 성명"
+        android:textAppearance="@style/black_12"
+        app:layout_constraintStart_toStartOf="@+id/res_date"
+        app:layout_constraintTop_toBottomOf="@+id/res_date" />
+
+    <TextView
+        android:id="@+id/res_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="홍길동"
+        android:textAppearance="@style/black_15"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/anno_tv2"
+        app:layout_constraintTop_toBottomOf="@+id/anno_tv2" />
+
+    <TextView
+        android:id="@+id/anno_tv3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="예약자 휴대전화 번호"
+        android:textAppearance="@style/black_12"
+        app:layout_constraintStart_toStartOf="@+id/res_name"
+        app:layout_constraintTop_toBottomOf="@+id/res_name" />
+
+    <TextView
+        android:id="@+id/res_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="010-1234-5678"
+        android:textAppearance="@style/black_15"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/anno_tv3"
+        app:layout_constraintTop_toBottomOf="@+id/anno_tv3" />
+
+    <TextView
+        android:id="@+id/anno_tv4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="예약 객실"
+        android:textAppearance="@style/black_12"
+        app:layout_constraintStart_toStartOf="@+id/res_phone"
+        app:layout_constraintTop_toBottomOf="@+id/res_phone" />
+
+    <TextView
+        android:id="@+id/res_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="패키지1 / 6인 온돌룸, 소형 온돌룸"
+        android:textAppearance="@style/black_15"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/anno_tv4"
+        app:layout_constraintTop_toBottomOf="@+id/anno_tv4" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
