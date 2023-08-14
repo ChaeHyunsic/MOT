@@ -38,6 +38,68 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title_tv" />
 
+    <TextView
+        android:id="@+id/start_date_anno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="시작일"
+        android:textAppearance="@style/title_style"
+        app:layout_constraintStart_toStartOf="@+id/calendarView"
+        app:layout_constraintTop_toBottomOf="@+id/calendarView" />
+
+    <TextView
+        android:id="@+id/start_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/start_date_anno"
+        app:layout_constraintStart_toEndOf="@+id/start_date_anno"
+        app:layout_constraintTop_toTopOf="@+id/start_date_anno" />
+
+    <TextView
+        android:id="@+id/wrong_anno1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="잘못된 일정을 선택하였습니다. 다시 선택해주십시오."
+        android:textAppearance="@style/red_15"
+        android:textSize="10sp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@+id/start_date_anno"
+        app:layout_constraintTop_toBottomOf="@+id/start_date_anno" />
+
+    <TextView
+        android:id="@+id/end_date_anno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="종료일"
+        android:textAppearance="@style/title_style"
+        app:layout_constraintStart_toStartOf="@+id/start_date_anno"
+        app:layout_constraintTop_toBottomOf="@+id/wrong_anno1" />
+
+    <TextView
+        android:id="@+id/end_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/end_date_anno"
+        app:layout_constraintStart_toEndOf="@+id/end_date_anno"
+        app:layout_constraintTop_toTopOf="@+id/end_date_anno" />
+
+    <TextView
+        android:id="@+id/wrong_anno2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="잘못된 일정을 선택하였습니다. 다시 선택해주십시오."
+        android:textAppearance="@style/red_15"
+        android:textSize="10sp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@+id/end_date_anno"
+        app:layout_constraintTop_toBottomOf="@+id/end_date_anno" />
+
     <android.widget.Button
         android:id="@+id/confirm_btn"
         android:layout_width="0dp"
@@ -49,6 +111,7 @@
         android:background="@drawable/btn_background"
         android:text="@string/reservation"
         android:textAppearance="@style/confirm_style"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

@@ -32,6 +32,9 @@
         <activity android:name=".FitterActivity"/>
         <activity android:name=".ModifyActivity"/>
         <activity android:name=".JoinActivity"/>
+        <activity android:name=".SelResDateActivity"/>
+        <activity android:name=".SelResResultActivity"/>
+        <activity android:name=".SelResResultDetailActivity"/>
 
     </application>
 
