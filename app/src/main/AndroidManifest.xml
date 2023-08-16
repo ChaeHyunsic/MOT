@@ -37,6 +37,9 @@
         <activity android:name=".SelResResultActivity"/>
         <activity android:name=".SelResResultDetailActivity"/>
         <activity android:name=".SelSplashActivity"/>
+        <activity android:name=".SelPolicyActivity"/>
+        <activity android:name=".SelPolicyDetail1Activity"/>
+        <activity android:name=".SelPolicyDetail2Activity"/>
 
     </application>
 

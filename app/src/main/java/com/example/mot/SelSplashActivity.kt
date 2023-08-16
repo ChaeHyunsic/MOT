@@ -21,7 +21,7 @@ class SelSplashActivity : AppCompatActivity() {
 
         Handler(Looper.getMainLooper()).postDelayed({
 
-            val intent= Intent( this,MainActivity::class.java)
+            val intent= Intent( this,SelPolicyActivity::class.java)
             startActivity(intent)
 
             finish()
