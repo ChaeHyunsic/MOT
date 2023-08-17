@@ -56,7 +56,7 @@ class SelPolicyActivity : AppCompatActivity() {
 
         mBinding!!.confirmBtn.setOnClickListener {
             if (mBinding!!.essCb1.isChecked && mBinding!!.essCb2.isChecked) {
-                val intent = Intent(this, MainActivity::class.java)
+                val intent = Intent(this, SelJoinNameActivity::class.java)
                 startActivity(intent)
             }
             else {

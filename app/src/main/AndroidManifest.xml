@@ -40,6 +40,10 @@
         <activity android:name=".SelPolicyActivity"/>
         <activity android:name=".SelPolicyDetail1Activity"/>
         <activity android:name=".SelPolicyDetail2Activity"/>
+        <activity android:name=".SelJoinNameActivity"/>
+        <activity android:name=".SelJoinLocationActivity"/>
+        <activity android:name=".SelJoinAddressActivity"/>
+        <activity android:name=".SelJoinAddressDetailActivity"/>
 
     </application>
 

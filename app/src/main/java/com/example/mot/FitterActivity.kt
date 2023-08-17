@@ -1,7 +1,6 @@
 package com.example.mot
 
 import android.content.Intent
-import android.graphics.Color
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
@@ -24,7 +23,7 @@ class FitterActivity : AppCompatActivity(){
 
         val buttons = listOf(mBinding!!.choseFitter1,mBinding!!.choseFitter2,mBinding!!.choseFitter3,mBinding!!.choseFitter4,
             mBinding!!.choseFitter5,mBinding!!.choseFitter6,mBinding!!.choseFitter7,mBinding!!.choseFitter8,mBinding!!.choseFitter9,
-            mBinding!!.choseFitter10,mBinding!!.choseFitter11,)
+            mBinding!!.choseFitter10,mBinding!!.choseFitter11)
 
         if (fitter1 != null) {
             mBinding!!.chosenFitter1.visibility = View.VISIBLE
