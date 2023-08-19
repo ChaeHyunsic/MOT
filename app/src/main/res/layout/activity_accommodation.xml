@@ -34,31 +34,31 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:ignore="SpeakableTextPresentCheck" />
+
             <ImageButton
                 android:id="@+id/share_btn"
                 android:layout_width="48dp"
                 android:layout_height="50dp"
-                android:src="@drawable/share_btn"
                 android:backgroundTint="@color/white"
+                android:contentDescription="share_btn"
                 android:padding="10dp"
                 android:scaleType="centerCrop"
-                app:layout_constraintTop_toTopOf="@id/backbutton"
+                android:src="@drawable/share_btn"
                 app:layout_constraintEnd_toStartOf="@+id/shopping_basket"
-                android:contentDescription="share_btn"
-                />
+                app:layout_constraintTop_toTopOf="@id/backbutton" />
+
             <ImageButton
                 android:id="@+id/shopping_basket"
                 android:layout_width="48dp"
                 android:layout_height="50dp"
-                android:src="@drawable/shopping_basket"
+                android:layout_marginEnd="10dp"
                 android:backgroundTint="@color/white"
+                android:contentDescription="shopping_basket"
                 android:padding="10dp"
                 android:scaleType="centerCrop"
-                app:layout_constraintTop_toTopOf="@id/backbutton"
+                android:src="@drawable/shopping_basket"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginEnd="10dp"
-                android:contentDescription="shopping_basket"
-                />
+                app:layout_constraintTop_toTopOf="@id/backbutton" />
 
             <ImageView
                 android:id="@+id/room_picture"
@@ -154,7 +154,8 @@
                 android:layout_marginStart="25dp"
                 android:layout_marginTop="15dp"
                 android:text="해운대 해수욕장 제일가까운 펜션, 단체룸, 투룸, 침실룸, 온돌룸, 개별 취사, 바베큐시설. 1. 해운 대해수욕장 정중앙에 위치 - 해변가에서 ...
-    "           android:textColor="#525252"
+    "
+                android:textColor="#525252"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/basic_Info" />
@@ -168,8 +169,6 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/long_basicinfo" />
-
-
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

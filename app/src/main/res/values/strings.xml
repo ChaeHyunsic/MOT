@@ -26,4 +26,5 @@
     <string name="confirm">확인하기</string>
     <string name="detail">보기</string>
     <string name="reservation">예약하기</string>
+    <string name="basic_info">인원 추가 정보\n-인원 기준 30명 / 최대 35명\n-인원추가요금: 1인 10,000원\n\n객실정보 6인 온돌룸, 소형온돌룸, 3인 온돌룸\n\n구비시설 침대, 에어컨, tv, 취사시설, 식탁, 냉장고,\n드라이기, 샴푸, 린스, 바디워시</string>
 </resources>
