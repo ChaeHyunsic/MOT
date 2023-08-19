@@ -9,10 +9,10 @@
         android:id="@+id/tv_write_review"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="40dp"
         android:text="후기쓰기"
         android:textColor="#000000"
-        android:textSize="25sp"
+        android:textSize="28sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,20 +22,20 @@
         android:id="@+id/btn_back"
         android:layout_width="48dp"
         android:layout_height="48dp"
-        android:layout_marginEnd="30dp"
+        android:layout_marginStart="20dp"
         android:background="#00ff0000"
         android:contentDescription="back"
         app:layout_constraintBottom_toBottomOf="@+id/tv_write_review"
-        app:layout_constraintEnd_toStartOf="@+id/tv_write_review"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/tv_write_review"
-        app:srcCompat="@drawable/back" />
+        android:src="@drawable/back" />
 
     <TextView
         android:id="@+id/tv_place_ttitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="70dp"
+        android:contentDescription="back"
         android:text="바다 풍경 팬션 부산"
         android:textColor="#000000"
         android:textSize="15sp"
@@ -46,14 +46,16 @@
 
     <RatingBar
         android:id="@+id/review_write_star"
-        style="@style/Widget.AppCompat.RatingBar"
+        style="@style/Widget.AppCompat.RatingBar.Indicator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:contentDescription="rating"
         android:numStars="5"
-        android:progressTint="#FDE400"
+        android:progressTint="@color/rating_color"
         android:stepSize="0.5"
+        android:rating="5"
+        android:isIndicator="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_place_ttitle" />
@@ -61,7 +63,7 @@
     <EditText
         android:id="@+id/review_write_box"
         android:layout_width="321dp"
-        android:layout_height="78dp"
+        android:layout_height="80dp"
         android:layout_marginTop="50dp"
         android:background="@drawable/review_box_shape"
         android:paddingStart="15dp"
@@ -90,11 +92,21 @@
         app:layout_constraintStart_toStartOf="@+id/review_write_box"
         app:layout_constraintTop_toBottomOf="@+id/review_write_box" />
 
+    <ImageView
+        android:id="@+id/upload_img"
+        android:layout_width="150dp"
+        android:layout_height="130dp"
+        android:contentDescription="reviewimg"
+        app:layout_constraintTop_toBottomOf="@id/btn_review_img"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"/>
+
     <android.widget.Button
         android:id="@+id/btn_write_done"
         android:layout_width="360dp"
         android:layout_height="56dp"
-        android:layout_marginBottom="25dp"
+        android:layout_marginBottom="20dp"
         android:background="@drawable/write_done_shape"
         android:text="완료"
         android:textSize="20sp"
@@ -102,4 +114,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

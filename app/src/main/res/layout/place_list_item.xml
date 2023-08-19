@@ -14,7 +14,7 @@
         app:layout_constraintEnd_toEndOf="@+id/btn_item"
         app:layout_constraintStart_toStartOf="@+id/btn_item"
         app:layout_constraintTop_toTopOf="@+id/btn_item" />
-    <Button
+    <android.widget.Button
         android:id="@+id/btn_item"
         android:layout_width="match_parent"
         android:layout_height="145dp"
@@ -64,7 +64,7 @@
         android:stepSize="0.5"/>
 
     <TextView
-        android:id="@+id/tv_grade"
+        android:id="@+id/tv_total_grade"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="7dp"
@@ -84,8 +84,8 @@
         android:text="(678)"
         android:textColor="#000000"
         android:textSize="10sp"
-        app:layout_constraintBottom_toBottomOf="@+id/tv_grade"
-        app:layout_constraintStart_toEndOf="@+id/tv_grade"
-        app:layout_constraintTop_toTopOf="@+id/tv_grade" />
+        app:layout_constraintBottom_toBottomOf="@+id/tv_total_grade"
+        app:layout_constraintStart_toEndOf="@+id/tv_total_grade"
+        app:layout_constraintTop_toTopOf="@+id/tv_total_grade" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MypageActivity"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/mypage"
+        android:layout_width="255dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:text="마이페이지"
+        android:textColor="#000000"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/profile"
+        android:layout_width="330dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/round2"
+        android:clickable="true"
+        android:drawableLeft="@drawable/mypage_profile"
+        android:drawableRight="@drawable/pencil"
+        android:drawablePadding="20dp"
+        android:elevation="5dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="80dp"
+        android:text="홍길동 1234님"
+        android:textSize="17sp"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="@+id/mypage"
+        app:layout_constraintTop_toBottomOf="@+id/mypage"
+        tools:textColor="#525252" />
+
+
+
+
+    <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="wrap_content"
+            android:layout_height="236dp"
+            android:orientation="vertical"
+            android:layout_marginStart="22dp"
+            app:layout_constraintBottom_toBottomOf="@+id/mypage_menu"
+            app:layout_constraintEnd_toEndOf="@+id/mypage_menu"
+            app:layout_constraintStart_toStartOf="@+id/mypage_menu"
+            app:layout_constraintTop_toTopOf="@+id/mypage_menu">
+
+        <View
+                android:layout_width="360dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="60dp"
+                android:background="#D2D2D2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:layout_width="360dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="59dp"
+            android:background="#D2D2D2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:layout_width="360dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="59dp"
+            android:background="#D2D2D2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </LinearLayout>
+
+    <TableLayout
+        android:id="@+id/mypage_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="25dp"
+        android:background="@drawable/round"
+        app:layout_constraintEnd_toEndOf="@+id/profile"
+        app:layout_constraintStart_toStartOf="@+id/profile"
+        app:layout_constraintTop_toBottomOf="@+id/profile">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.widget.Button
+                android:id="@+id/question"
+                android:layout_width="350dp"
+                android:layout_height="59dp"
+                android:layout_row="0"
+                android:background="@drawable/btn_bg"
+                android:drawableLeft="@drawable/img_question"
+                android:drawablePadding="20dp"
+                android:gravity="center_vertical"
+                android:paddingStart="20dp"
+                android:stateListAnimator="@null"
+                android:text="@string/mypage_questions"
+                android:textColor="#000000" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.widget.Button
+                android:id="@+id/reservation"
+                android:layout_width="350dp"
+                android:layout_height="59dp"
+                android:background="@drawable/btn_bg"
+                android:drawableLeft="@drawable/img_calendar"
+                android:drawablePadding="20dp"
+                android:gravity="center_vertical"
+                android:paddingStart="24dp"
+                android:stateListAnimator="@null"
+                android:text="@string/mypage_reservation"
+                android:textColor="#000000" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.widget.Button
+                android:id="@+id/my_lodging"
+                android:layout_width="350dp"
+                android:layout_height="59dp"
+                android:background="@drawable/btn_bg"
+                android:drawableLeft="@drawable/img_heart"
+                android:drawablePadding="20dp"
+                android:gravity="center_vertical"
+                android:paddingStart="24dp"
+                android:stateListAnimator="@null"
+                android:text="@string/mypage_lodging"
+                android:textColor="#000000" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.widget.Button
+                android:id="@+id/my_review"
+                android:layout_width="350dp"
+                android:layout_height="59dp"
+                android:background="@drawable/btn_bg"
+                android:drawableLeft="@drawable/img_pencil"
+                android:drawablePadding="20dp"
+                android:gravity="center_vertical"
+                android:paddingStart="24dp"
+                android:stateListAnimator="@null"
+                android:text="@string/mypage_review"
+                android:textColor="#000000" />
+        </TableRow>
+    </TableLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <android.widget.Button
+                android:id="@+id/btn_allarea_select"
+                android:layout_width="48dp"
+                android:layout_height="wrap_content"
+                android:background="#00ff0000"
+                android:contentDescription="allarea"
+                android:drawableTop="@drawable/edit_allarea_unselect"
+                android:drawablePadding="8dp"
+                android:padding="8dp"
+                android:text="지역"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <android.widget.Button
+                android:id="@+id/btn_around_select"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:background="#00ff0000"
+                android:contentDescription="myaround"
+                android:drawableTop="@drawable/edit_myaround_unselect"
+                android:drawablePadding="8dp"
+                android:padding="10dp"
+                android:text="내 주변"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <android.widget.Button
+                android:id="@+id/btn_main_select"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:background="#00ff0000"
+                android:contentDescription="mainhome"
+                android:drawableTop="@drawable/edit_main_unselect"
+                android:drawablePadding="8dp"
+                android:padding="10dp"
+                android:text="메인"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <android.widget.Button
+                android:id="@+id/btn_mypick_select"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:background="#00ff0000"
+                android:contentDescription="mypick"
+                android:drawableTop="@drawable/edit_mypick_unselect"
+                android:drawablePadding="8dp"
+                android:padding="10dp"
+                android:text="찜"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <android.widget.Button
+                android:id="@+id/btn_mypage_select"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:background="#00ff0000"
+                android:contentDescription="mypage"
+                android:drawableTop="@drawable/edit_mypage_select"
+                android:drawablePadding="10dp"
+                android:paddingTop="8dp"
+                android:text="마이페이지"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/profile_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="닉네임 변경"
+        android:imeOptions="actionDone"
+        android:inputType="textPersonName"
+        android:singleLine="true"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/profile"
+        app:layout_constraintEnd_toEndOf="@+id/profile"
+        app:layout_constraintStart_toStartOf="@+id/mypage"
+        app:layout_constraintTop_toBottomOf="@+id/mypage" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

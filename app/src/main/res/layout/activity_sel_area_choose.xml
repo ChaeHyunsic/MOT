@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SelAreaChooseActivity">
+
+
+    <TextView
+        android:id="@+id/sel_area_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="지역"
+        android:textColor="#000000"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <android.widget.Button
+        android:id="@+id/btn_settingdone"
+        android:layout_width="360dp"
+        android:layout_height="56dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/write_done_shape"
+        android:contentDescription="buttonBack"
+        android:text="확인하기"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sel_area_title"
+        android:layout_marginTop="30dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.widget.Button
+                android:id="@+id/btn_sell_seoul"
+                android:layout_width="150dp"
+                android:layout_height="48dp"
+                android:background="@drawable/btn_sell_area"
+                android:gravity="left|center_vertical"
+                android:paddingStart="18dp"
+                android:text="서울"
+                android:textSize="14sp" />
+
+            <android.widget.Button
+                android:id="@+id/btn_sell_busan"
+                android:layout_width="150dp"
+                android:layout_height="48dp"
+                android:background="@drawable/btn_sell_area"
+                android:gravity="left|center_vertical"
+                android:paddingStart="18dp"
+                android:text="부산"
+                android:textSize="14sp"
+                android:layout_marginTop="15dp"/>
+
+            <android.widget.Button
+                android:id="@+id/btn_sell_incheon"
+                android:layout_width="150dp"
+                android:layout_height="48dp"
+                android:background="@drawable/btn_sell_area"
+                android:gravity="left|center_vertical"
+                android:paddingStart="18dp"
+                android:text="인천"
+                android:textSize="14sp"
+                android:layout_marginTop="15dp"/>
+
+            <android.widget.Button
+                android:id="@+id/btn_sell_daejeon"
+                android:layout_width="150dp"
+                android:layout_height="48dp"
+                android:background="@drawable/btn_sell_area"
+                android:gravity="left|center_vertical"
+                android:paddingStart="18dp"
+                android:text="대전"
+                android:textSize="14sp"
+                android:layout_marginTop="15dp" />
+
+            <android.widget.Button
+                android:id="@+id/btn_sell_chungnam"
+                android:layout_width="150dp"
+                android:layout_height="48dp"
+                android:background="@drawable/btn_sell_area"
+                android:gravity="left|center_vertical"
+                android:paddingStart="18dp"
+                android:text="충남/세종"
+                android:textSize="14sp"
+                android:layout_marginTop="15dp" />
+
+            <android.widget.Button
+                android:id="@+id/btn_sell_chungbuk"
+                android:layout_width="150dp"
+                android:layout_height="48dp"
+                android:background="@drawable/btn_sell_area"
+                android:gravity="left|center_vertical"
+                android:paddingStart="18dp"
+                android:text="충북"
+                android:textSize="14sp"
+                android:layout_marginTop="15dp" />
+
+            <android.widget.Button
+                android:id="@+id/btn_sell_jeonnam"
+                android:layout_width="150dp"
+                android:layout_height="48dp"
+                android:background="@drawable/btn_sell_area"
+                android:gravity="left|center_vertical"
+                android:paddingStart="18dp"
+                android:text="전남"
+                android:textSize="14sp"
+                android:layout_marginTop="15dp" />
+
+            <android.widget.Button
+                android:id="@+id/btn_sell_gyeongnam"
+                android:layout_width="150dp"
+                android:layout_height="48dp"
+                android:background="@drawable/btn_sell_area"
+                android:gravity="left|center_vertical"
+                android:paddingStart="18dp"
+                android:text="경남"
+                android:textSize="14sp"
+                android:layout_marginTop="15dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="25dp">
+
+            <android.widget.Button
+                android:id="@+id/btn_sell_gyeonggi"
+                android:layout_width="150dp"
+                android:layout_height="48dp"
+                android:background="@drawable/btn_sell_area"
+                android:gravity="left|center_vertical"
+                android:paddingStart="18dp"
+                android:text="경기"
+                android:textSize="14sp" />
+
+            <android.widget.Button
+                android:id="@+id/btn_sell_deagu"
+                android:layout_width="150dp"
+                android:layout_height="48dp"
+                android:background="@drawable/btn_sell_area"
+                android:gravity="left|center_vertical"
+                android:paddingStart="18dp"
+                android:text="대구/경산"
+                android:textSize="14sp"
+                android:layout_marginTop="15dp"/>
+
+            <android.widget.Button
+                android:id="@+id/btn_sell_gwangju"
+                android:layout_width="150dp"
+                android:layout_height="48dp"
+                android:background="@drawable/btn_sell_area"
+                android:gravity="left|center_vertical"
+                android:paddingStart="18dp"
+                android:text="광주"
+                android:textSize="14sp"
+                android:layout_marginTop="15dp"/>
+
+            <android.widget.Button
+                android:id="@+id/btn_sell_ulsan"
+                android:layout_width="150dp"
+                android:layout_height="48dp"
+                android:background="@drawable/btn_sell_area"
+                android:gravity="left|center_vertical"
+                android:paddingStart="18dp"
+                android:text="울산"
+                android:textSize="14sp"
+                android:layout_marginTop="15dp" />
+
+            <android.widget.Button
+                android:id="@+id/btn_sell_gangwon"
+                android:layout_width="150dp"
+                android:layout_height="48dp"
+                android:background="@drawable/btn_sell_area"
+                android:gravity="left|center_vertical"
+                android:paddingStart="18dp"
+                android:text="강원"
+                android:textSize="14sp"
+                android:layout_marginTop="15dp" />
+
+            <android.widget.Button
+                android:id="@+id/btn_sell_jeonbuk"
+                android:layout_width="150dp"
+                android:layout_height="48dp"
+                android:background="@drawable/btn_sell_area"
+                android:gravity="left|center_vertical"
+                android:paddingStart="18dp"
+                android:text="전북"
+                android:textSize="14sp"
+                android:layout_marginTop="15dp" />
+
+            <android.widget.Button
+                android:id="@+id/btn_sell_gyeongbuk"
+                android:layout_width="150dp"
+                android:layout_height="48dp"
+                android:background="@drawable/btn_sell_area"
+                android:gravity="left|center_vertical"
+                android:paddingStart="18dp"
+                android:text="경북"
+                android:textSize="14sp"
+                android:layout_marginTop="15dp" />
+
+            <android.widget.Button
+                android:id="@+id/btn_sell_jeju"
+                android:layout_width="150dp"
+                android:layout_height="48dp"
+                android:background="@drawable/btn_sell_area"
+                android:gravity="left|center_vertical"
+                android:paddingStart="18dp"
+                android:text="제주"
+                android:textSize="14sp"
+                android:layout_marginTop="15dp" />
+        </LinearLayout>
+    </GridLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--    체크시 노란색으로 -->
+    <item android:color="@color/appmain" android:state_checked="true"/>
+
+    <!-- 선택 되지 않았을 때    -->
+    <item android:color="#636363" android:state_checked="false"/>
+</selector>

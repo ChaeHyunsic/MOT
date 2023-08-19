@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 지역 선택 시 색상 -->
+    <item android:color="@color/EFEFEF" android:state_checked="true"/>
+
+    <!-- 선택 되지 않았을 때    -->
+    <item android:color="@color/white" android:state_checked="false"/>
+</selector>

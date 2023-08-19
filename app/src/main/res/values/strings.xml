@@ -12,7 +12,9 @@
     <string name="mypage_lodging">관심 숙소</string>
     <string name="mypage_review">나의 후기</string>
     <string name="review">뷰도 좋고 룸 컨디션도 좋은 짱짱짱인 숙소였습니다.\n다음번에도 꼭 찾아오고싶은 숙소입니다!~!~!\n바베큐나 야외시설도 잘되어있고 청결이나.....</string>
+    <string name="replyInfo">* 정보를 수정해주세요. ( 500자 이내 )</string>
     <string name="traffic_str">1004 센텀방면\n5005 해운대 방면\n4002 광안 방면</string>
+    <string name="address_example">도로명  예) 반포대로 23길 6\n\n동주소  예) 연희동 42 - 18 </string>
     <string name="tab1">패키지 소개</string>
     <string name="tab2">객실 소개</string>
     <string name="tab3">후기</string>

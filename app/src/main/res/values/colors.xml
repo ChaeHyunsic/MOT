@@ -12,4 +12,7 @@
     <color name="dark_gray">#525252</color>
     <color name="yellow">#FFC700</color>
     <color name="blue">#2564DE</color>
+    <color name="appmain">#FFC700</color>
+    <color name="EFEFEF">#EFEFEF</color>
+    <color name="rating_color">#FDE400</color>
 </resources>

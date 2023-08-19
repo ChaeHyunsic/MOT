@@ -4,29 +4,153 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MypickActivity"
-    android:background="@color/white">
+    tools:context=".MypickActivity">
 
     <TextView
         android:id="@+id/tv_mypick"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="30dp"
         android:text="찜"
         android:textColor="#000000"
-        android:textSize="25sp"
+        android:textSize="28sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/mypick_list"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:id="@+id/rv_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_mypick"
-        tools:listitem="@layout/pick_list_item" />
+        app:layout_constraintTop_toBottomOf="@id/tv_mypick"
+        tools:listitem="@layout/pick_list_item"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@color/white">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <android.widget.Button
+                android:id="@+id/btn_allarea_select"
+                android:layout_width="48dp"
+                android:layout_height="wrap_content"
+                android:background="#00ff0000"
+                android:contentDescription="allarea"
+                android:drawableTop="@drawable/edit_allarea_unselect"
+                android:padding="8dp"
+                android:drawablePadding="8dp"
+                android:text="지역"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <android.widget.Button
+                android:id="@+id/btn_around_select"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:background="#00ff0000"
+                android:padding="10dp"
+                android:text="내 주변"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                android:drawablePadding="8dp"
+                android:contentDescription="myaround"
+                android:drawableTop="@drawable/edit_myaround_unselect"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <android.widget.Button
+                android:id="@+id/btn_main_select"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:background="#00ff0000"
+                android:contentDescription="mainhome"
+                android:padding="10dp"
+                android:text="메인"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                android:drawablePadding="8dp"
+                android:drawableTop="@drawable/edit_main_unselect"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <android.widget.Button
+                android:id="@+id/btn_mypick_select"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:background="#00ff0000"
+                android:padding="10dp"
+                android:contentDescription="mypick"
+                android:text="찜"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                android:drawablePadding="8dp"
+                android:drawableTop="@drawable/edit_mypick_select"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <android.widget.Button
+                android:id="@+id/btn_mypage_select"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:background="#00ff0000"
+                android:contentDescription="mypage"
+                android:paddingTop="10dp"
+                android:text="마이페이지"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                android:drawablePadding="8dp"
+                android:drawableTop="@drawable/edit_mypage_unselect"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <layer-list>
+            <item
+                android:drawable="@drawable/question"
+                android:width="30dp"
+                android:height="30dp" />
+        </layer-list>
+    </item>
+</selector>

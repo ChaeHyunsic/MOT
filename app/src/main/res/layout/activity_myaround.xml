@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".MyaroundActivity">
+
+    <EditText
+        android:id="@+id/btn_search"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/myplace_search"
+        android:drawableRight="@drawable/search"
+        android:gravity="center_vertical"
+        android:hint="지역, 숙소 검색"
+        android:paddingLeft="23dp"
+        android:paddingEnd="20dp"
+        android:textColor="#B5B5B5"
+        android:textSize="12sp"
+        android:singleLine="true"
+        android:imeOptions="actionSearch"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/btn_myplace"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="30dp"
+        android:padding="10dp"
+        android:clickable="true"
+        android:contentDescription="mylocation"
+        android:src="@drawable/place"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_search"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btn_search" />
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/map_view"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="30dp"
+        android:contentDescription="map"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_search" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/map_view">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/pick_cardview1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@color/white"
+                android:elevation="50dp"
+                app:cardCornerRadius="15dp"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.widget.Button
+                        android:id="@+id/btn_item"
+                        android:layout_width="0dp"
+                        android:layout_height="140dp"
+                        android:background="#00ff0000"
+                        android:drawableLeft="@drawable/sample"
+                        android:drawablePadding="20dp"
+                        android:gravity="top"
+                        android:padding="20dp"
+                        android:text="바다풍경팬션 부산"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <RatingBar
+                        android:id="@+id/rv_grade"
+                        style="@style/Widget.AppCompat.RatingBar.Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="138dp"
+                        android:layout_marginTop="48dp"
+                        android:numStars="5"
+                        android:progressTint="#FDE400"
+                        android:stepSize="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_total_grade"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="7dp"
+                        android:text="4.5"
+                        android:textColor="#000000"
+                        android:textSize="11sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@+id/rv_grade"
+                        app:layout_constraintStart_toEndOf="@+id/rv_grade"
+                        app:layout_constraintTop_toTopOf="@+id/rv_grade" />
+
+                    <TextView
+                        android:id="@+id/tv_gradecount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="7dp"
+                        android:text="(678)"
+                        android:textColor="#000000"
+                        android:textSize="10sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_total_grade"
+                        app:layout_constraintStart_toEndOf="@+id/tv_total_grade"
+                        app:layout_constraintTop_toTopOf="@+id/tv_total_grade" />
+
+                    <TextView
+                        android:id="@+id/myaround_accommodation_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="155,000원"
+                        android:textColor="@color/black"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@color/white"
+                android:elevation="50dp"
+                app:cardCornerRadius="15dp"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/pick_cardview1">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.widget.Button
+                        android:id="@+id/btn_item2"
+                        android:layout_width="0dp"
+                        android:layout_height="140dp"
+                        android:background="#00ff0000"
+                        android:drawableLeft="@drawable/sample"
+                        android:drawablePadding="20dp"
+                        android:gravity="top"
+                        android:padding="20dp"
+                        android:text="바다풍경팬션 부산"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <RatingBar
+                        android:id="@+id/rv_grade2"
+                        style="@style/Widget.AppCompat.RatingBar.Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="138dp"
+                        android:layout_marginTop="48dp"
+                        android:numStars="5"
+                        android:progressTint="#FDE400"
+                        android:stepSize="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_grade2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="7dp"
+                        android:text="4.5"
+                        android:textColor="#000000"
+                        android:textSize="11sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@+id/rv_grade2"
+                        app:layout_constraintStart_toEndOf="@+id/rv_grade2"
+                        app:layout_constraintTop_toTopOf="@+id/rv_grade2" />
+
+                    <TextView
+                        android:id="@+id/tv_gradecount2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="7dp"
+                        android:text="(678)"
+                        android:textColor="#000000"
+                        android:textSize="10sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_grade2"
+                        app:layout_constraintStart_toEndOf="@+id/tv_grade2"
+                        app:layout_constraintTop_toTopOf="@+id/tv_grade2" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@color/white">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <android.widget.Button
+                android:id="@+id/btn_allarea_select"
+                android:layout_width="48dp"
+                android:layout_height="wrap_content"
+                android:background="#00ff0000"
+                android:contentDescription="allarea"
+                android:drawableTop="@drawable/edit_allarea_unselect"
+                android:padding="8dp"
+                android:drawablePadding="8dp"
+                android:text="지역"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <android.widget.Button
+                android:id="@+id/btn_around_select"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:background="#00ff0000"
+                android:padding="10dp"
+                android:text="내 주변"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                android:drawablePadding="8dp"
+                android:contentDescription="myaround"
+                android:drawableTop="@drawable/edit_myaround_select"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <android.widget.Button
+                android:id="@+id/btn_main_select"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:background="#00ff0000"
+                android:contentDescription="mainhome"
+                android:padding="10dp"
+                android:text="메인"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                android:drawablePadding="8dp"
+                android:drawableTop="@drawable/edit_main_unselect"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <android.widget.Button
+                android:id="@+id/btn_mypick_select"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:background="#00ff0000"
+                android:padding="10dp"
+                android:contentDescription="mypick"
+                android:text="찜"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                android:drawablePadding="8dp"
+                android:drawableTop="@drawable/edit_mypick_unselect"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <android.widget.Button
+                android:id="@+id/btn_mypage_select"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:background="#00ff0000"
+                android:contentDescription="mypage"
+                android:paddingTop="10dp"
+                android:text="마이페이지"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                android:drawablePadding="8dp"
+                android:drawableTop="@drawable/edit_mypage_unselect"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

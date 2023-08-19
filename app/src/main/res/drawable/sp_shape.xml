@@ -3,9 +3,7 @@
     <item>
         <layer-list>
             <item
-                android:drawable="@drawable/down_arrow"
-                android:width="15dp"
-                android:height="15dp" />
+                android:drawable="@drawable/down_arrow"/>
         </layer-list>
     </item>
 </selector>
