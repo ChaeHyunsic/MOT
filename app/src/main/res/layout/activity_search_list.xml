@@ -76,119 +76,27 @@
                 app:layout_constraintTop_toBottomOf="@+id/person_btn"
                 app:srcCompat="@drawable/fitter_img" />
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cardview1"
+            <LinearLayout
+                android:id="@+id/result_ll"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="500dp"
                 android:layout_marginStart="30dp"
-                android:layout_marginTop="25dp"
+                android:layout_marginTop="30dp"
                 android:layout_marginEnd="30dp"
-                android:background="#FFFFFF"
-                android:elevation="40dp"
-                app:cardCornerRadius="15dp"
-                app:cardUseCompatPadding="true"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/fitter_btn">
 
-                <androidx.constraintlayout.widget.ConstraintLayout
+                <TextView
+                    android:id="@+id/default_tv"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center_vertical|center_horizontal"
-                    android:gravity="center">
+                    android:layout_height="wrap_content"
+                    android:text="일치하는 검색 결과가 존재하지 않습니다."
+                    android:textAlignment="center" />
+            </LinearLayout>
 
-                    <ImageView
-                        android:id="@+id/result_img1"
-                        android:layout_width="0dp"
-                        android:layout_height="200dp"
-                        android:scaleType="centerCrop"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        tools:srcCompat="@tools:sample/backgrounds/scenic" />
-
-                    <TextView
-                        android:id="@+id/result_title1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="30dp"
-                        android:layout_marginTop="30dp"
-                        android:text="아리랑 팬션 부산"
-                        android:textAppearance="@style/title_style"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/result_img1" />
-
-                    <RatingBar
-                        android:id="@+id/result_ratingBar1"
-                        style="?android:attr/ratingBarStyleSmall"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        app:layout_constraintStart_toStartOf="@+id/result_title1"
-                        app:layout_constraintTop_toBottomOf="@+id/result_title1" />
-
-                    <TextView
-                        android:id="@+id/result_rating1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="5dp"
-                        android:text="4.5"
-                        android:textAppearance="@style/anno_style"
-                        app:layout_constraintStart_toEndOf="@+id/result_ratingBar1"
-                        app:layout_constraintTop_toBottomOf="@+id/result_title1" />
-
-                    <ImageView
-                        android:id="@+id/result_wanted1"
-                        android:layout_width="23dp"
-                        android:layout_height="22dp"
-                        android:layout_marginEnd="30dp"
-                        app:layout_constraintBottom_toBottomOf="@+id/result_ratingBar1"
-                        app:layout_constraintEnd_toEndOf="@+id/result_img1"
-                        app:layout_constraintTop_toTopOf="@+id/result_title1"
-                        app:srcCompat="@drawable/wanted_img" />
-
-                    <TextView
-                        android:id="@+id/result_tv1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="30dp"
-                        android:text="1인"
-                        android:textAppearance="@style/title_style"
-                        app:layout_constraintStart_toStartOf="@+id/result_title1"
-                        app:layout_constraintTop_toBottomOf="@+id/result_ratingBar1" />
-
-                    <TextView
-                        android:id="@+id/result_price1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="30dp"
-                        android:text="25,000원"
-                        android:textAppearance="@style/text_style"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="@+id/result_tv1" />
-
-                    <TextView
-                        android:id="@+id/result_tv2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="30dp"
-                        android:layout_marginBottom="30dp"
-                        android:text="합계 금액"
-                        android:textAppearance="@style/title_style"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="@+id/result_tv1"
-                        app:layout_constraintTop_toBottomOf="@+id/result_tv1" />
-
-                    <TextView
-                        android:id="@+id/result_total1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="30dp"
-                        android:text="600,000원"
-                        android:textAppearance="@style/text_style"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="@+id/result_tv2" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
-            </androidx.cardview.widget.CardView>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

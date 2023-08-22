@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.example.mot.databinding.ActivityDateChoseBinding
+import java.text.SimpleDateFormat
 import java.util.*
 
 class DateChoseActivity : AppCompatActivity() {
@@ -30,15 +31,16 @@ class DateChoseActivity : AppCompatActivity() {
         mBinding!!.calendarView.setOnDateChangeListener { _, year, month, dayOfMonth ->
             val selectedDate = Calendar.getInstance()
             selectedDate.set(year, month, dayOfMonth)
+            var sdf = SimpleDateFormat("yyyy-MM-dd")
 
             if (mBinding!!.startDate.text == "") {
                 selectedStartDate = selectedDate.timeInMillis
-                mBinding!!.startDate.text = year.toString() + "년 " + (month+1).toString() + "월 " + dayOfMonth.toString() + "일"
+                mBinding!!.startDate.text = sdf.format(selectedDate.time)
             }
             else {
                 if (selectedDate.timeInMillis > selectedStartDate) {
                     selectedEndDate = selectedDate.timeInMillis
-                    mBinding!!.endDate.text = year.toString() + "년 " + (month+1).toString() + "월 " + dayOfMonth.toString() + "일"
+                    mBinding!!.endDate.text = sdf.format(selectedDate.time)
                     mBinding!!.choseBtn.visibility = View.VISIBLE
                 }
                 else {

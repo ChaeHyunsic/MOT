@@ -14,7 +14,7 @@
         android:layout_marginTop="220dp"
         android:ems="10"
         android:hint="아이디"
-        android:inputType="textPassword"
+        android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

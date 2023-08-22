@@ -3,9 +3,18 @@ package com.example.mot
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
+import android.view.View
+import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import com.example.mot.databinding.ActivitySearchListBinding
+import com.example.mot.databinding.ResultAccommodationItemBinding
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 
 class SearchListActivity : AppCompatActivity() {
 
@@ -20,6 +29,8 @@ class SearchListActivity : AppCompatActivity() {
     private var end_date: String? = null
 
     private var person: String? = null
+
+    private var keyword: String? = null
 
     private val getResultFitter = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
         if (result.resultCode == Activity.RESULT_OK) {
@@ -68,11 +79,57 @@ class SearchListActivity : AppCompatActivity() {
 
         person = intent.getStringExtra("person")
 
-        mBinding!!.dateBtn.setText(start_date + "~" + end_date)
+        keyword = intent.getStringExtra("keyword")
+
+        mBinding!!.dateBtn.setText(start_date + " ~ " + end_date)
         mBinding!!.personBtn.setText(person + "명")
 
+        var retrofit = Retrofit.Builder()
+            .baseUrl("http://13.125.85.98:8080")
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+
+        var service = retrofit.create(Service::class.java)
+
+        Log.d("chs", keyword + " " + start_date + " " + person + " " + end_date)
+        service.search(keyword, start_date, person, end_date).enqueue(object :
+            Callback<inq_accommodation> {
+            override fun onResponse(call: Call<inq_accommodation>, response: Response<inq_accommodation>) {
+                if(response.isSuccessful){
+                    var result: inq_accommodation? = response.body()
+
+                    if (result != null) {
+                        mBinding!!.defaultTv.visibility = View.GONE
+
+                        val newCardViewBinding = ResultAccommodationItemBinding.inflate(layoutInflater)
+
+                        newCardViewBinding.resultTitle1.text = result.name
+                        newCardViewBinding.resultRatingBar1.rating = result.star.toFloat()
+                        newCardViewBinding.resultRating1.text = result.star.toString()
+
+                        if (result.hearts != null) {
+                            newCardViewBinding.resultWanted1.setImageResource(R.drawable.wanted_img)
+                        }
+
+                        newCardViewBinding.resultPrice1.text = result.price.toString() + " 원"
+                        newCardViewBinding.resultTotal1.text = (result.price * person!!.toInt()).toString() + " 원"
+
+                        mBinding!!.resultLl.addView(newCardViewBinding.root)
+                    }
+                }else{
+                    // 통신이 실패한 경우(응답코드 3xx, 4xx 등)
+                    Toast.makeText(this@SearchListActivity, "서버가 혼잡합니다. 잠시후 시도해주시기 바랍니다.", Toast.LENGTH_SHORT).show()
+                }
+            }
+
+            override fun onFailure(call: Call<inq_accommodation>, t: Throwable) {
+                // 통신 실패 (인터넷 끊킴, 예외 발생 등 시스템적인 이유)
+                Toast.makeText(this@SearchListActivity, "서버가 혼잡합니다. 잠시후 시도해주시기 바랍니다.", Toast.LENGTH_SHORT).show()
+            }
+        })
+
         mBinding!!.fitterBtn.setOnClickListener {
-            val intent = Intent(this, FitterActivity::class.java)
+            val intent = Intent(this, FilterActivity::class.java)
 
             if (fitter1 != null) {
                 intent.putExtra("fitter 1", fitter1)

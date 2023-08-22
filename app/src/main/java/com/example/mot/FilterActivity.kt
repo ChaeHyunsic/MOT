@@ -4,17 +4,17 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import com.example.mot.databinding.ActivityFitterBinding
+import com.example.mot.databinding.ActivityFilterBinding
 
-class FitterActivity : AppCompatActivity(){
+class FilterActivity : AppCompatActivity(){
 
-    private var mBinding: ActivityFitterBinding? = null
+    private var mBinding: ActivityFilterBinding? = null
     private val binding get() = mBinding!!
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        mBinding = ActivityFitterBinding.inflate(layoutInflater)
+        mBinding = ActivityFilterBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         val fitter1 = intent.getStringExtra("fitter 1")

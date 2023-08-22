@@ -9,9 +9,8 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/scrollView2"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginBottom="50dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout7"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -54,6 +53,7 @@
                 android:layout_width="110dp"
                 android:layout_height="90dp"
                 android:layout_marginTop="10dp"
+                android:visibility="invisible"
                 app:cardCornerRadius="20dp"
                 app:layout_constraintStart_toStartOf="@+id/title1_tv"
                 app:layout_constraintTop_toBottomOf="@+id/title1_tv">
@@ -74,6 +74,7 @@
                 android:layout_marginTop="5dp"
                 android:text="아리랑 펜션"
                 android:textAppearance="@style/text_style"
+                android:visibility="invisible"
                 app:layout_constraintEnd_toEndOf="@+id/recent_img_view1"
                 app:layout_constraintStart_toStartOf="@+id/recent_img_view1"
                 app:layout_constraintTop_toBottomOf="@+id/recent_img_view1" />
@@ -82,6 +83,7 @@
                 android:id="@+id/recent_img_view2"
                 android:layout_width="110dp"
                 android:layout_height="90dp"
+                android:visibility="invisible"
                 app:cardCornerRadius="20dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -103,6 +105,7 @@
                 android:layout_marginTop="5dp"
                 android:text="비치웨어 펜션"
                 android:textAppearance="@style/text_style"
+                android:visibility="invisible"
                 app:layout_constraintEnd_toEndOf="@+id/recent_img_view2"
                 app:layout_constraintStart_toStartOf="@+id/recent_img_view2"
                 app:layout_constraintTop_toBottomOf="@+id/recent_img_view2" />
@@ -112,6 +115,7 @@
                 android:layout_width="110dp"
                 android:layout_height="90dp"
                 android:layout_marginEnd="30dp"
+                android:visibility="invisible"
                 app:cardCornerRadius="20dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/recent_img_view2">
@@ -132,6 +136,7 @@
                 android:layout_marginTop="5dp"
                 android:text="바다풍경"
                 android:textAppearance="@style/text_style"
+                android:visibility="invisible"
                 app:layout_constraintEnd_toEndOf="@+id/recent_img_view3"
                 app:layout_constraintStart_toStartOf="@+id/recent_img_view3"
                 app:layout_constraintTop_toBottomOf="@+id/recent_img_view3" />
@@ -190,6 +195,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="2dp"
+                android:progressTint="@color/appmain"
+                android:rating="4.5"
                 app:layout_constraintStart_toStartOf="@+id/rec_title_tv1"
                 app:layout_constraintTop_toBottomOf="@+id/rec_title_tv1" />
 
@@ -228,12 +235,128 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bot_nav"
-        android:layout_width="0dp"
+    <LinearLayout
+        android:id="@+id/linearLayout7"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <android.widget.Button
+                android:id="@+id/btn_allarea_select"
+                android:layout_width="48dp"
+                android:layout_height="wrap_content"
+                android:background="#00ff0000"
+                android:contentDescription="allarea"
+                android:drawableTop="@drawable/edit_allarea_unselect"
+                android:drawablePadding="8dp"
+                android:padding="8dp"
+                android:text="지역"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <android.widget.Button
+                android:id="@+id/btn_around_select"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:background="#00ff0000"
+                android:contentDescription="myaround"
+                android:drawableTop="@drawable/edit_myaround_unselect"
+                android:drawablePadding="8dp"
+                android:padding="10dp"
+                android:text="내 주변"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <android.widget.Button
+                android:id="@+id/btn_main_select"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:background="#00ff0000"
+                android:contentDescription="mainhome"
+                android:drawableTop="@drawable/edit_main_select"
+                android:drawablePadding="8dp"
+                android:padding="10dp"
+                android:text="메인"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <android.widget.Button
+                android:id="@+id/btn_mypick_select"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:background="#00ff0000"
+                android:contentDescription="mypick"
+                android:drawableTop="@drawable/edit_mypick_unselect"
+                android:drawablePadding="8dp"
+                android:padding="10dp"
+                android:text="찜"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <android.widget.Button
+                android:id="@+id/btn_mypage_select"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:background="#00ff0000"
+                android:contentDescription="mypage"
+                android:drawableTop="@drawable/edit_mypage_unselect"
+                android:drawablePadding="10dp"
+                android:paddingTop="8dp"
+                android:text="마이페이지"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
