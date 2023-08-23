@@ -13,8 +13,13 @@ interface Service {
     fun search(
         @Query("name") name: String?,
         @Query("checkin") checkin: String?,
-        @Query("people") people: String?,
+        @Query("people") people: Int?,
         @Query("checkout") checkout: String?
-    ) : Call<inq_accommodation>
+    ) : Call<List<inq_accommodation>>
+
+    @GET("/assign-access-token")
+    fun refresh_token(
+        @Header("Refresh") Refresh: String?
+    ) : Call<Void>
 
 }

@@ -6,98 +6,91 @@
     android:layout_height="match_parent">
 
 
+    <ImageButton
+        android:id="@+id/prev_btn"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:background="@null"
+        android:contentDescription="prev"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/prev_img" />
+
+    <TextView
+        android:id="@+id/title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="검색 결과"
+        android:textAppearance="@style/title_style"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/prev_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/prev_btn" />
+
+    <android.widget.Button
+        android:id="@+id/date_btn"
+        android:layout_width="227dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:background="@drawable/search_result_btn_background"
+        android:drawableLeft="@drawable/date_drawable"
+        android:paddingLeft="15dp"
+        android:text="5월 13일 ~ 5월 17일"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="@+id/prev_btn"
+        app:layout_constraintTop_toBottomOf="@+id/prev_btn" />
+
+    <android.widget.Button
+        android:id="@+id/person_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/search_result_btn_background"
+        android:drawableLeft="@drawable/person_drawable"
+        android:paddingLeft="15dp"
+        android:text="40명"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/date_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/date_btn"
+        app:layout_constraintTop_toTopOf="@+id/date_btn" />
+
+    <ImageView
+        android:id="@+id/fitter_btn"
+        android:layout_width="27dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/person_btn"
+        app:srcCompat="@drawable/fitter_img" />
+
     <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/person_btn"
+        app:layout_constraintStart_toStartOf="@+id/date_btn"
+        app:layout_constraintTop_toBottomOf="@+id/fitter_btn">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <LinearLayout
+            android:id="@+id/result_ll"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <ImageButton
-                android:id="@+id/prev_btn"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="30dp"
-                android:background="@null"
-                android:contentDescription="prev"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/prev_img" />
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
             <TextView
-                android:id="@+id/title_tv"
-                android:layout_width="wrap_content"
+                android:id="@+id/default_tv"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
-                android:text="검색 결과"
-                android:textAppearance="@style/title_style"
-                android:textSize="30sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <android.widget.Button
-                android:id="@+id/date_btn"
-                android:layout_width="227dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="35dp"
-                android:background="@drawable/search_result_btn_background"
-                android:drawableLeft="@drawable/date_drawable"
-                android:paddingLeft="15dp"
-                android:text="5월 13일 ~ 5월 17일"
-                android:textSize="10sp"
-                app:layout_constraintStart_toStartOf="@+id/prev_btn"
-                app:layout_constraintTop_toBottomOf="@+id/prev_btn" />
-
-            <android.widget.Button
-                android:id="@+id/person_btn"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="30dp"
-                android:background="@drawable/search_result_btn_background"
-                android:drawableLeft="@drawable/person_drawable"
-                android:paddingLeft="15dp"
-                android:text="40명"
-                android:textSize="10sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/date_btn"
-                app:layout_constraintTop_toTopOf="@+id/date_btn" />
-
-            <ImageView
-                android:id="@+id/fitter_btn"
-                android:layout_width="27dp"
-                android:layout_height="27dp"
-                android:layout_marginTop="11dp"
-                android:layout_marginEnd="30dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/person_btn"
-                app:srcCompat="@drawable/fitter_img" />
-
-            <LinearLayout
-                android:id="@+id/result_ll"
-                android:layout_width="0dp"
-                android:layout_height="500dp"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginEnd="30dp"
-                android:orientation="vertical"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/fitter_btn">
-
-                <TextView
-                    android:id="@+id/default_tv"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="일치하는 검색 결과가 존재하지 않습니다."
-                    android:textAlignment="center" />
-            </LinearLayout>
-
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                android:text="일치하는 검색 결과가 존재하지 않습니다."
+                android:textAlignment="center" />
+        </LinearLayout>
     </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

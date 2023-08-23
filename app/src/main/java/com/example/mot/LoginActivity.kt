@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.mot.databinding.ActivityLoginBinding
+import okhttp3.OkHttpClient
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -23,8 +24,13 @@ class LoginActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
+        val httpClient = OkHttpClient.Builder()
+            .addInterceptor(TokenInterceptor()) // Add your custom interceptor
+            .build()
+
         var retrofit = Retrofit.Builder()
             .baseUrl("http://13.125.85.98:8080")
+            .client(httpClient)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
 
