@@ -28,3 +28,27 @@ data class inq_accommodation(
     var distance: String,
     var photo: String
 )
+
+data class HotelRequestData(
+    var name: String,
+    var region: String,
+    var address: String,
+    var addressInfo: String
+)
+
+data class HotelResponseData(
+    var id: Int,
+    var maxPeople: Int,
+    var minPeople: Int,
+    var price: Int,
+    var name: String,
+    var star: Double,
+    var address: String,
+    var map: String,
+    var region: String,
+    var addressInfo: String,
+    var transfer: String,
+    var info: String,
+    var distance: String,
+    var photo: String
+)

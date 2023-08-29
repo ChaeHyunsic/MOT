@@ -9,6 +9,10 @@ interface Service {
         @Body loginRequestData: LoginRequestData
     ) : Call<LoginData>
 
+    @GET("/assign-access-token")
+    fun refresh_token(
+    ) : Call<Void>
+
     @GET("/hotel/search/peopleandday")
     fun search(
         @Query("name") name: String?,
@@ -17,9 +21,15 @@ interface Service {
         @Query("checkout") checkout: String?
     ) : Call<List<inq_accommodation>>
 
-    @GET("/assign-access-token")
-    fun refresh_token(
-        @Header("Refresh") Refresh: String?
-    ) : Call<Void>
+    @GET("/hotel/search")
+    fun search_name(
+        @Query("name") name: String?
+    ) : Call<List<inq_accommodation>>
+
+    @POST("/hotel")
+    fun hotel_add(
+        @Header("Authorization") Authorization: String?,
+        @Body hotelRequestData: HotelRequestData?
+    ) : Call<HotelResponseData>
 
 }

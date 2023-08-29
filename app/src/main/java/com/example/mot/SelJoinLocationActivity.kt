@@ -19,6 +19,8 @@ class SelJoinLocationActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
+        val accom_name = intent.getStringExtra("accom_name")
+
         var chosen_location: Button? = null
 
         val buttons = listOf(mBinding!!.locBtn, mBinding!!.locBtn2, mBinding!!.locBtn3, mBinding!!.locBtn4, mBinding!!.locBtn5, mBinding!!.locBtn6, mBinding!!.locBtn7, mBinding!!.locBtn8,
@@ -40,7 +42,7 @@ class SelJoinLocationActivity : AppCompatActivity() {
         mBinding!!.confirmBtn.setOnClickListener {
             if (chosen_location != null) {
                 val intent = Intent(this, SelJoinAddressActivity::class.java)
-                intent.putExtra("accom_name", intent.getStringExtra("accom_name"))
+                intent.putExtra("accom_name", accom_name)
                 intent.putExtra("accom_location", chosen_location!!.text.toString())
 
                 startActivity(intent)
