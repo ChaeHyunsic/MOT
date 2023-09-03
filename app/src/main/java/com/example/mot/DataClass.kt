@@ -92,3 +92,38 @@ data class ChkId(
     var phone: String,
     var randomNumber: Int
 )
+
+data class CertifiCode(
+    var code: String
+)
+
+data class Account(
+    var name: String,
+    var bank: String,
+    var number: String
+)
+
+data class RequestAccount(
+    var id: Int,
+    var name: String,
+    var bank: String,
+    var number: String,
+    var sellMemberId: Int
+)
+
+data class ProduceRoom(
+    var name: String,
+    var person: Int,
+    var price: Int,
+    var minPeople: Int,
+    var maxPeople: Int
+)
+
+data class RequestProduceRoom(
+    var id: Int,
+    var name: String,
+    var person: Int,
+    var price: Int,
+    var minPeople: Int,
+    var maxPeople: Int
+)

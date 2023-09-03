@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 
     <application
         android:allowBackup="true"
@@ -31,7 +33,7 @@
         <activity android:name=".PersonChoseActivity"/>
         <activity android:name=".DateChoseActivity"/>
         <activity android:name=".SearchListActivity"/>
-        <activity android:name=".FilterActivity"/>
+        <activity android:name=".Fi"/>
         <activity android:name=".ModifyActivity"/>
         <activity android:name=".JoinActivity"/>
         <activity android:name=".SelResDateActivity"/>
@@ -44,7 +46,6 @@
         <activity android:name=".SelJoinNameActivity"/>
         <activity android:name=".SelJoinLocationActivity"/>
         <activity android:name=".SelJoinAddressActivity"/>
-        <activity android:name=".SelJoinAddressDetailActivity"/>
 
     </application>
 

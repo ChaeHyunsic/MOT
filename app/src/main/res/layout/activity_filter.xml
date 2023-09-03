@@ -17,17 +17,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <ImageButton
-                android:id="@+id/prev_btn"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
+            <ImageView
+                android:id="@+id/back_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="30dp"
-                android:background="@null"
+                android:src="@drawable/vector_back"
                 android:contentDescription="prev"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/prev_img" />
+                app:layout_constraintTop_toTopOf="parent"/>
 
             <TextView
                 android:id="@+id/title_tv"
@@ -48,8 +47,8 @@
                 android:layout_marginTop="60dp"
                 android:text="선택된 필터"
                 android:textAppearance="@style/title_style"
-                app:layout_constraintStart_toStartOf="@+id/prev_btn"
-                app:layout_constraintTop_toBottomOf="@+id/prev_btn" />
+                app:layout_constraintStart_toStartOf="@+id/back_iv"
+                app:layout_constraintTop_toBottomOf="@+id/back_iv" />
 
             <LinearLayout
                 android:id="@+id/linearLayout"
@@ -68,7 +67,7 @@
                     android:layout_width="110dp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10dp"
-                    android:background="@drawable/fitter_background"
+                    android:background="@drawable/filter_background"
                     android:drawableRight="@drawable/del_background"
                     android:drawablePadding="10dp"
                     android:gravity="center"
@@ -83,7 +82,7 @@
                     android:layout_width="110dp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10dp"
-                    android:background="@drawable/fitter_background"
+                    android:background="@drawable/filter_background"
                     android:drawableRight="@drawable/del_background"
                     android:drawablePadding="10dp"
                     android:gravity="center"
@@ -97,7 +96,7 @@
                     android:id="@+id/chosen_fitter3"
                     android:layout_width="110dp"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/fitter_background"
+                    android:background="@drawable/filter_background"
                     android:drawableRight="@drawable/del_background"
                     android:drawablePadding="10dp"
                     android:gravity="center"
@@ -137,29 +136,32 @@
                     android:layout_width="110dp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10dp"
-                    android:background="@drawable/fitter_btn_background"
+                    android:background="@drawable/filter_btn_background"
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp"
-                    android:text="조식제공 56" />
+                    android:text="조식제공 56"
+                    android:textSize="12sp" />
 
                 <android.widget.Button
                     android:id="@+id/chose_fitter2"
                     android:layout_width="110dp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10dp"
-                    android:background="@drawable/fitter_btn_background"
+                    android:background="@drawable/filter_btn_background"
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp"
-                    android:text="오션뷰 56" />
+                    android:text="오션뷰 56"
+                    android:textSize="12sp" />
 
                 <android.widget.Button
                     android:id="@+id/chose_fitter3"
                     android:layout_width="110dp"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/fitter_btn_background"
+                    android:background="@drawable/filter_btn_background"
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp"
-                    android:text="애견동반 56" />
+                    android:text="애견동반 56"
+                    android:textSize="12sp" />
 
             </LinearLayout>
 
@@ -181,29 +183,32 @@
                     android:layout_width="110dp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10dp"
-                    android:background="@drawable/fitter_btn_background"
+                    android:background="@drawable/filter_btn_background"
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp"
-                    android:text="풀빌라 56" />
+                    android:text="풀빌라 56"
+                    android:textSize="12sp" />
 
                 <android.widget.Button
                     android:id="@+id/chose_fitter5"
                     android:layout_width="110dp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10dp"
-                    android:background="@drawable/fitter_btn_background"
+                    android:background="@drawable/filter_btn_background"
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp"
-                    android:text="사진 맛집 56" />
+                    android:text="사진 맛집 56"
+                    android:textSize="12sp" />
 
                 <android.widget.Button
                     android:id="@+id/chose_fitter6"
                     android:layout_width="110dp"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/fitter_btn_background"
+                    android:background="@drawable/filter_btn_background"
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp"
-                    android:text="뷰 맛집 56" />
+                    android:text="뷰 맛집 56"
+                    android:textSize="12sp" />
 
             </LinearLayout>
 
@@ -225,29 +230,32 @@
                     android:layout_width="110dp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10dp"
-                    android:background="@drawable/fitter_btn_background"
+                    android:background="@drawable/filter_btn_background"
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp"
-                    android:text="캠핑·카라반 56" />
+                    android:text="캠핑·카라반 56"
+                    android:textSize="12sp"/>
 
                 <android.widget.Button
                     android:id="@+id/chose_fitter8"
                     android:layout_width="110dp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10dp"
-                    android:background="@drawable/fitter_btn_background"
+                    android:background="@drawable/filter_btn_background"
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp"
-                    android:text="키즈 전용 56" />
+                    android:text="키즈 전용 56"
+                    android:textSize="12sp"/>
 
                 <android.widget.Button
                     android:id="@+id/chose_fitter9"
                     android:layout_width="110dp"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/fitter_btn_background"
+                    android:background="@drawable/filter_btn_background"
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp"
-                    android:text="모텔 56" />
+                    android:text="모텔 56"
+                    android:textSize="12sp" />
 
             </LinearLayout>
 
@@ -269,20 +277,22 @@
                     android:layout_width="110dp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10dp"
-                    android:background="@drawable/fitter_btn_background"
+                    android:background="@drawable/filter_btn_background"
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp"
-                    android:text="호텔 56" />
+                    android:text="호텔 56"
+                    android:textSize="12sp" />
 
                 <android.widget.Button
                     android:id="@+id/chose_fitter11"
                     android:layout_width="130dp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10dp"
-                    android:background="@drawable/fitter_btn_background"
+                    android:background="@drawable/filter_btn_background"
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp"
-                    android:text="게스트하우스 56" />
+                    android:text="게스트하우스 56"
+                    android:textSize="12sp" />
 
             </LinearLayout>
 
@@ -314,29 +324,32 @@
                     android:layout_width="110dp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10dp"
-                    android:background="@drawable/fitter_btn_background"
+                    android:background="@drawable/filter_btn_background"
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp"
-                    android:text="단체바베큐 56" />
+                    android:text="단체바베큐 56"
+                    android:textSize="12sp" />
 
                 <android.widget.Button
                     android:id="@+id/chose_group_fitter2"
                     android:layout_width="110dp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10dp"
-                    android:background="@drawable/fitter_btn_background"
+                    android:background="@drawable/filter_btn_background"
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp"
-                    android:text="넓은 강당 56" />
+                    android:text="넓은 강당 56"
+                    android:textSize="12sp" />
 
                 <android.widget.Button
                     android:id="@+id/chose_group_fitter3"
                     android:layout_width="110dp"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/fitter_btn_background"
+                    android:background="@drawable/filter_btn_background"
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp"
-                    android:text="캠프파이어 56" />
+                    android:text="캠프파이어 56"
+                    android:textSize="12sp" />
             </LinearLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,5 +1,6 @@
 package com.example.mot
 
+import android.accounts.Account
 import okhttp3.ResponseBody
 import retrofit2.Call
 import retrofit2.http.*
@@ -69,5 +70,19 @@ interface Service {
     fun modifyPw(
         @Body loginPw: String
     ): Call<ResponseBody>
+
+    @PATCH("/account/{account}")
+    fun modifyaccount(
+        @Path("account") account: Account
+    ): Call<RequestAccount>
+
+    @GET("/accountt?accountId=1")
+    fun getaccount(
+    ): Call<RequestAccount>
+
+    @POST("/room/{hotel-id}")
+    fun produceroom(
+        @Body produceRoom: ProduceRoom
+    ): Call<RequestProduceRoom>
 
 }
