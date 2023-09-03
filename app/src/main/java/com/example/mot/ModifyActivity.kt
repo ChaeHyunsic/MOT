@@ -5,16 +5,15 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.mot.R
 import com.example.mot.databinding.ActivityModifyBinding
-import com.example.mot.ModifyIdFragment
-import com.example.mot.ModifyPwFragment
+import com.example.register.ModifyPwFragment
 import com.google.android.material.tabs.TabLayout
-import kotlin.reflect.KMutableProperty1
 
 class ModifyActivity: AppCompatActivity() {
 
     lateinit var binding: ActivityModifyBinding
     lateinit var tab1: ModifyIdFragment
     lateinit var tab2: ModifyPwFragment
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,6 +22,7 @@ class ModifyActivity: AppCompatActivity() {
 
         tab1 = ModifyIdFragment()
         tab2 = ModifyPwFragment()
+
 
         supportFragmentManager.beginTransaction().add(R.id.modify_fl, tab1).commit()
 
@@ -58,7 +58,6 @@ class ModifyActivity: AppCompatActivity() {
                 .replace(R.id.modify_fl, it).commit()
         }
     }
-
 
     fun changeFragment(fragment: Fragment){
         supportFragmentManager

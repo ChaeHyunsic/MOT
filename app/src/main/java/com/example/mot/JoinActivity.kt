@@ -1,7 +1,6 @@
 package com.example.mot
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -9,8 +8,10 @@ import android.view.KeyEvent
 import android.view.KeyEvent.KEYCODE_ENTER
 import android.view.View
 import androidx.appcompat.app.AlertDialog
-import com.example.mot.CertifiActivity
+import androidx.appcompat.app.AppCompatActivity
+import com.example.mot.*
 import com.example.mot.databinding.ActivityJoinBinding
+import okhttp3.OkHttpClient
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -27,56 +28,56 @@ class JoinActivity : AppCompatActivity() {
 
         setContentView(binding.root)
 
-//        var retrofit = Retrofit.Builder()
-//            .baseUrl("")//서버 주소를 적을 것
-//            .addConverterFactory(GsonConverterFactory.create())
-//            .build()
-//
-//        var Service = retrofit.create(Service::class.java)
+        val httpClient = OkHttpClient.Builder()
+            .addInterceptor(TokenInterceptor()) // Add your custom interceptor
+            .build()
+
+        var retrofit = Retrofit.Builder()
+            .baseUrl("http://13.125.85.98:8080")//서버 주소를 적을 것
+            .client(httpClient)
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+
+        var Service = retrofit.create(Service::class.java)
 
 
         //아이디 정규표현식 및 중복확인 기능
         binding.dupliBtnIb.setOnClickListener{
             var textid = binding.idInputEt.text.toString()
-
-            if(verifyId(textid)){
-                setIdStatus(true)
-            }
-            else{
-                setIdStatus(false)
-            }
+            var dialog = AlertDialog.Builder(this@JoinActivity)
 
             //아이디 중복 retrofit2
-//            Service.requestId(textid).enqueue(object : Callback<Id_Duplic> {
-//                override fun onResponse(call: Call<Id_Duplic>, response: Response<Id_Duplic>) {
-//                    //응답값을 받아왓을 때
-//                    var dialog = AlertDialog.Builder(this@JoinActivity)
-//                    var duplic_code = response.code() //서버에서 받은 코드값을 duplic_code 객체에 넣음
-//                    if(duplic_code == 200){
-//                        if(verifyId(textid)){
-//                            setIdStatus(true)
-//                        }
-//                        else{
-//                            setIdStatus(false)
-//                        }
-//                    }
-//                    else{
-//                        dialog.setTitle("실패")
-//                        dialog.setMessage("통신에 실패하였습니다.")
-//                        dialog.show()
-//                    }
-//                }
-//
-//                override fun onFailure(call: Call<Id_Duplic>, t: Throwable) {
-//                    //웹통신이 실패했을 시
-//                    var dialog = AlertDialog.Builder(this@JoinActivity)
-//                    dialog.setTitle("실패")
-//                    dialog.setMessage("통신에 실패하였습니다.")
-//                    dialog.show()
-//
-//                }
-//
-//            })
+            Service.requestId(textid).enqueue(object : Callback<Check> {
+                override fun onResponse(call: Call<Check>, response: Response<Check>) {
+                    var result: Check? = response.body() //서버에서 받은 코드값을 duplic_code 객체에 넣음
+                    if(result != null){
+                        if(result.check == true){
+                            if(verifyId(textid)){
+                                setIdStatus(true)
+                            }
+                            else{
+                                setIdStatus(false)
+                            }
+                        }
+                        else{
+                            setIdStatus(false)
+                        }
+                    }
+                    else{
+                        setIdStatus(false)
+                    }
+
+                }
+
+                override fun onFailure(call: Call<Check>, t: Throwable) {
+                    //웹통신이 실패했을 시
+                    dialog.setTitle("통신 실패")
+                    dialog.setMessage("통신에 실패하였습니다.")
+                    dialog.show()
+
+                }
+
+            })
         }
 
         //비밀번호 입력시 정규표현식 확인 기능
@@ -137,7 +138,39 @@ class JoinActivity : AppCompatActivity() {
             }
         }
 
+        binding.btnIb.setOnClickListener {
+            var textid = binding.idInputEt.text.toString()
+            var textpw = binding.pwInputEt.text.toString()
+            var texttel = binding.telInputEt.text.toString()
+            var dialog = AlertDialog.Builder(this@JoinActivity)
 
+            Service.requestJoin(JoinRequestData(textid, textpw, texttel)).enqueue(object : Callback<JoinResponseData>{
+                override fun onResponse(call: Call<JoinResponseData>, response: Response<JoinResponseData>) {
+                    var result: JoinResponseData? = response.body()
+                    if(result != null){
+                        if(result.id == 1){
+                            //페이지 이동
+                        }
+                        else{
+                            dialog.setTitle("가입 실패")
+                            dialog.setMessage("가입에 실패하였습니다.")
+                            dialog.show()
+                        }
+                    }
+                    else{
+                        dialog.setTitle("가입 실패")
+                        dialog.setMessage("가입에 실패하였습니다.")
+                        dialog.show()
+                    }
+                }
+
+                override fun onFailure(call: Call<JoinResponseData>, t: Throwable) {
+                    dialog.setTitle("가입 실패")
+                    dialog.setMessage("가입에 실패하였습니다.")
+                    dialog.show()
+                }
+            })
+        }
     }
 
     //id유효성 검사

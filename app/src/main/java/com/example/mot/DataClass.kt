@@ -52,3 +52,43 @@ data class HotelResponseData(
     var distance: String,
     var photo: String
 )
+
+data class Check(
+    var check: Boolean
+)
+
+data class Certifi(
+    var phoneNumber: String,
+    var randomNumber: Int?
+)
+
+data class  Id(
+    var id: String
+)
+
+data class Pw(
+    var pw: String
+)
+
+data class JoinRequestData(
+    var loginId: String,
+    var loginPw: String,
+    var phone: String
+)
+
+data class JoinResponseData(
+    var id: Int,
+    var loginId: String
+)
+
+data class FindId(
+    var id: Int,
+    var loginId: String,
+    var createdAt: String
+)
+
+data class ChkId(
+    var loginId: String,
+    var phone: String,
+    var randomNumber: Int
+)

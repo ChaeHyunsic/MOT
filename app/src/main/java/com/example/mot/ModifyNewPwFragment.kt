@@ -8,10 +8,17 @@ import android.view.KeyEvent.KEYCODE_ENTER
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
-import com.example.mot.ModifyActivity
 import com.example.mot.databinding.FragmentModifyNewPwBinding
-import com.example.mot.ModifyPwSucFragment
+import com.example.register.ModifyPwSucFragment
+import okhttp3.OkHttpClient
+import okhttp3.ResponseBody
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 
 class ModifyNewPwFragment: Fragment(){
     lateinit var binding: FragmentModifyNewPwBinding
@@ -22,6 +29,18 @@ class ModifyNewPwFragment: Fragment(){
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentModifyNewPwBinding.inflate(inflater, container, false)
+
+        val httpClient = OkHttpClient.Builder()
+            .addInterceptor(TokenInterceptor()) // Add your custom interceptor
+            .build()
+
+        var retrofit = Retrofit.Builder()
+            .baseUrl("http://13.125.85.98:8080")//서버 주소를 적을 것
+            .client(httpClient)
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+
+        var Service = retrofit.create(Service::class.java)
 
         binding.pwInputEt.addTextChangedListener(object : TextWatcher{
             //입력이 끝날때 작동
@@ -66,8 +85,31 @@ class ModifyNewPwFragment: Fragment(){
         }
 
         binding.btnIb.setOnClickListener {
+            val textpw = binding.pwChkInputEt.text.toString()
+            var dialog = context?.let { it1 -> AlertDialog.Builder(it1) }
+
             if(binding.pwDifferentTv.visibility == View.GONE){
-                (activity as ModifyActivity).changeFragment(ModifyPwSucFragment())
+                Service.modifyPw(textpw).enqueue(object : Callback<ResponseBody>{
+                    override fun onResponse(call: Call<ResponseBody>, response: Response<ResponseBody>) {
+                        val result: ResponseBody? = response.body()
+                        if(result!=null){
+                            (activity as ModifyActivity).changeFragment(ModifyPwSucFragment())
+                        }
+                        else{
+                            dialog?.setTitle("변경 실패")
+                            dialog?.setMessage("비밀번호 변경에 실패하였습니다.")
+                            dialog?.show()
+                        }
+                    }
+
+                    override fun onFailure(call: Call<ResponseBody>, t: Throwable) {
+                        dialog?.setTitle("통신 실패")
+                        dialog?.setMessage("통신에 실패하였습니다.")
+                        dialog?.show()
+                    }
+
+                })
+
             }
         }
         return binding.root

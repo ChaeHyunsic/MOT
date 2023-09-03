@@ -1,5 +1,6 @@
 package com.example.mot
 
+import okhttp3.ResponseBody
 import retrofit2.Call
 import retrofit2.http.*
 
@@ -31,5 +32,42 @@ interface Service {
         @Header("Authorization") Authorization: String?,
         @Body hotelRequestData: HotelRequestData?
     ) : Call<HotelResponseData>
+
+    @GET("/check-login-id/{id}") //root url이후에 것을 작성할 것
+    fun requestId(
+        @Path("id") id: String?
+    ) : Call<Check> //아우풋을 정의하는 곳
+
+    @POST("/send-message/{phone}") //root url이후에 것을 작성할 것
+    fun requestCertifi(
+        @Path("phone") phone:String? //post로 받는 이름이랑
+    ) : Call<Certifi> //아우풋을 정의하는 곳
+
+    @POST("/signin")
+    fun requestJoin(
+        @Body joinRequestData: JoinRequestData
+    ): Call<JoinResponseData>
+
+    @GET("/check-random-number")
+    fun chkRandomNum(
+        @Body certifi: Certifi
+    ): Call<Check>
+
+
+    @GET("/find-login-id") //root url이후에 것을 작성할 것
+    fun findId(
+        @Body certifi: Certifi
+    ) : Call<FindId> //아우풋을 정의하는 곳
+
+
+    @POST("/login/phone") //root url이후에 것을 작성할 것
+    fun chkId(
+        @Body chkId: ChkId
+    ): Call<Check>
+
+    @PATCH("/change-pw")
+    fun modifyPw(
+        @Body loginPw: String
+    ): Call<ResponseBody>
 
 }

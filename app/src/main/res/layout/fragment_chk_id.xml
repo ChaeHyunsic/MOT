@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/modify_chk_cl"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -28,39 +27,60 @@
         app:layout_constraintEnd_toEndOf="parent"/>
 
     <TextView
-        android:id="@+id/reg_id_tv"
+        android:id="@+id/reg_id1_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="35dp"
-        android:text="아이디: AHSUW123"
+        android:layout_marginTop="32dp"
+        android:text="아이디: "
         android:textAppearance="@style/black_15"
-        app:layout_constraintTop_toTopOf="@id/id_chk_iv"
+        app:layout_constraintEnd_toStartOf="@id/reg_id2_tv"
         app:layout_constraintStart_toStartOf="@id/id_chk_iv"
+        app:layout_constraintTop_toTopOf="@id/id_chk_iv" />
+
+    <TextView
+        android:id="@+id/reg_id2_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="dir0093"
+        android:textAppearance="@style/black_15"
+        app:layout_constraintTop_toTopOf="@id/reg_id1_tv"
+        app:layout_constraintStart_toEndOf="@id/reg_id1_tv"
         app:layout_constraintEnd_toEndOf="@id/id_chk_iv"
         />
 
     <TextView
-        android:id="@+id/reg_date_tv"
+        android:id="@+id/reg_date1_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="22dp"
-        android:text="가입일: 2023. 08. 15"
+        android:text="가입일: "
         android:textAppearance="@style/black_15"
-        app:layout_constraintTop_toBottomOf="@id/reg_id_tv"
-        app:layout_constraintStart_toStartOf="@id/reg_id_tv"
-        app:layout_constraintEnd_toEndOf="@id/reg_id_tv"
+        app:layout_constraintTop_toBottomOf="@id/reg_id1_tv"
+        app:layout_constraintStart_toStartOf="@id/reg_id1_tv"
+        app:layout_constraintEnd_toEndOf="@id/reg_id1_tv"
+        />
+
+    <TextView
+        android:id="@+id/reg_date2_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2023. 08. 15"
+        android:textAppearance="@style/black_15"
+        app:layout_constraintTop_toTopOf="@id/reg_date1_tv"
+        app:layout_constraintStart_toEndOf="@id/reg_date1_tv"
+        app:layout_constraintEnd_toEndOf="@id/id_chk_iv"
         />
 
     <ImageButton
         android:id="@+id/btn_ib"
         android:layout_width="360dp"
         android:layout_height="56dp"
-        android:layout_marginBottom="10dp"
-        android:contentDescription="chk"
         android:src="@drawable/rectange_yellow"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_marginTop="275dp"
+        android:contentDescription="chk"
+        app:layout_constraintTop_toBottomOf="@id/id_chk_iv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
     <TextView
         android:id="@+id/btn_tv"

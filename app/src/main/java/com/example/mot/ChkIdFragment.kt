@@ -1,7 +1,6 @@
 package com.example.mot
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -17,6 +16,12 @@ class ChkIdFragment: Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentChkIdBinding.inflate(inflater, container, false)
+
+        val loginId = arguments?.getString("loginId")
+        val createdAt = arguments?.getString("createdAt")
+
+        binding.regId2Tv.text = loginId
+        binding.regDate2Tv.text = createdAt
 
         return binding.root
     }
