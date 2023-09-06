@@ -107,7 +107,7 @@
                 android:drawableLeft="@drawable/img_question"
                 android:drawablePadding="20dp"
                 android:gravity="center_vertical"
-                android:paddingStart="20dp"
+                android:paddingStart="24dp"
                 android:stateListAnimator="@null"
                 android:text="@string/mypage_questions"
                 android:textColor="#000000" />

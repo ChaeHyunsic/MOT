@@ -41,24 +41,52 @@
         app:layout_constraintStart_toStartOf="@+id/tv_addresstext"
         app:layout_constraintTop_toBottomOf="@+id/tv_addresstext" />
 
-    <TextView
-        android:id="@+id/btn_seartchAddress"
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/et_Address_write"
+        android:layout_width="300dp"
         android:layout_height="48dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="#B5B5B5"
         android:clickable="true"
-        android:gravity="center"
-        android:text="주소를 검색하려면 눌러주세요."
-        android:textColor="#B5B5B5"
+        android:focusable="false"
+        android:gravity="center|start"
+        android:hint="주소를 검색하려면 눌러주세요"
+        android:paddingBottom="20dp"
+        android:textColorHint="#B5B5B5"
         android:textSize="13sp"
+        android:imeOptions="actionDone"
         app:layout_constraintStart_toStartOf="@+id/selected_area"
         app:layout_constraintTop_toBottomOf="@+id/selected_area" />
 
-    <View
-        android:layout_width="340dp"
-        android:layout_height="0.5dp"
-        android:background="#B5B5B5"
+    <EditText
+        android:id="@+id/et_adrDetailWrite"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#B5B5B5"
+        android:focusable="false"
+        android:gravity="start|center_vertical"
+        android:hint="상세 주소 입력"
+        android:paddingBottom="20dp"
+        android:textColorHint="#B5B5B5"
+        android:textSize="13sp"
+        android:imeOptions="actionDone"
+        app:layout_constraintStart_toStartOf="@+id/et_Address_write"
+        app:layout_constraintTop_toBottomOf="@+id/et_Address_write" />
+
+    <android.widget.Button
+        android:id="@+id/btn_settingdone"
+        android:layout_width="360dp"
+        android:layout_height="56dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/write_done_shape"
+        android:contentDescription="buttonBack"
+        android:text="설정하기"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_seartchAddress" />
+        app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

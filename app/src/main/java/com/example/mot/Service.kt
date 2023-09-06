@@ -85,4 +85,118 @@ interface Service {
         @Body produceRoom: ProduceRoom
     ): Call<RequestProduceRoom>
 
+    // 닉네임 조회
+    @GET("/nickname")
+    fun nicknameInq(
+        //@Header("Authorization") Authorization: String?
+    ) : Call<NicknameData>
+
+    // 닉네임 변경
+    @PUT("/nickname/{nick-name}")
+    fun nicknameChange(
+        //@Header("Authorization") Authorization: String?
+        @Path("nickname") nickname : String?
+    ) : Call<NicknameData>
+
+    @GET("/hotel/search")
+    fun areaSelect(
+        @Query("name") name: String?,
+    ) : Call<List<inq_accommodation>>
+
+    // 구매자 댓글 생성
+    @POST("/comment")
+    fun commentWrite(
+        // @Header("Authorization") Authorization: String?,
+        @Body commentWriteData : CommentWriteData,
+        @Query("reserveId") reserveId : Int?
+    ) : Call<CommentData>
+
+    // 구매자 댓글 수정
+    @PATCH("/comment/PurchaseMember/{comment-id}")
+    fun commentEdit(
+        //@Header("Authorization") Authorization: String?,
+        @Body commentEditData: CommentWriteData,
+        @Path (value = "comment-id") commentId: Int?
+    ) : Call<CommentData>
+
+    // 구매자 댓글 사진 수정
+    @PATCH("/comment/PurchaseMember/upload-images")
+    fun commentImageEdit(
+        //@Header("Authorization") Authorization: String?,
+        @Body commentImage: CommentImageData
+    ) : Call<CommentData>
+
+    // 구매자 댓글 조회
+    @GET("/comment/PurchaseMember")
+    fun commentInq(
+        //@Header("Authorization") Authorization: String?
+    ) : Call<List<CommentInqData>>
+
+    // 구매자 댓글 삭제
+    @DELETE("/comment/PurchaseMember/{comment -id}")
+    fun commentDel(
+        //@Header("Authorization") Authorization: String?,
+        @Path("comment-id") commentId : Int?
+    ) : Call<Void>
+
+    // 판매자 댓글 조회
+    @GET("/comment/sellmember")
+    fun selCommentInq(
+        // @Header("Authorization") Authorization: String?,
+    ) : Call<SelCommentInqData>
+
+    // 답글 작성
+    @POST("/message")
+    fun replyWrite(
+        // @Header("Authorization") Authorization: String?,
+        @Body replyWriteData: ReplyWriteData
+    ) : Call<ReplyData>
+
+    // 답글 조회
+    @GET("/message/{message-id}")
+    fun replyInq(
+        // @Header("Authorization") Authorization: String?,
+        @Path(value = "message-id") messageId : Int
+    ) : Call<ReplyData>
+
+    // 판매자 댓글 보임여부 변경
+    @PATCH("/comment/sellmember")
+    fun commentVis(
+        // @Header("Authorization") Authorization: String?,
+        @Body selComVisible : ComVisibleData
+    ): Call<ComVisibleChange>
+
+    // 좋아요 생성
+    @POST("/heart")
+    fun heartCreate(
+        //@Header("Authorization") Authorization: String?,
+        @Query("hotelId") hotelId: String?
+    ) : Call<HeartCreateData>
+
+    // 좋아요 조회
+    @GET("/heart")
+    fun heartInq(
+        //@Header("Authorization") Authorization: String?,
+    ) : Call<List<HeartInqData>>
+
+    // 좋아요 삭제
+    @DELETE("heart/{heart-id}")
+    fun heartDel(
+        //@Header("Authorization") Authorization: String?
+        @Path("heartId") heartId : Int
+    ) : Call<Void>
+
+    // 호텔 생성
+    @POST("/hotel")
+    fun hotel_add(
+        //@Header("Authorization") Authorization: String?,
+        @Body hotelRequestData: HotelRequestData?
+    ) : Call<HotelResponseData>
+
+    // 구매자 예약 내역 조회
+    @GET("/reserve")
+    fun reserveInq(
+        //@Header("Authorization") Authorization: String?,
+    ) : Call<List<ReserveInqData>>
+
 }

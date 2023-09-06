@@ -33,7 +33,7 @@
         <activity android:name=".PersonChoseActivity"/>
         <activity android:name=".DateChoseActivity"/>
         <activity android:name=".SearchListActivity"/>
-        <activity android:name=".Fi"/>
+        <activity android:name=".FilterActivity"/>
         <activity android:name=".ModifyActivity"/>
         <activity android:name=".JoinActivity"/>
         <activity android:name=".SelResDateActivity"/>
@@ -46,6 +46,58 @@
         <activity android:name=".SelJoinNameActivity"/>
         <activity android:name=".SelJoinLocationActivity"/>
         <activity android:name=".SelJoinAddressActivity"/>
+
+        <activity
+            android:name=".SelAreaChooseActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SelSearchAddressActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SelAddressWriteActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SelTrafficDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SelLocationDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SelReviewMoreActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SelReplyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ReserveUseActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ManagerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MyreviewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MypageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MypickActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MyaroundActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AllareaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AllareaItemActivity"
+            android:exported="false" />
+        <activity
+            android:name=".WriteReviewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SelTabActivity"
+            android:exported="true" />
 
     </application>
 

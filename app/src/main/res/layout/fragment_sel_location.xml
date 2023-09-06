@@ -9,11 +9,10 @@
     <ScrollView
         android:id="@+id/scrollView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         tools:ignore="SpeakableTextPresentCheck">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -23,18 +22,15 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-            <ImageButton
+            <com.google.android.gms.maps.MapView
                 android:id="@+id/map"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:layout_marginStart="25dp"
+                android:layout_height="170dp"
                 android:layout_marginTop="40dp"
-                android:layout_marginEnd="25dp"
-                android:backgroundTint="@color/white"
+                android:layout_marginEnd="30dp"
+                android:layout_marginStart="30dp"
                 android:contentDescription="+id/map"
-                android:padding="0dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/img_map"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -78,8 +74,8 @@
                 android:id="@+id/line"
                 android:layout_width="360dp"
                 android:layout_height="1dp"
-                android:background="#A2A2A2"
                 android:layout_marginTop="15dp"
+                android:background="#A2A2A2"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tv_replyinfo" />
@@ -121,7 +117,7 @@
                 android:id="@+id/line2"
                 android:layout_width="360dp"
                 android:layout_height="1dp"
-                android:layout_marginTop="100dp"
+                android:layout_marginTop="80dp"
                 android:background="#A2A2A2"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -143,7 +139,7 @@
                 android:id="@+id/adress_detail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="25dp"
+                android:layout_marginTop="20dp"
                 android:text="부산광역시 송정로 74-4"
                 android:textColor="#000000"
                 android:textSize="15sp"
@@ -154,56 +150,40 @@
                 android:id="@+id/distance_edit"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:text="수정"
-                android:textColor="#585858"
                 android:clickable="true"
                 android:gravity="center"
-                app:layout_constraintTop_toTopOf="@id/location_str"
+                android:text="수정"
+                android:textColor="#585858"
                 app:layout_constraintBottom_toBottomOf="@id/location_str"
                 app:layout_constraintStart_toEndOf="@id/location_str"
-                />
+                app:layout_constraintTop_toTopOf="@id/location_str" />
 
             <TextView
                 android:id="@+id/traffic_edit"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:text="수정"
-                android:textColor="#585858"
                 android:clickable="true"
                 android:gravity="center"
-                app:layout_constraintTop_toTopOf="@+id/tv_traffic"
+                android:text="수정"
+                android:textColor="#585858"
                 app:layout_constraintBottom_toBottomOf="@+id/tv_traffic"
                 app:layout_constraintStart_toEndOf="@+id/tv_traffic"
-                />
+                app:layout_constraintTop_toTopOf="@+id/tv_traffic" />
 
             <TextView
                 android:id="@+id/address_edit"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:text="수정"
-                android:textColor="#585858"
                 android:clickable="true"
                 android:gravity="center"
-                app:layout_constraintTop_toTopOf="@+id/address"
+                android:text="수정"
+                android:textColor="#585858"
                 app:layout_constraintBottom_toBottomOf="@+id/address"
                 app:layout_constraintStart_toEndOf="@+id/address"
-                />
+                app:layout_constraintTop_toTopOf="@+id/address" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
-    <android.widget.Button
-        android:id="@+id/btn_reserve"
-        android:layout_width="360dp"
-        android:layout_height="56dp"
-        android:layout_marginBottom="20dp"
-        android:background="@drawable/write_done_shape"
-        android:contentDescription="buttonBack"
-        android:text="예약하기"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

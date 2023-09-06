@@ -29,7 +29,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/tv_replyTitle"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/tv_replyTitle"
-        app:srcCompat="@drawable/back" />
+        android:src="@drawable/back" />
 
     <TextView
         android:id="@+id/user_write_review"
@@ -44,7 +44,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_replyTitle" />
 
     <android.widget.Button
-        android:id="@+id/btn_settingdone"
+        android:id="@+id/btn_replyWrite"
         android:layout_width="360dp"
         android:layout_height="56dp"
         android:layout_marginBottom="20dp"

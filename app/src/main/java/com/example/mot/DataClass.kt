@@ -127,3 +127,122 @@ data class RequestProduceRoom(
     var minPeople: Int,
     var maxPeople: Int
 )
+
+
+data class CommentWriteData(
+    var context: String,
+    var star: Double
+)
+
+data class CommentData(
+    var id: Int,
+    var context: String,
+    var star: Double,
+    var photo: List<String>,
+    var visible : Boolean
+)
+
+data class CommentImageData(
+    var commentId: Int,
+    var image : List<String>
+)
+
+data class CommentInqData(
+    var id: Int,
+    var hotelstar: Double,
+    var context: String,
+    var star: Double,
+    var photo: List<String>,
+    var visible: Boolean,
+    var modifiedAt : String,
+    var packageName : String,
+    var hotelName : String,
+    var roomName : String
+)
+
+data class ReplyWriteData(
+    var commentId: Int,
+    var content : String
+)
+
+data class ReplyData(
+    var id: Int,
+    var context: String
+)
+
+data class ComVisibleData(
+    var commentId: Int,
+    var visible: Boolean
+)
+
+data class HeartCreateData(
+    var id: Int,
+    var purchaseMemberId : Int,
+    var hotelId: Int
+)
+
+data class HeartInqData(
+    var id: Int,
+    var star: Double,
+    var commentCount: Int,
+    var name: String,
+    var photo: String,
+    var price: Int
+)
+
+data class ComVisibleChange(
+    var id: Int,
+    var context: String,
+    var star: Double,
+    var photo: List<String>,
+    var visible: Boolean
+)
+data class NicknameData(
+    var name : String
+)
+
+data class SelCommentInqData(
+    var hotelstar: Double,
+    var comments: List<SelCommentData>,
+)
+
+data class SelCommentData(
+    var commentId: Int,
+    var name: String,
+    var context: String,
+    var star: Double,
+    var photo: String,
+    var visible: Boolean,
+    var modifiedAt: String,
+    var messages: List<SelCommentDetail>,
+    var packageName : String,
+    var roomName : String
+)
+
+data class SelCommentDetail(
+    var mesageId: Int,
+    var content: String,
+)
+
+data class ReserveInqData(
+    var hotelInfo : HotelInfoData,
+    var name : String,
+    var star : Double,
+    var commentCount: Int,
+    var photo: String,
+    var checkIn: String,
+    var checkOut: String,
+    var roomInfo: List<RoomInfoData>,
+    var packageInfo: List<Int>
+)
+
+data class HotelInfoData(
+    var name: String,
+    var star: Double,
+    var commentCount: Int,
+    var photo: String
+)
+
+data class RoomInfoData(
+    var name: String
+)

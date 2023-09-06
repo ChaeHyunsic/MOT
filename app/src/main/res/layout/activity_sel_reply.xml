@@ -29,7 +29,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/tv_replyTitle"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/tv_replyTitle"
-        app:srcCompat="@drawable/back" />
+        android:src="@drawable/back" />
 
     <TextView
         android:id="@+id/tv_replyinfo"

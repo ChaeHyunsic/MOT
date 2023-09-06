@@ -92,15 +92,7 @@
         app:layout_constraintStart_toStartOf="@+id/review_write_box"
         app:layout_constraintTop_toBottomOf="@+id/review_write_box" />
 
-    <ImageView
-        android:id="@+id/upload_img"
-        android:layout_width="150dp"
-        android:layout_height="130dp"
-        android:contentDescription="reviewimg"
-        app:layout_constraintTop_toBottomOf="@id/btn_review_img"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="20dp"/>
+
 
     <android.widget.Button
         android:id="@+id/btn_write_done"
@@ -114,5 +106,27 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_ratingScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="TextView"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/review_write_star"
+        app:layout_constraintStart_toEndOf="@+id/review_write_star" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_galleryView"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_write_done"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_review_img"
+        tools:listitem="@layout/upload_img" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

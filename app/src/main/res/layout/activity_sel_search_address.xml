@@ -7,11 +7,12 @@
     tools:context=".SelSearchAddressActivity">
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/detail_address_search"
         android:layout_width="230dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginTop="100dp"
+        android:backgroundTint="#B5B5B5"
         android:ems="10"
         android:hint="예 ) 한남동 123, 도산대로 33"
         android:inputType="textPersonName"
@@ -29,95 +30,62 @@
         android:background="@drawable/btn_adr_search"
         android:text="검색"
         android:textColor="#B5B5B5"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName"
-        app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName"
-        app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName" />
+        app:layout_constraintBottom_toBottomOf="@+id/detail_address_search"
+        app:layout_constraintStart_toEndOf="@+id/detail_address_search"
+        app:layout_constraintTop_toTopOf="@+id/detail_address_search" />
 
     <TextView
         android:id="@+id/tv_example"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="15dp"
         android:text="@string/address_example"
         android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintStart_toStartOf="@+id/detail_address_search"
+        app:layout_constraintTop_toBottomOf="@+id/detail_address_search" />
 
-    <TextView
-        android:id="@+id/tv_adrnumber"
-        android:layout_width="50dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="40dp"
-        android:background="@drawable/address_bg"
-        android:gravity="center"
-        android:text="우편\n번호"
-        android:textColor="#9F9F9F"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/tv_example"
-        app:layout_constraintTop_toBottomOf="@+id/tv_example" />
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:contentDescription="result"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_example">
 
-    <TextView
-        android:id="@+id/tv_adr"
-        android:layout_width="290dp"
-        android:layout_height="60dp"
-        android:background="@drawable/address_bg"
-        android:gravity="center"
-        android:text="주소"
-        android:textColor="#9F9F9F"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/tv_adrnumber"
-        app:layout_constraintStart_toEndOf="@+id/tv_adrnumber"
-        app:layout_constraintTop_toTopOf="@+id/tv_adrnumber" />
-
-    <LinearLayout
-        android:id="@+id/result_layout"
-        android:layout_width="340dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="5dp"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="@+id/tv_adr"
-        app:layout_constraintStart_toStartOf="@+id/tv_adrnumber"
-        app:layout_constraintTop_toBottomOf="@+id/tv_adr">
-
-        <TextView
-            android:id="@+id/adrnumber_result"
-            android:layout_width="wrap_content"
+        <TableLayout
+            android:id="@+id/res_detail_address"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="7dp"
-            android:text="06653"
-            android:textColor="@color/black"
-            android:textSize="10sp" />
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/tv_adrDetail_result"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:text="서울특별시 서초구 반포대로 23길 6 ( 서초동, 효진빌딩 )"
-            android:textColor="@color/black"
-            android:textSize="10sp" />
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/table_layout_background">
 
-        <TextView
-            android:id="@+id/btn_choose"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_marginStart="10dp"
-            android:clickable="true"
-            android:gravity="center"
-            android:text="선택"
-            android:textColor="@color/black"
-            android:textSize="10sp" />
-    </LinearLayout>
+                <TextView
+                    android:id="@+id/sel_adrNum_search_res"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="우편번호"
+                    android:textStyle="bold" />
 
-    <View
-        android:layout_width="340dp"
-        android:layout_height="0.8dp"
-        android:background="#B5B5B5"
-        app:layout_constraintEnd_toEndOf="@+id/result_layout"
-        app:layout_constraintStart_toStartOf="@+id/result_layout"
-        app:layout_constraintTop_toBottomOf="@+id/result_layout" />
+                <TextView
+                    android:id="@+id/sel_adr_search_res"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_weight="10"
+                    android:gravity="center"
+                    android:text="주소"
+                    android:textStyle="bold" />
+            </TableRow>
 
-
+        </TableLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
