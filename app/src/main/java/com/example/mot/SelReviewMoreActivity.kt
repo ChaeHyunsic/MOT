@@ -1,15 +1,11 @@
 package com.example.mot
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import androidx.appcompat.app.AppCompatActivity
 import com.example.mot.databinding.ActivitySelReviewMoreBinding
-import com.example.motsample.databinding.ActivitySelReviewMoreBinding
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 

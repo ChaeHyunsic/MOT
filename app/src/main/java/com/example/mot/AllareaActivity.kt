@@ -2,6 +2,7 @@ package com.example.mot
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.example.mot.databinding.ActivityAllareaBinding
 
@@ -19,7 +20,7 @@ class AllareaActivity : AppCompatActivity() {
 
         setContentView(binding.root)
 
-//        var select_location : Button
+        var select_location : Button
 
         //액티비티 변경
         binding.btnAroundSelect.setOnClickListener {

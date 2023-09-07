@@ -21,7 +21,6 @@ class SelLocationFragment : Fragment(), OnMapReadyCallback {
 
     private lateinit var mapView : MapView
 
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

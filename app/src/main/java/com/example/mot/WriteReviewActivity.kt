@@ -76,7 +76,8 @@ class WriteReviewActivity : AppCompatActivity() {
         // 입력 완료 버튼 클릭
         binding.btnWriteDone.setOnClickListener {
 
-            service.commentWrite(CommentWriteData(binding.reviewWriteBox.text.toString(), binding.reviewWriteStar.rating.toDouble()), reserveId!!.toInt()).enqueue(object :
+            service.commentWrite(TokenManager.getAuthToken(), CommentWriteData(binding.reviewWriteBox.text.toString(),
+                binding.reviewWriteStar.rating.toDouble()), reserveId!!.toInt()).enqueue(object :
             Callback<CommentData> {
                 override fun onResponse(call: Call<CommentData>, response: Response<CommentData>) {
                     if(response.isSuccessful){
@@ -102,7 +103,6 @@ class WriteReviewActivity : AppCompatActivity() {
             })
         }
     }
-
 
     // 결과 가져오기
     private var activityResult : ActivityResultLauncher<Intent> = registerForActivityResult(

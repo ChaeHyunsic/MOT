@@ -137,27 +137,25 @@ class AllareaItemActivity : AppCompatActivity() {
             areaHotelList(keyword)
         }
 
-//        필터, 날짜선택, 인원 수 액티비티 연결
-//        binding.btnFilter.setOnClickListener {
-//            val intent = Intent(this, FitterActivity::class.javja)
-//            startActivity(intent)
-//
-//        }
-//
-//        binding.btnDate.setOnClickListener {
-//            val intent = Intent(this, DateChoseActivity::class.java)
-//            startActivity(intent)
-//        }
-//
-//        binding.btnPersonCnt.setOnClickListener {
-//            val intent = Intent(this, PersonChoseActivity::class.java)
-//            startActivity(intent)
-//        }
+        binding.btnFilter.setOnClickListener {
+            val intent = Intent(this, FilterActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnDate.setOnClickListener {
+            val intent = Intent(this, DateChoseActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnPersonCnt.setOnClickListener {
+            val intent = Intent(this, PersonChoseActivity::class.java)
+            startActivity(intent)
+        }
 
          // 좋아요 생성
         var accommCardview = AccommodationItemBinding.inflate(layoutInflater)
         accommCardview.resPick.setOnClickListener {
-            service.heartCreate(/*TokenManager.getAuthToken(),*/hotelId).enqueue(object : Callback<HeartCreateData>{
+            service.heartCreate(TokenManager.getAuthToken(),hotelId).enqueue(object : Callback<HeartCreateData>{
                 override fun onResponse(
                     call: Call<HeartCreateData>,
                     response: Response<HeartCreateData>
@@ -186,7 +184,6 @@ class AllareaItemActivity : AppCompatActivity() {
             startActivity(intent)
         }
     }
-
 
 
     fun areaHotelList(keyword : String?) {

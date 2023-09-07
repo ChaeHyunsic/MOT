@@ -1,11 +1,9 @@
 package com.example.mot
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.ImageView
 import android.widget.Toast
-import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import com.example.mot.databinding.ActivityMypickBinding
 import com.example.mot.databinding.PickListItemBinding
@@ -58,15 +56,7 @@ class MypickActivity : AppCompatActivity() {
             overridePendingTransition(0, 0)
         }
 
-//        val itemList = List<HeartInqData>()
-//        val pickListAdapter = PickRecyclerAdapter(itemList)
-//
-//        pickListAdapter.notifyDataSetChanged()
-//        binding.itemList.adapter = pickListAdapter
-//        binding.itemList.layoutManager = LinearLayoutManager(this , LinearLayoutManager.VERTICAL, false)
-
-
-        service.heartInq().enqueue(object : Callback<List<HeartInqData>>{
+        service.heartInq(TokenManager.getAuthToken()).enqueue(object : Callback<List<HeartInqData>>{
             override fun onResponse(
                 call: Call<List<HeartInqData>>,
                 response: Response<List<HeartInqData>>
@@ -103,7 +93,7 @@ class MypickActivity : AppCompatActivity() {
 
         val pickCardview = PickListItemBinding.inflate(layoutInflater)
         pickCardview.imgHeart.setOnClickListener {
-            service.heartDel(/*TokenManager.getAuthToken(),*/id!!.toInt()).enqueue(object : Callback<Void>{
+            service.heartDel(TokenManager.getAuthToken(),id!!.toInt()).enqueue(object : Callback<Void>{
                 override fun onResponse(call: Call<Void>, response: Response<Void>) {
                     if(response.isSuccessful){
                         Toast.makeText(this@MypickActivity, "찜 목록에서 삭제되었습니다.", Toast.LENGTH_SHORT).show()

@@ -16,7 +16,6 @@ class Seller_packageinfo_detailsActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySellerPackageinfoDetailsBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
-
         binding = ActivitySellerPackageinfoDetailsBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
@@ -26,6 +25,7 @@ class Seller_packageinfo_detailsActivity : AppCompatActivity() {
 
             startActivity(intent)
         }
+
         binding.adjustBtn2.setOnClickListener {
             val intent = Intent(this, Seller_basicinfo_strActivity::class.java )
 
@@ -73,30 +73,33 @@ class Seller_packageinfo_detailsActivity : AppCompatActivity() {
             binding.pict5Iv.visibility = View.GONE
             binding.btn5Iv.visibility = View.GONE
         }
+
         binding.btn1Iv.setOnClickListener {
             binding.pict1Iv.visibility = View.GONE
             binding.btn1Iv.visibility = View.GONE
         }
+
         binding.btn2Iv.setOnClickListener {
             binding.pict2Iv.visibility = View.GONE
             binding.btn2Iv.visibility = View.GONE
         }
+
         binding.btn3Iv.setOnClickListener {
             binding.pict3Iv.visibility = View.GONE
             binding.btn3Iv.visibility = View.GONE
         }
+
         binding.btn4Iv.setOnClickListener {
             binding.pict4Iv.visibility = View.GONE
             binding.btn4Iv.visibility = View.GONE
         }
+
         binding.btn5Iv.setOnClickListener {
             binding.pict5Iv.visibility = View.GONE
             binding.btn5Iv.visibility = View.GONE
         }
-
-
-
     }
+
     //결과 가져오기
     private val activityResult: ActivityResultLauncher<Intent> = registerForActivityResult(
         ActivityResultContracts.StartActivityForResult()){

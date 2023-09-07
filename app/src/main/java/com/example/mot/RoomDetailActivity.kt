@@ -2,23 +2,15 @@ package com.example.mot
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.View
-import android.view.View.GONE
 import android.view.View.generateViewId
-import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.activity.result.ActivityResult
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.marginTop
 import com.bumptech.glide.Glide
 import com.example.mot.databinding.ActivityRoomDetailBinding
-import com.example.seller.RoomInfoActivity
-import okhttp3.OkHttpClient
-import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
 
 
 class RoomDetailActivity: AppCompatActivity() {

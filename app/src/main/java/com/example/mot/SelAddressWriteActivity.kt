@@ -1,6 +1,7 @@
 package com.example.mot
 
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -37,7 +38,7 @@ class SelAddressWriteActivity : AppCompatActivity() {
 
         binding.btnSettingdone.setOnClickListener {
             if (binding.etAddressWrite != null && binding.etAdrDetailWrite != null) {
-                service.hotel_add(/*TokenManager.getAuthToken(),*/HotelRequestData(accommodation_name.toString(), accommodation_location.toString(),
+                service.hotel_add(TokenManager.getAuthToken(),HotelRequestData(accommodation_name.toString(), accommodation_location.toString(),
                     binding.etAddressWrite.text.toString(), binding.etAdrDetailWrite.text.toString())
                 ).enqueue(object :
                     Callback<HotelResponseData> {
@@ -61,8 +62,8 @@ class SelAddressWriteActivity : AppCompatActivity() {
                                 selLocationFragment.arguments = bundle
 
                                 // 설정완료 버튼 클릭시 판매자 메인 화면으로 이동
-//                                val intent = Intent(this@SelAddressWriteActivity, MainActivity::class.java)
-//                                startActivity(intent)
+                                val intent = Intent(this@SelAddressWriteActivity, MainActivity::class.java)
+                                startActivity(intent)
 
                                 finish()
                             }

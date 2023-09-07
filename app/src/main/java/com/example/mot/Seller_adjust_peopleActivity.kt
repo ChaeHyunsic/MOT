@@ -21,11 +21,13 @@ class Seller_adjust_peopleActivity    : AppCompatActivity() {
                 startActivity(intent)
                 finish()
             }
+
             mBinding!!.btnDone.setOnClickListener {
                 val intent =  Intent(this,Seller_packageinfo_addpicActivity::class.java)
                 startActivity(intent)
                 finish()
             }
+
             mBinding!!.minusBtn.setOnClickListener {
                 val curValue = mBinding!!.numberBtn.text.toString().toInt()
                 if ( curValue > 1) {

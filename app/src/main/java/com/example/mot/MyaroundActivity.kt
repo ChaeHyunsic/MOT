@@ -113,38 +113,6 @@ class MyaroundActivity : AppCompatActivity() {
         }
 
     }
-
-
-//    override fun onMapReady(googleMap : GoogleMap) {
-//        this.googleMap = googleMap
-//
-//        currentMarker = setupMarker(LatLngEntity(37.5562,126.9724))  // default 서울역
-//        currentMarker?.showInfoWindow()
-//
-//
-//        fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
-//    }
-//
-//    /**
-//     * setupMarker()
-//     * 선택한 위치의 marker 표시
-//     * @param locationLatLngEntity
-//     * @return
-//     */
-//    private fun setupMarker(locationLatLngEntity: LatLngEntity): Marker? {
-//
-//        val positionLatLng = LatLng(locationLatLngEntity.latitude!!,
-//                                    locationLatLngEntity.longitude!!)
-//        val markerOption = MarkerOptions().apply {
-//            position(positionLatLng)
-//        }
-//
-//        googleMap.mapType = GoogleMap.MAP_TYPE_NORMAL  //지도 유형 설정
-//        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(positionLatLng, 15f))  // 카메라 이동
-//        googleMap.animateCamera(CameraUpdateFactory.zoomTo(15f))  // 줌의 정도 - 1 일 경우 세계지도 수준, 숫자가 커질 수록 상세지도가 표시됨
-//        return googleMap.addMarker(markerOption)
-//    }
-
 }
 
 

@@ -17,7 +17,6 @@ class ReserveUseActivity : AppCompatActivity() {
 
     private lateinit var binding : ActivityReserveUseBinding
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         binding = ActivityReserveUseBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
@@ -31,7 +30,7 @@ class ReserveUseActivity : AppCompatActivity() {
         var service = retrofit.create(Service::class.java)
 
 
-        service.reserveInq(/*TokenManager.getAuthToken(),*/).enqueue(object :
+        service.reserveInq(TokenManager.getAuthToken()).enqueue(object :
             Callback<List<ReserveInqData>>{
             override fun onResponse(
                 call: Call<List<ReserveInqData>>,
@@ -101,11 +100,6 @@ class ReserveUseActivity : AppCompatActivity() {
             startActivity(intent)
             overridePendingTransition(0, 0)
         }
-
-//        binding.btnReview.setOnClickListener {
-//            val intent = Intent(this, WriteReviewActivity::class.java)
-//            startActivity(intent)
-//        }
 
         binding.back.setOnClickListener {
             finish()

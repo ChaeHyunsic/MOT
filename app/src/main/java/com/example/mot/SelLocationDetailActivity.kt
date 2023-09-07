@@ -30,9 +30,6 @@ class SelLocationDetailActivity : AppCompatActivity() {
             selLocationFragment.arguments = bundle
 
             finish()
-//            supportFragmentManager
-//                .beginTransaction()
-//               .replace(R.id.tab_frameLayout, SelLocationFragment()).commit()
         }
     }
 }

@@ -12,7 +12,7 @@ class AccommodationActivity : AppCompatActivity() {
     private var mBinding: ActivityAccommodationBinding? = null
     private val binding get() = mBinding!!
     lateinit var tab1: PackageinfoFragment
-    lateinit var tab2: RoominfoFragment
+    lateinit var tab2: InqRoominfoFragment
     lateinit var tab3: ReviewFragment
     lateinit var tab4: LocationFragment
 
@@ -36,7 +36,7 @@ class AccommodationActivity : AppCompatActivity() {
 
         }
         tab1 = PackageinfoFragment()
-        tab2 = RoominfoFragment()
+        tab2 = InqRoominfoFragment()
         tab3 = ReviewFragment()
         tab4 = LocationFragment()
 

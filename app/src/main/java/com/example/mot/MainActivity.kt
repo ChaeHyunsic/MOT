@@ -20,5 +20,34 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        // activity 전환
+        binding.btnAllareaSelect.setOnClickListener {
+            val intent = Intent(this, AllareaActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP
+            startActivity(intent)
+            overridePendingTransition(0, 0)
+        }
+
+        binding.btnAroundSelect.setOnClickListener {
+            val intent = Intent(this, MyaroundActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP
+            startActivity(intent)
+            overridePendingTransition(0, 0)
+        }
+
+        binding.btnMypickSelect.setOnClickListener {
+            val intent = Intent(this, MypickActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP
+            startActivity(intent)
+            overridePendingTransition(0, 0)
+        }
+
+        binding.btnMypageSelect.setOnClickListener {
+            val intent = Intent(this, MypageActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP
+            startActivity(intent)
+            overridePendingTransition(0, 0)
+        }
+
     }
 }

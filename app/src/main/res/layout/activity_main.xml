@@ -1,19 +1,248 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.widget.Button
+                android:id="@+id/search_btn"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="95dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/myplace_search"
+                android:drawableRight="@drawable/search"
+                android:gravity="center_vertical"
+                android:paddingLeft="23dp"
+                android:paddingEnd="20dp"
+                android:text="검색하시려면 여기를 눌러주세요"
+                android:textColor="#B5B5B5"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/title1_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:text="최근 본 숙소"
+                android:textAppearance="@style/title_style"
+                app:layout_constraintStart_toStartOf="@+id/search_btn"
+                app:layout_constraintTop_toBottomOf="@+id/search_btn" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/recent_img_view1"
+                android:layout_width="110dp"
+                android:layout_height="90dp"
+                android:layout_marginTop="10dp"
+                android:visibility="invisible"
+                app:cardCornerRadius="20dp"
+                app:layout_constraintStart_toStartOf="@+id/title1_tv"
+                app:layout_constraintTop_toBottomOf="@+id/title1_tv">
+
+                <ImageView
+                    android:id="@+id/recent_img1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/recent_tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="아리랑 펜션"
+                android:textAppearance="@style/text_style"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="@+id/recent_img_view1"
+                app:layout_constraintStart_toStartOf="@+id/recent_img_view1"
+                app:layout_constraintTop_toBottomOf="@+id/recent_img_view1" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/recent_img_view2"
+                android:layout_width="110dp"
+                android:layout_height="90dp"
+                android:visibility="invisible"
+                app:cardCornerRadius="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/recent_img_view1">
+
+                <ImageView
+                    android:id="@+id/recent_img2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    tools:srcCompat="@drawable/room_picture" />
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/recent_tv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="비치웨어 펜션"
+                android:textAppearance="@style/text_style"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="@+id/recent_img_view2"
+                app:layout_constraintStart_toStartOf="@+id/recent_img_view2"
+                app:layout_constraintTop_toBottomOf="@+id/recent_img_view2" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/recent_img_view3"
+                android:layout_width="110dp"
+                android:layout_height="90dp"
+                android:layout_marginEnd="30dp"
+                android:visibility="invisible"
+                app:cardCornerRadius="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/recent_img_view2">
+
+                <ImageView
+                    android:id="@+id/recent_img3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/recent_tv3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="바다풍경"
+                android:textAppearance="@style/text_style"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="@+id/recent_img_view3"
+                app:layout_constraintStart_toStartOf="@+id/recent_img_view3"
+                app:layout_constraintTop_toBottomOf="@+id/recent_img_view3" />
+
+            <TextView
+                android:id="@+id/title2_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="53dp"
+                android:text="추천 숙소"
+                android:textAppearance="@style/title_style"
+                app:layout_constraintStart_toStartOf="@+id/title1_tv"
+                app:layout_constraintTop_toBottomOf="@+id/recent_tv1" />
+
+            <TextView
+                android:id="@+id/title2_anno_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="관심지역 근처거나 구매가 많은 숙소를 추천"
+                android:textAppearance="@style/anno_style"
+                app:layout_constraintStart_toStartOf="@+id/title2_tv"
+                app:layout_constraintTop_toBottomOf="@+id/title2_tv" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/rec_img_view1"
+                android:layout_width="160dp"
+                android:layout_height="120dp"
+                android:layout_marginTop="20dp"
+                app:cardCornerRadius="20dp"
+                app:layout_constraintStart_toStartOf="@+id/title2_anno_tv"
+                app:layout_constraintTop_toBottomOf="@+id/title2_anno_tv">
+
+                <ImageView
+                    android:id="@+id/rec_img1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    tools:srcCompat="@drawable/small_room_pic" />
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/rec_title_tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:text="바다 봄 팬션 부산"
+                android:textAppearance="@style/text_style"
+                android:textSize="13sp"
+                app:layout_constraintStart_toEndOf="@+id/rec_img_view1"
+                app:layout_constraintTop_toTopOf="@+id/rec_img_view1" />
+
+            <RatingBar
+                android:id="@+id/rec_ratingBar1"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:progressTint="@color/appmain"
+                android:rating="4.5"
+                app:layout_constraintStart_toStartOf="@+id/rec_title_tv1"
+                app:layout_constraintTop_toBottomOf="@+id/rec_title_tv1" />
+
+            <TextView
+                android:id="@+id/rec_rating_tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="2dp"
+                android:text="4.5"
+                android:textAppearance="@style/title_style"
+                android:textSize="11sp"
+                app:layout_constraintStart_toEndOf="@+id/rec_ratingBar1"
+                app:layout_constraintTop_toBottomOf="@+id/rec_title_tv1" />
+
+            <TextView
+                android:id="@+id/rec_count_tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="2dp"
+                android:text="(678)"
+                android:textAppearance="@style/anno_style"
+                app:layout_constraintStart_toEndOf="@+id/rec_rating_tv1"
+                app:layout_constraintTop_toBottomOf="@+id/rec_title_tv1" />
+
+            <TextView
+                android:id="@+id/price_tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="30dp"
+                android:text="155,000원"
+                android:textAppearance="@style/title_style"
+                app:layout_constraintBottom_toBottomOf="@+id/rec_img_view1"
+                app:layout_constraintEnd_toEndOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:background="@color/white"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:background="@color/white">
+        app:layout_constraintStart_toStartOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="wrap_content"
@@ -27,15 +256,14 @@
                 android:background="#00ff0000"
                 android:contentDescription="allarea"
                 android:drawableTop="@drawable/edit_allarea_unselect"
-                android:padding="8dp"
                 android:drawablePadding="8dp"
+                android:padding="8dp"
                 android:text="지역"
                 android:textColor="@color/black"
                 android:textSize="10sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                />
+                app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -49,13 +277,13 @@
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:background="#00ff0000"
+                android:contentDescription="myaround"
+                android:drawableTop="@drawable/edit_myaround_unselect"
+                android:drawablePadding="8dp"
                 android:padding="10dp"
                 android:text="내 주변"
                 android:textColor="@color/black"
                 android:textSize="10sp"
-                android:drawablePadding="8dp"
-                android:contentDescription="myaround"
-                android:drawableTop="@drawable/edit_myaround_unselect"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -73,12 +301,12 @@
                 android:layout_height="wrap_content"
                 android:background="#00ff0000"
                 android:contentDescription="mainhome"
+                android:drawableTop="@drawable/edit_main_select"
+                android:drawablePadding="8dp"
                 android:padding="10dp"
                 android:text="메인"
                 android:textColor="@color/black"
                 android:textSize="10sp"
-                android:drawablePadding="8dp"
-                android:drawableTop="@drawable/edit_main_select"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -94,13 +322,13 @@
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:background="#00ff0000"
-                android:padding="10dp"
                 android:contentDescription="mypick"
+                android:drawableTop="@drawable/edit_mypick_unselect"
+                android:drawablePadding="8dp"
+                android:padding="10dp"
                 android:text="찜"
                 android:textColor="@color/black"
                 android:textSize="10sp"
-                android:drawablePadding="8dp"
-                android:drawableTop="@drawable/edit_mypick_unselect"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -118,17 +346,15 @@
                 android:layout_height="match_parent"
                 android:background="#00ff0000"
                 android:contentDescription="mypage"
+                android:drawableTop="@drawable/edit_mypage_unselect"
+                android:drawablePadding="8dp"
                 android:paddingTop="10dp"
                 android:text="마이페이지"
                 android:textColor="@color/black"
                 android:textSize="10sp"
-                android:drawablePadding="8dp"
-                android:drawableTop="@drawable/edit_mypage_unselect"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

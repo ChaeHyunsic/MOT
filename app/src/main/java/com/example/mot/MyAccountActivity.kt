@@ -1,11 +1,11 @@
 package com.example.mot
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.result.ActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
 import com.example.mot.databinding.ActivityMyaccountBinding
 import okhttp3.OkHttpClient
 import retrofit2.Call
@@ -22,42 +22,42 @@ class MyAccountActivity : AppCompatActivity() {
         binding = ActivityMyaccountBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-//        val httpClient = OkHttpClient.Builder()
-//            .addInterceptor(TokenInterceptor()) // Add your custom interceptor
-//            .build()
-//
-//        var retrofit = Retrofit.Builder()
-//            .baseUrl("http://13.125.85.98:8080")//서버 주소를 적을 것
-//            .client(httpClient)
-//            .addConverterFactory(GsonConverterFactory.create())
-//            .build()
-//
-//        var Service = retrofit.create(Service::class.java)
+        val httpClient = OkHttpClient.Builder()
+            .addInterceptor(TokenInterceptor()) // Add your custom interceptor
+            .build()
+
+        var retrofit = Retrofit.Builder()
+            .baseUrl("http://13.125.85.98:8080")//서버 주소를 적을 것
+            .client(httpClient)
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+
+        var Service = retrofit.create(Service::class.java)
 
 
-//        Service.getaccount().enqueue(object : Callback<RequestAccount>{
-//
-//            var dialog = AlertDialog.Builder(this@MyAccountActivity)
-//
-//            override fun onResponse(call: Call<RequestAccount>, response: Response<RequestAccount>
-//            ) {
-//                val result = response.body()
-//                if(result != null){
-//                    if(result.id == 1){
-//                        binding.nameTv.text = result.name
-//                        binding.bankNameTv.text = result.bank
-//                        binding.accountNameTv.text = result.number
-//                    }
-//                }
-//            }
-//
-//            override fun onFailure(call: Call<RequestAccount>, t: Throwable) {
-//                dialog.setTitle("설정 실패")
-//                dialog.setMessage("계좌 설정에 실패하였습니다.")
-//                dialog.show()
-//            }
-//
-//        })
+        Service.getaccount().enqueue(object : Callback<RequestAccount>{
+
+            var dialog = AlertDialog.Builder(this@MyAccountActivity)
+
+            override fun onResponse(call: Call<RequestAccount>, response: Response<RequestAccount>
+            ) {
+                val result = response.body()
+                if(result != null){
+                    if(result.id == 1){
+                        binding.nameTv.text = result.name
+                        binding.bankNameTv.text = result.bank
+                        binding.accountNameTv.text = result.number
+                    }
+                }
+            }
+
+            override fun onFailure(call: Call<RequestAccount>, t: Throwable) {
+                dialog.setTitle("설정 실패")
+                dialog.setMessage("계좌 설정에 실패하였습니다.")
+                dialog.show()
+            }
+
+        })
 
         binding.backIv.setOnClickListener {
             finish()
@@ -67,7 +67,6 @@ class MyAccountActivity : AppCompatActivity() {
             val intent = Intent(this, AccountSettingActivity::class.java)
             startForResult.launch(intent)
         }
-
 
     }
 

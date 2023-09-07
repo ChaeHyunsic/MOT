@@ -21,9 +21,5 @@ class PrivacyActivity    : AppCompatActivity() {
                 startActivity(intent)
                 finish()
             }
-
-
-
-
         }
 }

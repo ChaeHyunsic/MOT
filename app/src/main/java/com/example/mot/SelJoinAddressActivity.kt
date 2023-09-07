@@ -48,7 +48,7 @@ class SelJoinAddressActivity : AppCompatActivity() {
                             if (result != null) {
                                 Toast.makeText(this@SelJoinAddressActivity, "성공적으로 숙소를 등록하였습니다.", Toast.LENGTH_SHORT).show()
 
-                                val intent = Intent(this@SelJoinAddressActivity, MainActivity::class.java)
+                                val intent = Intent(this@SelJoinAddressActivity, SellActivity::class.java)
 
                                 startActivity(intent)
                             }

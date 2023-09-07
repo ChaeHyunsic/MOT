@@ -4,9 +4,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
-import androidx.activity.result.ActivityResultLauncher
-import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.Fragment
 import com.google.android.gms.maps.*
 import com.google.android.gms.maps.model.LatLng
@@ -55,8 +52,6 @@ class MapFragment : Fragment(), OnMapReadyCallback {
             .position(myLocation)
         googleMap.addMarker(marker.title("현위치"))
     }
-
-
 
     override fun onStart() {
         super.onStart()

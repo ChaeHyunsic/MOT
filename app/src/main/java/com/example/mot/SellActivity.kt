@@ -1,13 +1,11 @@
 package com.example.mot
 
 import android.content.Intent
-import android.icu.text.IDNA.Info
 import android.os.Bundle
 import android.view.View
 import android.widget.PopupMenu
 import androidx.activity.result.ActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.mot.databinding.ActivitySellBinding
@@ -17,7 +15,10 @@ class SellActivity: AppCompatActivity() {
 
     lateinit var binding: ActivitySellBinding
 
+    lateinit var tab1: Seller_packageinfo_Fragment
     lateinit var tab2: RoomInfoFragment
+    lateinit var tab3: SelReviewListFragment
+    lateinit var tab4: SelLocationFragment
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,15 +26,18 @@ class SellActivity: AppCompatActivity() {
         binding = ActivitySellBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        tab1 = Seller_packageinfo_Fragment()
         tab2 = RoomInfoFragment()
+        tab3 = SelReviewListFragment()
+        tab4 = SelLocationFragment()
 
-        supportFragmentManager.beginTransaction().add(R.id.sell_fl, tab2).commit()
+        supportFragmentManager.beginTransaction().add(R.id.sell_fl, tab1).commit()
 
         binding.sellTl.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener{
             override fun onTabSelected(tab: TabLayout.Tab?) {
                 when(tab?.position){
                     0 -> {
-                        replaceView(tab2)
+                        replaceView(tab1)
                     }
 
                     1 -> {
@@ -41,11 +45,11 @@ class SellActivity: AppCompatActivity() {
                     }
 
                     2 -> {
-                        replaceView(tab2)
+                        replaceView(tab3)
                     }
 
                     3 -> {
-                        replaceView(tab2)
+                        replaceView(tab4)
                     }
                 }
             }
@@ -85,6 +89,11 @@ class SellActivity: AppCompatActivity() {
             startForResult.launch(intent)
         }
 
+        binding.btnIv.setOnClickListener {
+            var intent = Intent(this, SelResDateActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 
     private fun replaceView(tab: Fragment){
@@ -120,9 +129,5 @@ class SellActivity: AppCompatActivity() {
                 binding.filter3InfoTv.text = result.data?.getStringExtra("filter3")
             }
         }
-        else{
-
-        }
     }
-
 }

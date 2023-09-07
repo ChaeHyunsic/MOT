@@ -8,6 +8,7 @@ class RoomInfoActivity: AppCompatActivity() {
 
     lateinit var binding: ActivityRoomInfoBinding
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityRoomInfoBinding.inflate(layoutInflater)

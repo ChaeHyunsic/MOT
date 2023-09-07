@@ -49,8 +49,6 @@ class RoomInfoFragment: Fragment() {
             binding.stand1Tv.text = result.data?.getStringExtra("stand")
             binding.max1Tv.text = result.data?.getStringExtra("max")
 
-        } else {
-            // 결과가 실패했거나 취소된 경우의 처리
         }
     }
 }

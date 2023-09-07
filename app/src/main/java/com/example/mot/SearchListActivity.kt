@@ -214,6 +214,12 @@ class SearchListActivity : AppCompatActivity() {
                             newCardViewBinding.resultPrice1.text = result.price.toString() + " 원"
                             newCardViewBinding.resultTotal1.text = (result.price * person!!.toInt()).toString() + " 원"
 
+                            newCardViewBinding.root.setOnClickListener {
+                                val intent = Intent(this@SearchListActivity, Tablayout_Activity::class.java)
+
+                                startActivity(intent)
+                            }
+
                             mBinding!!.resultLl.addView(newCardViewBinding.root)
                         }
                     }

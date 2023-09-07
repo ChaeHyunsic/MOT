@@ -108,6 +108,7 @@ data class RequestAccount(
     var name: String,
     var bank: String,
     var number: String,
+    var certifi: String,
     var sellMemberId: Int
 )
 

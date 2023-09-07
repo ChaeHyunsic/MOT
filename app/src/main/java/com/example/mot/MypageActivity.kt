@@ -2,14 +2,13 @@ package com.example.mot
 
 import android.content.Context
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.provider.ContactsContract.CommonDataKinds.Nickname
 import android.view.View
 import android.view.inputmethod.EditorInfo
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import com.example.mot.databinding.ActivityMypageBinding
 import retrofit2.Call
 import retrofit2.Callback
@@ -74,7 +73,7 @@ class MypageActivity : AppCompatActivity(), View.OnClickListener {
         EditNickname.setOnClickListener {
             val text : String = binding.profileEdit.text.toString()
 
-            service.nicknameChange(text).enqueue(object : Callback<NicknameData>{
+            service.nicknameChange(TokenManager.getAuthToken(), text).enqueue(object : Callback<NicknameData>{
                 override fun onResponse(
                     call: Call<NicknameData>,
                     response: Response<NicknameData>

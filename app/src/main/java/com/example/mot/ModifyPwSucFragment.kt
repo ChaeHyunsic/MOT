@@ -16,9 +16,6 @@ class ModifyPwSucFragment: Fragment() {
     ): View? {
         binding = FragmentModifyPwSucBinding.inflate(inflater, container, false)
 
-//        binding.btnIb.setOnClickListener {
-//
-//        }
         return binding.root
     }
 }

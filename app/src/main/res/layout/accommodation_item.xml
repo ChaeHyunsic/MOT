@@ -73,11 +73,11 @@
 
             <ImageView
                 android:id="@+id/res_pick"
-                android:layout_width="23dp"
-                android:layout_height="22dp"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
                 android:layout_marginEnd="30dp"
-                android:contentDescription="pick"
                 android:clickable="true"
+                android:contentDescription="pick"
                 app:layout_constraintBottom_toBottomOf="@+id/res_ratingBar"
                 app:layout_constraintEnd_toEndOf="@+id/item_img"
                 app:layout_constraintTop_toTopOf="@+id/res_item_title"

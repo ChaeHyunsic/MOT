@@ -9,7 +9,6 @@ import com.example.mot.databinding.ActivitySellerPackageinfoAddpicBinding
 
 class Seller_packageinfo_addpicActivity    : AppCompatActivity() {
 
-
     private var mBinding: ActivitySellerPackageinfoAddpicBinding? = null
         private val binding get() = mBinding!!
 
@@ -23,6 +22,7 @@ class Seller_packageinfo_addpicActivity    : AppCompatActivity() {
                 finish()
 
             }
+
             mBinding!!.smallPackageStr7.setOnClickListener {
                 val intent =  Intent(this,Seller_adjust_peopleActivity::class.java)
                 startActivity(intent)
@@ -30,6 +30,7 @@ class Seller_packageinfo_addpicActivity    : AppCompatActivity() {
                 finish()
 
             }
+
             mBinding!!.smallPackageStr8.setOnClickListener {
                 val intent =  Intent(this,Seller_adjust_peopleActivity::class.java)
                 getPersonCount.launch(intent)
@@ -37,14 +38,12 @@ class Seller_packageinfo_addpicActivity    : AppCompatActivity() {
 
             }
 
+            mBinding!!.sellerAdjustBtn.setOnClickListener {
+                mBinding!!.packageStr.text.toString()
+            }
 
             mBinding!!.sellerAdjustBtn.setOnClickListener {
                 mBinding!!.packageStr.text.toString()
-
-                }
-            mBinding!!.sellerAdjustBtn.setOnClickListener {
-                mBinding!!.packageStr.text.toString()
-
             }
         }
 

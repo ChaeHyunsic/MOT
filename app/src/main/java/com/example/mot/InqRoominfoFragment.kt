@@ -5,17 +5,20 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.mot.databinding.FragmentInqRoominfoBinding
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 
-class RoominfoFragment : Fragment() {
+class InqRoominfoFragment : Fragment() {
     private lateinit var binding: FragmentInqRoominfoBinding
 
     var roomId: Int?= null
-
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -31,28 +34,27 @@ class RoominfoFragment : Fragment() {
 
         binding = FragmentInqRoominfoBinding.inflate(layoutInflater, container, false)
 
-//        //객실 조회
-//        service.roomInq(roomId!!.toInt()).enqueue(object : Callback<ResponseInqRoomData>{
-//            override fun onResponse(
-//                call: Call<ResponseInqRoomData>,
-//                response: Response<ResponseInqRoomData>
-//            ) {
-//                if(response.isSuccessful){
-//                    val result :ResponseInqRoomData? = response.body()
-//
-//                    if(result != null){
-//                        binding.roomInfoStr.text=result.roomType
-//                        binding.personnel.text="기존" + result.minPeople +"/ 최대" + result.maxPeople
-//                        binding.allPriceInt.text=result.Price.toString() +"원"
-//
-//                    }
-//                }
-//            }
-//
-//            override fun onFailure(call: Call<ResponseInqRoomData>, t: Throwable) {
-//                Toast.makeText(context, "서버가 혼잡합니다. 잠시후 시도해주시기 바랍니다.", Toast.LENGTH_SHORT).show()
-//            }
-//        })
+        //객실 조회
+        service.roomInq(roomId!!.toInt()).enqueue(object : Callback<ResponseInqRoomData> {
+            override fun onResponse(
+                call: Call<ResponseInqRoomData>,
+                response: Response<ResponseInqRoomData>
+            ) {
+                if(response.isSuccessful){
+                    val result :ResponseInqRoomData? = response.body()
+
+                    if(result != null){
+                        binding.roomInfoStr.text=result.roomType
+                        binding.personnel.text="기존" + result.minPeople +"/ 최대" + result.maxPeople
+                        binding.allPriceInt.text=result.Price.toString() +"원"
+                    }
+                }
+            }
+
+            override fun onFailure(call: Call<ResponseInqRoomData>, t: Throwable) {
+                Toast.makeText(context, "서버가 혼잡합니다. 잠시후 시도해주시기 바랍니다.", Toast.LENGTH_SHORT).show()
+            }
+        })
 
         binding.packageBtn.setOnClickListener {
             (activity as Tablayout_Activity).changeFragment(InqRoominfoDetailsFragment())
@@ -68,9 +70,6 @@ class RoominfoFragment : Fragment() {
             startActivity(intent)
         }
 
-
         return binding.root
     }
-
-
 }

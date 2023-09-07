@@ -11,7 +11,6 @@ import android.view.ViewGroup
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import com.example.mot.databinding.FragmentModifyNewPwBinding
-import com.example.register.ModifyPwSucFragment
 import okhttp3.OkHttpClient
 import okhttp3.ResponseBody
 import retrofit2.Call

@@ -19,10 +19,10 @@ class AccountCertifiActivity: AppCompatActivity() {
             setResult(RESULT_OK, intent);
             finish()
 
-//            if(certifi == certifichk){
-//                setResult(RESULT_OK, intent);
-//                finish()
-//            }
+            if(certifi == certifichk){
+                setResult(RESULT_OK, intent);
+                finish()
+            }
         }
 
         binding.backIv.setOnClickListener {

@@ -1,6 +1,5 @@
 package com.example.mot
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
@@ -276,7 +275,7 @@ class FilterActivity : AppCompatActivity(){
 
                 for (button in buttons) {
                     if(button.text == binding.chosenFitter1.text) {
-                        button.setBackgroundResource(R.drawable.fitter_btn_background)
+                        button.setBackgroundResource(R.drawable.filter_btn_background)
                     }
                 }
             }
@@ -288,7 +287,7 @@ class FilterActivity : AppCompatActivity(){
 
                 for (button in buttons) {
                     if(button.text == binding.chosenFitter2.text) {
-                        button.setBackgroundResource(R.drawable.fitter_btn_background)
+                        button.setBackgroundResource(R.drawable.filter_btn_background)
                     }
                 }
             }
@@ -300,7 +299,7 @@ class FilterActivity : AppCompatActivity(){
 
                 for (button in buttons) {
                     if(button.text == binding.chosenFitter3.text) {
-                        button.setBackgroundResource(R.drawable.fitter_btn_background)
+                        button.setBackgroundResource(R.drawable.filter_btn_background)
                     }
                 }
             }

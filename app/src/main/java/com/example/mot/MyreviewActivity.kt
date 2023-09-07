@@ -1,15 +1,13 @@
 package com.example.mot
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.EditText
 import android.widget.ImageButton
-import android.widget.ImageView
 import android.widget.RatingBar
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import com.example.mot.databinding.ActivityMyreviewBinding
 import com.example.mot.databinding.MyreviewItemBinding
@@ -44,7 +42,7 @@ class MyreviewActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         // 댓글 조회
-        service.commentInq(/*TokenManager.getAuthToken(),*/).enqueue(object : Callback<List<CommentInqData>> {
+        service.commentInq(TokenManager.getAuthToken()).enqueue(object : Callback<List<CommentInqData>> {
             override fun onResponse(call: Call<List<CommentInqData>>, response: Response<List<CommentInqData>>
             ) {
                 if(response.isSuccessful){
@@ -82,15 +80,12 @@ class MyreviewActivity : AppCompatActivity() {
 
         val reviewItem = ReviewListItemBinding.inflate(layoutInflater)
 
-        //넘겨 받은 후기 저장
-        //reviewText.text = intent.getStringExtra("reviewData")
-
         // 리뷰 수정
         reviewItem.reviewEdit.setOnClickListener {
             val reviewText = findViewById<TextView>(R.id.tv_myreview).text.toString()
             val ratingBar = findViewById<RatingBar>(R.id.review_write_star).rating.toDouble()
 
-            service.commentEdit(/*TokenManager.getAuthToken(),*/CommentWriteData(reviewText, ratingBar) ,commentId!!.toInt()).enqueue(object :
+            service.commentEdit(TokenManager.getAuthToken(),CommentWriteData(reviewText, ratingBar) ,commentId!!.toInt()).enqueue(object :
             Callback<CommentData> {
                 override fun onResponse(call: Call<CommentData>, response: Response<CommentData>) {
                     if(response.isSuccessful) {
@@ -114,7 +109,7 @@ class MyreviewActivity : AppCompatActivity() {
 
         // 리뷰 삭제
         reviewItem.reviewDel.setOnClickListener {
-            service.commentDel(/*TokenManager.getAuthToken(),*/commentId!!.toInt()).enqueue(object : Callback<Void> {
+            service.commentDel(TokenManager.getAuthToken(),commentId!!.toInt()).enqueue(object : Callback<Void> {
                 override fun onResponse(call: Call<Void>, response: Response<Void>) {
                     if(response.isSuccessful) {
                         val result = response.body()

@@ -11,8 +11,9 @@ class Tablayout_Activity    : AppCompatActivity() {
 
         private var mBinding: ActivityTablayoutBinding? = null
         private val binding: ActivityTablayoutBinding get() = mBinding!!
+
         lateinit var tab1: PackageinfoFragment
-        lateinit var tab2: RoominfoFragment
+        lateinit var tab2: InqRoominfoFragment
         lateinit var tab3: ReviewFragment
         lateinit var tab4: LocationFragment
 
@@ -33,7 +34,7 @@ class Tablayout_Activity    : AppCompatActivity() {
             }
 
             tab1 = PackageinfoFragment()
-            tab2 = RoominfoFragment()
+            tab2 = InqRoominfoFragment()
             tab3 = ReviewFragment()
             tab4 = LocationFragment()
 
@@ -62,9 +63,8 @@ class Tablayout_Activity    : AppCompatActivity() {
                 override fun onTabReselected(tab: TabLayout.Tab?) {
                 }
             })
-
-
         }
+
     private fun replaceView(tab: Fragment){
         var selectorFragment: Fragment? = null
         selectorFragment = tab
