@@ -1,16 +1,15 @@
 package com.example.mot
 
-
 import android.os.Bundle
-import android.text.Editable
-import android.text.TextWatcher
+import android.text.InputFilter
 import androidx.appcompat.app.AppCompatActivity
 import com.example.mot.databinding.ActivitySelTrafficDetailBinding
-
 class SelTrafficDetailActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivitySelTrafficDetailBinding
     private lateinit var sellocationfragment : SelLocationFragment
+
+    var bundle : Bundle? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
@@ -20,31 +19,17 @@ class SelTrafficDetailActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         // 글자수 제한
-        binding.etTrafficMoreBox.addTextChangedListener (object : TextWatcher{
-            override fun beforeTextChanged(s: CharSequence?, p1: Int, p2: Int, p3: Int) {
-                TODO("Not yet implemented")
-            }
+        val maxLength = 500
+        var textbound = binding.etTrafficMoreBox
 
-            override fun onTextChanged(s: CharSequence?, p1: Int, p2: Int, p3: Int) {
+        textbound.filters = arrayOf<InputFilter>(InputFilter.LengthFilter(maxLength))
 
-                if (s?.length!! > 500) {
-                    binding.etTrafficMoreBox.setError("최대 10자까지 입력 가능합니다.")
-                } else {
-                    binding.etTrafficMoreBox.setError(null)
-                }
-            }
-
-            override fun afterTextChanged(s: Editable?) {
-                TODO("Not yet implemented")
-            }
-        })
-
+        val trafficInfo = binding.etTrafficMoreBox.text.toString()
         binding.btnSettingdone.setOnClickListener {
-            val trafficInfo : String = binding.etTrafficMoreBox.text.toString()
-            val bundle : Bundle? = null
 
             bundle?.putString("trafficInfo", trafficInfo)
 
+            sellocationfragment = SelLocationFragment()
             sellocationfragment.arguments = bundle
 
             finish()

@@ -4,7 +4,41 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".AccommodationActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+        <TextView
+            android:id="@+id/info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="예약 정보"
+            android:layout_marginTop="25dp"
+            android:textColor="#000000"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/backbutton"
+            android:layout_width="48dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="25dp"
+            android:backgroundTint="@color/white"
+            android:padding="0sp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/backbutton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/info"
+            tools:ignore="SpeakableTextPresentCheck" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ScrollView
         android:id="@+id/scrollView2"
@@ -14,39 +48,11 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@id/top_bar">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-
-            <TextView
-                android:id="@+id/info"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="79dp"
-                android:text="예약 정보"
-                android:textColor="#000000"
-                android:textSize="30sp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.498"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageButton
-                android:id="@+id/backbutton"
-                android:layout_width="48dp"
-                android:layout_height="50dp"
-                android:layout_marginStart="25dp"
-                android:backgroundTint="@color/white"
-                android:padding="0sp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/backbutton"
-                app:layout_constraintStart_toStartOf="parent"
-
-                app:layout_constraintTop_toTopOf="@+id/info"
-                tools:ignore="SpeakableTextPresentCheck" />
 
             <TextView
                 android:id="@+id/rectangle"
@@ -62,7 +68,7 @@
                 app:layout_constraintBottom_toTopOf="@id/line2"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/info"
+                app:layout_constraintTop_toTopOf="parent"
                 tools:ignore="SpeakableTextPresentCheck" />
 
             <TextView
@@ -73,7 +79,7 @@
                 android:layout_marginTop="35dp"
                 android:text="체크인"
                 android:textColor="@color/black"
-                android:textSize="25sp"
+                android:textSize="22sp"
                 android:textStyle="bold"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/rectangle"
@@ -87,7 +93,7 @@
                 android:layout_marginTop="35dp"
                 android:text="체크아웃"
                 android:textColor="@color/black"
-                android:textSize="25sp"
+                android:textSize="22sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toEndOf="@+id/line1"
                 app:layout_constraintTop_toTopOf="@+id/rectangle" />
@@ -110,7 +116,7 @@
                 android:gravity="left"
                 android:text="5월 14일 (수)\n18:00"
                 android:textColor="@color/black"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="@id/check_in"
                 app:layout_constraintTop_toBottomOf="@+id/check_in" />
 
@@ -123,7 +129,7 @@
                 android:gravity="left"
                 android:text="5월 17일 (금)\n12:00"
                 android:textColor="@color/black"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="@id/check_out"
                 app:layout_constraintTop_toBottomOf="@+id/check_out" />
 
@@ -147,151 +153,165 @@
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/line2" />
-
-            <ImageView
-                android:id="@+id/room1"
-                android:layout_width="120dp"
-                android:layout_height="88.89dp"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/room1"
-                android:src="@drawable/room_picture"
-                app:layout_constraintStart_toStartOf="@id/lodging_name"
-                app:layout_constraintTop_toBottomOf="@id/lodging_name" />
-
-            <TextView
-                android:id="@+id/room_style1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="25dp"
-                android:text="복층형"
-                android:textColor="@color/black"
-                android:textSize="19sp"
-                app:layout_constraintStart_toEndOf="@+id/room1"
-                app:layout_constraintTop_toTopOf="@+id/room1" />
-
-            <ImageButton
-                android:id="@+id/x"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:layout_marginTop="44dp"
-                android:layout_marginEnd="20dp"
-                android:backgroundTint="@color/white"
-                android:padding="14dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/x"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/line2"
-                tools:ignore="SpeakableTextPresentCheck"
-
-                />
-
-            <TextView
-                android:id="@+id/price_per_person"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="40dp"
-                android:layout_marginBottom="0dp"
-                android:text="1인 10,000원"
-                android:textColor="#B5B5B5"
-                android:textSize="15sp"
-                app:layout_constraintBottom_toBottomOf="@+id/price"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/x" />
-
-            <TextView
-                android:id="@+id/price"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="0dp"
-                android:layout_marginEnd="40dp"
-                android:text="600,000원"
-                android:textColor="@color/black"
-                android:textSize="22sp"
-                app:layout_constraintBottom_toBottomOf="@+id/room1"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/price_per_person" />
-
-            <View
-                android:id="@+id/line3"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/room_layout"
                 android:layout_width="360dp"
-                android:layout_height="1dp"
-                android:layout_marginTop="20dp"
-                android:background="#f0f0f0"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/room1" />
-
-            <ImageView
-                android:id="@+id/room2"
-                android:layout_width="120dp"
-                android:layout_height="88.89dp"
-                android:layout_marginTop="23dp"
-                android:background="@drawable/room1"
-                android:src="@drawable/room_picture"
+                android:layout_height="match_parent"
+                app:layout_constraintTop_toBottomOf="@id/lodging_name"
                 app:layout_constraintStart_toStartOf="@id/lodging_name"
-                app:layout_constraintTop_toBottomOf="@id/line3" />
+                android:layout_marginTop="20dp">
 
-            <TextView
-                android:id="@+id/room_style2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="25dp"
-                android:text="복층형"
-                android:textColor="@color/black"
-                android:textSize="19sp"
-                app:layout_constraintStart_toEndOf="@+id/room2"
-                app:layout_constraintTop_toTopOf="@+id/room2" />
+                <ImageView
+                    android:id="@+id/room1"
+                    android:layout_width="120dp"
+                    android:layout_height="89dp"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/room_picture"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
 
-            <ImageButton
-                android:id="@+id/x2"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:layout_marginTop="10dp"
-                android:backgroundTint="@color/white"
-                android:padding="14dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/x"
-                app:layout_constraintEnd_toEndOf="@+id/x"
-                app:layout_constraintTop_toBottomOf="@id/line3"
-                tools:ignore="SpeakableTextPresentCheck" />
+                <TextView
+                    android:id="@+id/room_style1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:text="복층형"
+                    android:textColor="@color/black"
+                    android:textSize="19sp"
+                    app:layout_constraintStart_toEndOf="@+id/room1"
+                    app:layout_constraintTop_toTopOf="@+id/room1" />
 
-            <TextView
-                android:id="@+id/price_per_person2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="40dp"
-                android:text="1인 10,000원"
-                android:textColor="#B5B5B5"
-                android:textSize="15sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/x2" />
+                <ImageButton
+                    android:id="@+id/x"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginEnd="20dp"
+                    android:backgroundTint="@color/white"
+                    android:padding="14dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/x"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="SpeakableTextPresentCheck"
+                    />
 
-            <TextView
-                android:id="@+id/price2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="0dp"
-                android:layout_marginEnd="40dp"
-                android:text="600,000원"
-                android:textColor="@color/black"
-                android:textSize="22sp"
-                app:layout_constraintBottom_toBottomOf="@+id/room2"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/price_per_person2" />
+                <TextView
+                    android:id="@+id/price_per_person"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="40dp"
+                    android:layout_marginBottom="0dp"
+                    android:text="1인 10,000원"
+                    android:textColor="#B5B5B5"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/price"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/x" />
+
+                <TextView
+                    android:id="@+id/price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="40dp"
+                    android:text="600,000원"
+                    android:textColor="@color/black"
+                    android:textSize="22sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/room1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/price_per_person" />
+
+                <View
+                    android:id="@+id/line3"
+                    android:layout_width="360dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="20dp"
+                    android:background="#f0f0f0"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/room1" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/room_layout2"
+                android:layout_width="360dp"
+                android:layout_height="match_parent"
+                app:layout_constraintTop_toBottomOf="@id/room_layout"
+                app:layout_constraintStart_toStartOf="@id/room_layout">
+
+                <ImageView
+                    android:id="@+id/room2"
+                    android:layout_width="120dp"
+                    android:layout_height="89dp"
+                    android:layout_marginTop="23dp"
+                    android:src="@drawable/room_picture"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/room_style2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:text="복층형"
+                    android:textColor="@color/black"
+                    android:textSize="19sp"
+                    app:layout_constraintStart_toEndOf="@+id/room2"
+                    app:layout_constraintTop_toTopOf="@+id/room2" />
+
+                <ImageButton
+                    android:id="@+id/x2"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:backgroundTint="@color/white"
+                    android:layout_marginEnd="20dp"
+                    android:padding="14dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/x"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+                <TextView
+                    android:id="@+id/price_per_person2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="40dp"
+                    android:text="1인 10,000원"
+                    android:textColor="#B5B5B5"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/x2" />
+
+                <TextView
+                    android:id="@+id/price2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="40dp"
+                    android:text="600,000원"
+                    android:textColor="@color/black"
+                    android:textSize="22sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/room2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/price_per_person2" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <TextView
                 android:id="@+id/more_reservation"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="120dp"
+                android:layout_height="48dp"
                 android:layout_marginTop="20dp"
                 android:backgroundTint="@color/white"
                 android:text="+ 더 예약하기"
                 android:textColor="#2564DE"
                 android:textSize="18sp"
                 android:textStyle="bold"
+                android:clickable="true"
+                android:focusable="true"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/price2"
+                app:layout_constraintTop_toBottomOf="@+id/room_layout2"
                 app:layout_goneMarginTop="0dp" />
 
             <View
@@ -329,104 +349,116 @@
                 app:layout_constraintTop_toBottomOf="@id/reservation_info" />
 
             <TextView
+                android:id="@+id/change_str"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="48dp"
                 android:layout_marginTop="34dp"
                 android:layout_marginEnd="25dp"
                 android:backgroundTint="@color/white"
+                android:clickable="true"
                 android:text="변경하기"
                 android:textColor="#2564DE"
                 android:textSize="17sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/line4" />
 
-            <View
-                android:id="@+id/line5"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/plus_info_page"
                 android:layout_width="match_parent"
-                android:layout_height="11dp"
-                android:layout_marginTop="15dp"
-                android:background="#f0f0f0"
-                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_height="match_parent"
+                app:layout_constraintTop_toBottomOf="@id/reservation_name"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/reservation_name" />
+                android:visibility="gone"
+                >
 
-            <TextView
-                android:id="@+id/reservation_info2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="25dp"
-                android:layout_marginTop="20dp"
-                android:text="예약자 정보"
-                android:textColor="@color/black"
-                android:textSize="23sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/line5" />
+                <View
+                    android:id="@+id/line5"
+                    android:layout_width="match_parent"
+                    android:layout_height="11dp"
+                    android:layout_marginTop="15dp"
+                    android:background="#f0f0f0"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
 
-            <TextView
-                android:id="@+id/reservation_name2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="7dp"
-                android:text="성명 /"
-                android:textColor="#A0A0A0"
-                android:textSize="19sp"
-                app:layout_constraintStart_toStartOf="@id/reservation_info2"
-                app:layout_constraintTop_toBottomOf="@id/reservation_info2"
-                app:layout_goneMarginTop="5dp" />
+                <TextView
+                    android:id="@+id/reservation_info2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="20dp"
+                    android:text="예약자 정보"
+                    android:textColor="@color/black"
+                    android:textSize="23sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/line5" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text=" 홍길동"
-                android:textColor="@color/black"
-                android:textSize="19sp"
-                app:layout_constraintStart_toEndOf="@id/reservation_name2"
-                app:layout_constraintTop_toTopOf="@+id/reservation_name2" />
+                <TextView
+                    android:id="@+id/reservation_name2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:text="성명 /"
+                    android:textColor="#A0A0A0"
+                    android:textSize="19sp"
+                    app:layout_constraintStart_toStartOf="@id/reservation_info2"
+                    app:layout_constraintTop_toBottomOf="@id/reservation_info2"
+                    app:layout_goneMarginTop="5dp" />
 
-            <View
-                android:id="@+id/line6"
-                android:layout_width="360dp"
-                android:layout_height="1dp"
-                android:layout_marginTop="20dp"
-                android:background="#f0f0f0"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/reservation_name2"
-                app:layout_goneMarginTop="0dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" 홍길동"
+                    android:textColor="@color/black"
+                    android:textSize="19sp"
+                    app:layout_constraintStart_toEndOf="@id/reservation_name2"
+                    app:layout_constraintTop_toTopOf="@+id/reservation_name2" />
+
+                <View
+                    android:id="@+id/line6"
+                    android:layout_width="360dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="20dp"
+                    android:background="#f0f0f0"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/reservation_name2"
+                    app:layout_goneMarginTop="0dp" />
 
 
-            <TextView
-                android:id="@+id/phone_number"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="7dp"
-                android:text="휴대폰 번호 /"
-                android:textColor="#A0A0A0"
-                android:textSize="19sp"
-                app:layout_constraintStart_toStartOf="@id/line6"
-                app:layout_constraintTop_toBottomOf="@id/line6"
-                app:layout_goneMarginTop="5dp" />
+                <TextView
+                    android:id="@+id/phone_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:text="휴대폰 번호 /"
+                    android:textColor="#A0A0A0"
+                    android:textSize="19sp"
+                    app:layout_constraintStart_toStartOf="@id/reservation_name2"
+                    app:layout_constraintTop_toBottomOf="@id/line6"
+                    app:layout_goneMarginTop="5dp" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text=" 010-2314-3522"
-                android:textColor="@color/black"
-                android:textSize="19sp"
-                app:layout_constraintStart_toEndOf="@id/phone_number"
-                app:layout_constraintTop_toTopOf="@+id/phone_number" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" 010-2314-3522"
+                    android:textColor="@color/black"
+                    android:textSize="19sp"
+                    app:layout_constraintStart_toEndOf="@id/phone_number"
+                    app:layout_constraintTop_toTopOf="@+id/phone_number" />
 
-            <View
-                android:id="@+id/line7"
-                android:layout_width="360dp"
-                android:layout_height="1dp"
-                android:layout_marginTop="20dp"
-                android:background="#f0f0f0"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/phone_number"
-                app:layout_goneMarginTop="0dp" />
+                <View
+                    android:id="@+id/line7"
+                    android:layout_width="360dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="20dp"
+                    android:background="#f0f0f0"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/phone_number"
+                    app:layout_goneMarginTop="0dp" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <View
                 android:id="@+id/line8"
@@ -436,7 +468,7 @@
                 android:background="#f0f0f0"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/line7" />
+                app:layout_constraintTop_toBottomOf="@+id/plus_info_page" />
 
             <TextView
                 android:id="@+id/payment_amount"
@@ -540,27 +572,18 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/rectangle_1" />
 
-            <ImageButton
-                android:id="@+id/select_btn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="25dp"
-                android:layout_marginTop="25dp"
-                android:backgroundTint="@color/white"
-                android:src="@drawable/select"
-                app:layout_constraintStart_toStartOf="@id/select_box"
-                app:layout_constraintTop_toTopOf="@id/select_box" />
+
 
             <ImageView
                 android:id="@+id/card_picture"
                 android:layout_width="28dp"
                 android:layout_height="28dp"
                 android:layout_marginStart="5dp"
-                android:layout_marginTop="7dp"
+                android:layout_marginTop="35dp"
                 android:backgroundTint="@color/white"
                 android:src="@drawable/card"
-                app:layout_constraintStart_toEndOf="@id/select_btn"
-                app:layout_constraintTop_toTopOf="@id/select_btn" />
+                app:layout_constraintStart_toEndOf="@id/Radio_group"
+                app:layout_constraintTop_toTopOf="@id/Radio_group" />
 
             <TextView
                 android:id="@+id/card_str"
@@ -574,16 +597,7 @@
                 app:layout_constraintTop_toTopOf="@id/card_picture" />
 
 
-            <ImageButton
-                android:id="@+id/select_btn1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="25dp"
-                android:layout_marginTop="25dp"
-                android:backgroundTint="@color/white"
-                android:src="@drawable/blue_select"
-                app:layout_constraintStart_toStartOf="@id/select_box"
-                app:layout_constraintTop_toBottomOf="@id/select_btn" />
+
 
             <TextView
                 android:id="@+id/easypay_str"
@@ -593,29 +607,20 @@
                 android:textColor="@color/black"
                 android:textSize="19sp"
                 app:layout_constraintStart_toStartOf="@+id/card_str"
-                app:layout_constraintTop_toTopOf="@id/select_btn1" />
+                app:layout_constraintTop_toTopOf="@id/select_box"
+                android:layout_marginTop="90dp"/>
 
-            <ImageButton
-                android:id="@+id/select_btn2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="25dp"
-                android:layout_marginTop="25dp"
-                android:backgroundTint="@color/white"
-                android:src="@drawable/select"
-                app:layout_constraintStart_toStartOf="@id/select_box"
-                app:layout_constraintTop_toBottomOf="@id/select_btn1" />
 
             <ImageView
                 android:id="@+id/phone_picture"
                 android:layout_width="30dp"
                 android:layout_height="28dp"
                 android:layout_marginStart="5dp"
-                android:layout_marginTop="7dp"
+                android:layout_marginTop="35dp"
                 android:backgroundTint="@color/white"
                 android:src="@drawable/phone"
-                app:layout_constraintStart_toEndOf="@id/select_btn2"
-                app:layout_constraintTop_toTopOf="@id/select_btn2" />
+                app:layout_constraintStart_toStartOf="@id/card_picture"
+                app:layout_constraintTop_toBottomOf="@id/easypay_str" />
 
             <TextView
                 android:id="@+id/phonepay_str"
@@ -627,52 +632,13 @@
                 app:layout_constraintStart_toStartOf="@+id/easypay_str"
                 app:layout_constraintTop_toTopOf="@id/phone_picture" />
 
-            <ImageButton
-                android:id="@+id/checkbox"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="30dp"
-                android:backgroundTint="@color/white"
-                android:padding="12dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/checkbox"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/select_box" />
 
-            <TextView
-                android:id="@+id/agree_str"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:text="필수 약관 전체 동의"
-                android:textColor="@color/black"
-                android:textSize="23sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/checkbox"
-                app:layout_constraintTop_toTopOf="@+id/checkbox" />
 
-            <ImageButton
-                android:id="@+id/checkbox_small"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="28dp"
-                android:backgroundTint="@color/white"
-                android:src="@drawable/checkbox_small"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/checkbox"
-                android:contentDescription="checkbox_small"/>
 
-            <TextView
-                android:id="@+id/essential"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:text="[ 필수 ] 개인정보 수집 및 이용"
-                android:textColor="#A0A0A0"
-                android:textSize="15sp"
-                app:layout_constraintStart_toEndOf="@id/checkbox_small"
-                app:layout_constraintTop_toTopOf="@id/checkbox_small" />
+
+
+
+
 
             <TextView
                 android:id="@+id/more"
@@ -683,28 +649,11 @@
                 android:textColor="#2564DE"
                 android:textSize="13sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@id/checkbox_small" />
+                app:layout_constraintTop_toTopOf="@id/checkBox_small" />
 
-            <ImageButton
-                android:id="@+id/checkbox_small1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="28dp"
-                android:backgroundTint="@color/white"
-                android:src="@drawable/checkbox_small"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/checkbox_small" />
 
-            <TextView
-                android:id="@+id/essential1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:text="[ 필수 ] 개인정보 제 3자 제공"
-                android:textColor="#A0A0A0"
-                android:textSize="15sp"
-                app:layout_constraintStart_toEndOf="@id/checkbox_small"
-                app:layout_constraintTop_toTopOf="@id/checkbox_small1" />
+
+
 
             <TextView
                 android:id="@+id/more1"
@@ -715,40 +664,115 @@
                 android:textColor="#2564DE"
                 android:textSize="13sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@id/checkbox_small1" />
+                app:layout_constraintTop_toTopOf="@id/checkBox_small1" />
 
-            <ImageButton
-                android:id="@+id/yellow_bar"
-                android:layout_width="380dp"
-                android:layout_height="58dp"
-                android:layout_marginStart="6dp"
-                android:layout_marginTop="25dp"
-                android:layout_marginEnd="6dp"
-                android:backgroundTint="@color/white"
-                android:padding="0dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/yellow_bar"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/checkbox_small1" />
 
-            <TextView
+            <CheckBox
+                android:id="@+id/agree_str"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="340,000원 결제하기"
-                android:textColor="@color/white"
-                android:textSize="25sp"
+                android:layout_marginTop="20dp"
+                android:buttonTint="#2564DE"
+                android:text="필수약관 전체동의"
+                android:textColor="@color/black"
+                android:textSize="23sp"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="@+id/yellow_bar"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/yellow_bar" />
+                app:layout_constraintStart_toStartOf="@id/select_box"
+                app:layout_constraintTop_toBottomOf="@+id/select_box" />
+
+            <CheckBox
+                android:id="@+id/checkBox_small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="[ 필수 ] 개인정보 수집 및 이용"
+                android:buttonTint="#2564DE"
+                android:textColor="#A0A0A0"
+                android:textSize="15sp"
+                tools:layout_editor_absoluteX="99dp"
+                tools:layout_editor_absoluteY="2dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="150dp"
+                app:layout_constraintTop_toBottomOf="@id/agree_str"
+                app:layout_constraintStart_toStartOf="@id/agree_str"/>
+            <CheckBox
+                android:id="@+id/checkBox_small1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="[ 필수 ] 개인정보 수집 및 이용"
+                android:buttonTint="#2564DE"
+                android:textColor="#A0A0A0"
+                android:textSize="15sp"
+                tools:layout_editor_absoluteX="99dp"
+                tools:layout_editor_absoluteY="2dp"
+                app:layout_constraintTop_toBottomOf="@id/checkBox_small"
+                app:layout_constraintStart_toStartOf="@id/checkBox_small"/>
+
+            <RadioGroup
+                android:id="@+id/Radio_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@id/select_box"
+                app:layout_constraintStart_toStartOf="@id/select_box">
+
+                <RadioButton
+                    android:id="@+id/select_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="25dp"
+                    android:backgroundTint="@color/white"
+                    android:buttonTint="#2564DE"
+                    android:src="@drawable/selected_btn"
+                    app:layout_constraintStart_toStartOf="@id/select_box"
+                    app:layout_constraintTop_toTopOf="@id/select_box"
+                    android:contentDescription="select_btn"/>
+                <RadioButton
+                    android:id="@+id/select_btn1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="10dp"
+                    android:buttonTint="#2564DE"
+                    android:backgroundTint="@color/white"
+                    android:src="@drawable/selected_btn"
+                    app:layout_constraintStart_toStartOf="@id/select_box"
+                    app:layout_constraintTop_toBottomOf="@id/select_btn" />
+
+                <RadioButton
+                    android:id="@+id/select_btn2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="10dp"
+                    android:buttonTint="#2564DE"
+                    android:backgroundTint="@color/white"
+                    android:src="@drawable/selected_btn"
+                    app:layout_constraintStart_toStartOf="@id/select_box"
+                    app:layout_constraintTop_toBottomOf="@id/select_btn1" />
+            </RadioGroup>
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 
     </ScrollView>
+    <android.widget.Button
+        android:id="@+id/yellow_bar"
+        android:layout_width="380dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="20dp"
+        android:text="예약하기"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:background="@drawable/write_done_shape"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:contentDescription="yellow_bar"/>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

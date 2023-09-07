@@ -246,3 +246,144 @@ data class HotelInfoData(
 data class RoomInfoData(
     var name: String
 )
+
+data class ReserveData(
+    var checkIn : String,
+    var checkOut : String,
+    var paymentPrice : String,
+    var peopleNum : Int,
+    var phone :String,
+    var hotelId : Int,
+    var roomId : List<Int>,
+    var packageId : List<Int>,
+)
+
+data class ReserveResponseData(
+    var id: Int,
+    var checkIn: String,
+    var checkOut: String,
+    var phone: String,
+    var peopleNum: Int
+)
+data class Reservedetail(
+    var checkIn: String,
+    var checkOut: String,
+    var name: String,
+    var phone: String,
+    var roomInfo: List<Int>,
+    var packageInfo: String
+)
+
+data class PackageData(
+    var name : String,
+    var minPeople : Int,
+    var maxPeople : Int,
+    var price: Int,
+    var roomType : String,
+    var info : String
+)
+
+data class ResponsePackageData(
+    var id: Int,
+    var name: String,
+    var minPeople : Int,
+    var maxPeople : Int,
+    var price: Int,
+    var roomType : String,
+    var photos: List<String>
+)
+
+data class PkgImgData(
+    var packageId : Int,
+    var image : List<String>
+)
+
+
+data class RoomCreateData(
+    var name : String,
+    var minPeople : Int,
+    var maxPeople : Int,
+    var star : Int,
+    var price: Int,
+    var info: String,
+    var roomType : String
+)
+data class ResponseCreateRoomData(
+    var id: Int,
+    var name: String,
+    var minPeople: Int,
+    var maxPeople: Int,
+    var price: Int,
+    var info: String,
+    var roomType: String,
+    var photos: List<String>
+)
+data class RoomEditData(
+    var name: String,
+    var minPeople: Int,
+    var maxPeople: Int,
+    var price: Int,
+    var info: String,
+    var roomType: String
+)
+data class ResponseEditRoomData(
+    var id: Int,
+    var name: String,
+    var minPeople: Int,
+    var maxPeople: Int,
+    var price: Int,
+    var info: String,
+    var roomType: String,
+    var photos: List<String>
+)
+data class RoomImgEditData(
+    var roomId : Int,
+    var image : List<String>
+)
+data class ResponseImgEditRoomData(
+    var id: Int,
+    var name: String,
+    var minPeople: Int,
+    var maxPeople: Int,
+    var price: Int,
+    var info: String,
+    var roomType: String,
+    var photos:List<String>
+)
+data class ResponseInqRoomData(
+    var id: Int,
+    var name: String,
+    var minPeople: Int,
+    var maxPeople: Int,
+    var Price: Int,
+    var info: String,
+    var roomType: String,
+    var photos:List<String>
+)
+data class RoomPackage(
+    var packages: RoomPackageData,
+    var room: List<RoomPackageData>
+)
+
+data class RoomPackageData(
+    var id: Int,
+    var name: String
+)
+
+data class ResponseRoomPackage(
+    var packages: RoomPkgData,
+    var room: List<RoomPkgData>
+)
+
+data class RoomPkgData(
+    var id: Int,
+    var name: String,
+    var minPeople: Int,
+    var maxPeople: Int,
+    var Price: Int,
+    var info: String,
+    var roomType: String,
+    var photos:List<String>,
+    var createdAt: String,
+    var modifiedAt: String
+)

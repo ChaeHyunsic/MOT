@@ -48,13 +48,12 @@
         android:layout_marginTop="40dp"
         android:backgroundTint="#B5B5B5"
         android:clickable="true"
-        android:focusable="false"
         android:gravity="center|start"
         android:hint="주소를 검색하려면 눌러주세요"
+        android:maxLines="1"
         android:paddingBottom="20dp"
         android:textColorHint="#B5B5B5"
         android:textSize="13sp"
-        android:imeOptions="actionDone"
         app:layout_constraintStart_toStartOf="@+id/selected_area"
         app:layout_constraintTop_toBottomOf="@+id/selected_area" />
 
@@ -64,13 +63,12 @@
         android:layout_height="48dp"
         android:layout_marginTop="20dp"
         android:backgroundTint="#B5B5B5"
-        android:focusable="false"
         android:gravity="start|center_vertical"
         android:hint="상세 주소 입력"
+        android:maxLines="1"
         android:paddingBottom="20dp"
         android:textColorHint="#B5B5B5"
         android:textSize="13sp"
-        android:imeOptions="actionDone"
         app:layout_constraintStart_toStartOf="@+id/et_Address_write"
         app:layout_constraintTop_toBottomOf="@+id/et_Address_write" />
 

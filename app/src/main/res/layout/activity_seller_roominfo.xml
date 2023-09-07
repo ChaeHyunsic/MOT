@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageButton
+        android:id="@+id/x_btn"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="@color/white"
+        android:contentDescription="x_btn"
+        android:padding="10dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/seller_x"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/image_plus_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="90dp"
+        android:backgroundTint="@color/white"
+        android:contentDescription="image_plus_btn"
+        android:src="@drawable/round_seller_rectangle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/x_btn" />
+    <ImageView
+        android:id="@+id/camera_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/camera"
+        android:backgroundTint="@color/white"
+        android:background="@android:color/transparent"
+        app:layout_constraintTop_toTopOf="@+id/image_plus_btn"
+        app:layout_constraintStart_toStartOf="@id/image_plus_btn"
+        app:layout_constraintEnd_toEndOf="@id/image_plus_btn"
+        app:layout_constraintBottom_toBottomOf="@id/image_plus_btn"/>
+    <TextView
+        android:id="@+id/package_str"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="객실"
+        android:textSize="30sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/image_plus_btn"
+        app:layout_constraintTop_toBottomOf="@id/image_plus_btn"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp"/>
+    <ImageButton
+        android:id="@+id/seller_adjust_btn"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/seller_adjust_btn"
+        android:scaleType="centerCrop"
+        android:padding="15dp"
+        app:layout_constraintTop_toTopOf="@id/package_str"
+        app:layout_constraintStart_toEndOf="@id/package_str"
+        android:layout_marginStart="10dp"
+        android:backgroundTint="@color/white"
+        android:contentDescription="seller_adjust_btn" />
+
+    <TextView
+        android:id="@+id/small_package_str"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="1인"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        app:layout_constraintStart_toStartOf="@id/package_str"
+        app:layout_constraintTop_toBottomOf="@id/package_str" />
+
+    <TextView
+        android:id="@+id/small_package_str2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="기본 금액"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        app:layout_constraintStart_toStartOf="@id/small_package_str"
+        app:layout_constraintTop_toBottomOf="@id/small_package_str" />
+
+    <TextView
+        android:id="@+id/small_package_str3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="기준 인원"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        app:layout_constraintStart_toStartOf="@id/small_package_str2"
+        app:layout_constraintTop_toBottomOf="@id/small_package_str2" />
+
+    <TextView
+        android:id="@+id/small_package_str4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="최대 인원"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        app:layout_constraintStart_toStartOf="@id/small_package_str3"
+        app:layout_constraintTop_toBottomOf="@id/small_package_str3" />
+
+    <TextView
+        android:id="@+id/small_package_str5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:text="25,000원"
+        android:textColor="#7E7E7E"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/small_package_str"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/small_package_str" />
+
+    <TextView
+        android:id="@+id/small_package_str6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:text="600,000원"
+        android:textColor="#7E7E7E"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/small_package_str2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/small_package_str2" />
+
+    <TextView
+        android:id="@+id/small_package_str7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:text="5명"
+        android:textColor="#7E7E7E"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/small_package_str3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/small_package_str3" />
+
+    <TextView
+        android:id="@+id/small_package_str8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:text="10명"
+        android:textColor="#7E7E7E"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/small_package_str4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/small_package_str4" />
+
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

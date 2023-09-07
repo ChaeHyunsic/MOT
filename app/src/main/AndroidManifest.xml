@@ -17,6 +17,11 @@
         android:theme="@style/Theme.MOT"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="${MAPS_API_KEY}" />
+
         <activity
             android:name=".SplashActivity"
             android:theme="@style/Theme.Design.Light.NoActionBar"
@@ -46,6 +51,17 @@
         <activity android:name=".SelJoinNameActivity"/>
         <activity android:name=".SelJoinLocationActivity"/>
         <activity android:name=".SelJoinAddressActivity"/>
+
+        <activity android:name=".MyAccountActivity"></activity>
+        <activity android:name=".InfoActivity"></activity>
+        <activity android:name=".AccountSettingActivity"></activity>
+        <activity android:name=".AccountCertifiActivity"></activity>
+        <activity android:name=".SellActivity"></activity>
+        <activity android:name=".RoomActivity"></activity>
+        <activity android:name=".RoomSimpleActivity"></activity>
+        <activity android:name=".RoomInfoActivity"></activity>
+        <activity android:name=".RoomDetailActivity"></activity>
+        <activity android:name=".PersonActivity"></activity>
 
         <activity
             android:name=".SelAreaChooseActivity"
@@ -98,6 +114,43 @@
         <activity
             android:name=".SelTabActivity"
             android:exported="true" />
+
+        <activity
+            android:name=".Seller_package_adjustActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PaymentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PrivacyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Seller_adjust_peopleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Seller_basicinfo_strActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Seller_packageinfo_addpicActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Seller_roominfoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Tablayout_details_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Seller_packageinfo_detailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AccommodationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Tablayout_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Seller_tablayoutActivity"
+            android:exported="false" />
 
     </application>
 

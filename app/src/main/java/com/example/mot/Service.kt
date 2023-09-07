@@ -199,4 +199,96 @@ interface Service {
         //@Header("Authorization") Authorization: String?,
     ) : Call<List<ReserveInqData>>
 
+    @POST("/reserve")
+    fun reserveCreate(
+        @Body reserveData : ReserveData
+    ) : Call<ReserveResponseData>
+    //판매자 예약 상세 보기
+    @POST("/reserve/detail/{reserve-id}")
+    fun reserveDetail(
+        @Path("reserveid") reserveid :String
+    ): Call<Reservedetail>
+
+    // 패키지 생성
+    @POST("/package/{hotel-id}")
+    fun packageCreate(
+        @Path("hotelId") hotelId : Int,
+        @Body packageCreateData : PackageData
+    ) : Call<ResponsePackageData>
+
+    // 패키지 수정
+    @PATCH("/package/{package-id}")
+    fun packageEdit(
+        @Path("packageId") packageId : Int,
+        @Body packageEditData : PackageData
+    ) : Call<ResponsePackageData>
+
+    // 패키지 사진 수정
+    @PATCH("/package/upload-images")
+    fun packageImgEdit(
+        @Body packageImage : PkgImgData
+    ) : Call<ResponsePackageData>
+
+    //패키지 조회
+    @GET("/package")
+    fun packageInq(
+        @Query("packageId") packageId : Int,
+    ): Call<ResponsePackageData>
+
+    //패키지 삭제
+    @DELETE("/package/{package-id}")
+    fun packageDelete(
+        @Path("packageId") packageId : Int
+    ) : Call<Void>
+
+    //객실 생성
+    @POST("/room/{hotel-id}")
+    fun roomCreate(
+        @Path("hotelId") hotelId : Int,
+        @Body roomCreateData : RoomCreateData
+    ) : Call<ResponseCreateRoomData>
+
+    //객실 수정
+    @PATCH("/room/{room-id}")
+    fun roomEdit(
+        @Path("roomId") roomId : Int,
+        @Body roomEditData : RoomEditData
+    ) : Call<ResponseEditRoomData>
+
+    //객실 사진 수정
+    @PATCH("/room/upload-images")
+    fun roomImgEdit(
+        @Body roomImgEditData : RoomImgEditData
+    ) : Call<ResponseImgEditRoomData>
+
+    //객실 조회
+    @GET("/room/{room-id}")
+    fun roomInq(
+        @Path("roomId") roomId : Int
+    ) : Call<ResponseInqRoomData>
+
+    //패키지 삭제
+    @DELETE("/room/{room-id}")
+    fun roomDelete(
+        @Path("roomId") roomId : Int
+    ) : Call<Void>
+
+    // 패키지 생성 후 해당 패키지 안에 원하는 숙소 추가
+    @POST("/roomPackage")
+    fun roomPackage(
+        @Body roomPackage : RoomPackage
+    ) : Call<ResponseRoomPackage>
+
+    // 패키지 아이디 입력하면 패키지에 속한 숙소 조회하기
+    @GET("/roomPackage")
+    fun packageId_add(
+        @Query("packageId") packageId:Int
+    ) : Call<List<RoomPkgData>>
+
+    // 패키지 안에 있는 숙소 수정하기
+    @PATCH("/roomPackage")
+    fun packageInEdit(
+        @Body roomPackage : RoomPackage
+    ) : Call<ResponseRoomPackage>
+
 }

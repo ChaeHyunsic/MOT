@@ -38,15 +38,15 @@
 
     <GridLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_height="500dp"
+        android:layout_marginTop="30dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/sel_area_title"
-        android:layout_marginTop="30dp">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sel_area_title">
 
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical">
 
             <android.widget.Button
@@ -63,84 +63,85 @@
                 android:id="@+id/btn_sell_busan"
                 android:layout_width="150dp"
                 android:layout_height="48dp"
+                android:layout_marginTop="15dp"
                 android:background="@drawable/btn_sell_area_unselect"
                 android:gravity="left|center_vertical"
                 android:paddingStart="18dp"
                 android:text="부산"
-                android:textSize="14sp"
-                android:layout_marginTop="15dp"/>
+                android:textSize="14sp" />
 
             <android.widget.Button
                 android:id="@+id/btn_sell_incheon"
                 android:layout_width="150dp"
                 android:layout_height="48dp"
+                android:layout_marginTop="15dp"
                 android:background="@drawable/btn_sell_area_unselect"
                 android:gravity="left|center_vertical"
                 android:paddingStart="18dp"
                 android:text="인천"
-                android:textSize="14sp"
-                android:layout_marginTop="15dp"/>
+                android:textSize="14sp" />
 
             <android.widget.Button
                 android:id="@+id/btn_sell_daejeon"
                 android:layout_width="150dp"
                 android:layout_height="48dp"
+                android:layout_marginTop="15dp"
                 android:background="@drawable/btn_sell_area_unselect"
                 android:gravity="left|center_vertical"
                 android:paddingStart="18dp"
                 android:text="대전"
-                android:textSize="14sp"
-                android:layout_marginTop="15dp" />
+                android:textSize="14sp" />
 
             <android.widget.Button
                 android:id="@+id/btn_sell_chungnam"
                 android:layout_width="150dp"
                 android:layout_height="48dp"
+                android:layout_marginTop="15dp"
                 android:background="@drawable/btn_sell_area_unselect"
                 android:gravity="left|center_vertical"
                 android:paddingStart="18dp"
                 android:text="충남/세종"
-                android:textSize="14sp"
-                android:layout_marginTop="15dp" />
+                android:textSize="14sp" />
 
             <android.widget.Button
                 android:id="@+id/btn_sell_chungbuk"
                 android:layout_width="150dp"
                 android:layout_height="48dp"
+                android:layout_marginTop="15dp"
                 android:background="@drawable/btn_sell_area_unselect"
                 android:gravity="left|center_vertical"
                 android:paddingStart="18dp"
                 android:text="충북"
-                android:textSize="14sp"
-                android:layout_marginTop="15dp" />
+                android:textSize="14sp" />
 
             <android.widget.Button
                 android:id="@+id/btn_sell_jeonnam"
                 android:layout_width="150dp"
                 android:layout_height="48dp"
+                android:layout_marginTop="15dp"
                 android:background="@drawable/btn_sell_area_unselect"
                 android:gravity="left|center_vertical"
                 android:paddingStart="18dp"
                 android:text="전남"
-                android:textSize="14sp"
-                android:layout_marginTop="15dp" />
+                android:textSize="14sp" />
 
             <android.widget.Button
                 android:id="@+id/btn_sell_gyeongnam"
                 android:layout_width="150dp"
                 android:layout_height="48dp"
+                android:layout_marginTop="15dp"
                 android:background="@drawable/btn_sell_area_unselect"
                 android:gravity="left|center_vertical"
                 android:paddingStart="18dp"
                 android:text="경남"
-                android:textSize="14sp"
-                android:layout_marginTop="15dp" />
+                android:textSize="14sp" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginStart="25dp">
+            android:layout_height="match_parent"
+            android:layout_marginStart="25dp"
+            android:orientation="vertical">
 
             <android.widget.Button
                 android:id="@+id/btn_sell_gyeonggi"
@@ -156,78 +157,78 @@
                 android:id="@+id/btn_sell_deagu"
                 android:layout_width="150dp"
                 android:layout_height="48dp"
+                android:layout_marginTop="15dp"
                 android:background="@drawable/btn_sell_area_unselect"
                 android:gravity="left|center_vertical"
                 android:paddingStart="18dp"
                 android:text="대구/경산"
-                android:textSize="14sp"
-                android:layout_marginTop="15dp"/>
+                android:textSize="14sp" />
 
             <android.widget.Button
                 android:id="@+id/btn_sell_gwangju"
                 android:layout_width="150dp"
                 android:layout_height="48dp"
+                android:layout_marginTop="15dp"
                 android:background="@drawable/btn_sell_area_unselect"
                 android:gravity="left|center_vertical"
                 android:paddingStart="18dp"
                 android:text="광주"
-                android:textSize="14sp"
-                android:layout_marginTop="15dp"/>
+                android:textSize="14sp" />
 
             <android.widget.Button
                 android:id="@+id/btn_sell_ulsan"
                 android:layout_width="150dp"
                 android:layout_height="48dp"
+                android:layout_marginTop="15dp"
                 android:background="@drawable/btn_sell_area_unselect"
                 android:gravity="left|center_vertical"
                 android:paddingStart="18dp"
                 android:text="울산"
-                android:textSize="14sp"
-                android:layout_marginTop="15dp" />
+                android:textSize="14sp" />
 
             <android.widget.Button
                 android:id="@+id/btn_sell_gangwon"
                 android:layout_width="150dp"
                 android:layout_height="48dp"
+                android:layout_marginTop="15dp"
                 android:background="@drawable/btn_sell_area_unselect"
                 android:gravity="left|center_vertical"
                 android:paddingStart="18dp"
                 android:text="강원"
-                android:textSize="14sp"
-                android:layout_marginTop="15dp" />
+                android:textSize="14sp" />
 
             <android.widget.Button
                 android:id="@+id/btn_sell_jeonbuk"
                 android:layout_width="150dp"
                 android:layout_height="48dp"
+                android:layout_marginTop="15dp"
                 android:background="@drawable/btn_sell_area_unselect"
                 android:gravity="left|center_vertical"
                 android:paddingStart="18dp"
                 android:text="전북"
-                android:textSize="14sp"
-                android:layout_marginTop="15dp" />
+                android:textSize="14sp" />
 
             <android.widget.Button
                 android:id="@+id/btn_sell_gyeongbuk"
                 android:layout_width="150dp"
                 android:layout_height="48dp"
+                android:layout_marginTop="15dp"
                 android:background="@drawable/btn_sell_area_unselect"
                 android:gravity="left|center_vertical"
                 android:paddingStart="18dp"
                 android:text="경북"
-                android:textSize="14sp"
-                android:layout_marginTop="15dp" />
+                android:textSize="14sp" />
 
             <android.widget.Button
                 android:id="@+id/btn_sell_jeju"
                 android:layout_width="150dp"
                 android:layout_height="48dp"
+                android:layout_marginTop="15dp"
                 android:background="@drawable/btn_sell_area_unselect"
                 android:gravity="left|center_vertical"
                 android:paddingStart="18dp"
                 android:text="제주"
-                android:textSize="14sp"
-                android:layout_marginTop="15dp" />
+                android:textSize="14sp" />
         </LinearLayout>
     </GridLayout>
 

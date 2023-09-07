@@ -7,13 +7,9 @@ import android.os.Looper
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.mot.databinding.FragmentSelReviewListBinding
 import com.example.mot.databinding.SelReviewListItemBinding
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
@@ -21,12 +17,6 @@ class SelReviewListFragment : Fragment() {
 
     private lateinit var binding : FragmentSelReviewListBinding
 
-    var retrofit = Retrofit.Builder()
-        .baseUrl("http://13.125.85.98:8080")
-        .addConverterFactory(GsonConverterFactory.create())
-        .build()
-
-    var service = retrofit.create(Service::class.java)
     var commentId : Int? = null
 
 
@@ -34,6 +24,13 @@ class SelReviewListFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
+        var retrofit = Retrofit.Builder()
+            .baseUrl("http://13.125.85.98:8080")
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+
+        var service = retrofit.create(Service::class.java)
 
         binding = FragmentSelReviewListBinding.inflate(layoutInflater)
 
@@ -76,44 +73,54 @@ class SelReviewListFragment : Fragment() {
 //        })
 
         // 숨김 버튼
-        selReviewInqBinding.btnHide.setOnClickListener {
-            service.commentVis(/*TokenManager.getAuthToken(),*/ComVisibleData(commentId!!.toInt(), visible = false)).enqueue(object :
-                 Callback<ComVisibleChange>{
-                override fun onResponse(
-                    call: Call<ComVisibleChange>,
-                    response: Response<ComVisibleChange>
-                ) {
-                    if(response.isSuccessful){
-                        val result = response.body()
-
-                        if(result != null){
-                            selReviewInqBinding.btnHide.setImageResource(R.drawable.btn_hide_done)
-                        }
-                    }
-                }
-
-                override fun onFailure(call: Call<ComVisibleChange>, t: Throwable) {
-                    Toast.makeText(activity, "잠시후 다시 시도해주세요.", Toast.LENGTH_SHORT).show()
-                }
-            })
+        val select_buttons = listOf(binding.btnHide, binding.btnHide2)
+        for (btn_hide in select_buttons) {
+            btn_hide.setOnClickListener {
+//            service.commentVis(/*TokenManager.getAuthToken(),*/ComVisibleData(commentId!!.toInt(), visible = false)).enqueue(object :
+//                 Callback<ComVisibleChange>{
+//                override fun onResponse(
+//                    call: Call<ComVisibleChange>,
+//                    response: Response<ComVisibleChange>
+//                ) {
+//                    if(response.isSuccessful){
+//                        val result : ComVisibleChange? = response.body()
+//
+//                        if(result!!.visible == true){
+//                            binding.btnHide.setImageResource(R.drawable.btn_hide_done)
+//                        }
+//                    }
+//                    Toast.makeText(context, "잠시후 다시 시도해주세요.", Toast.LENGTH_SHORT).show()
+//                }
+//
+//
+//                override fun onFailure(call: Call<ComVisibleChange>, t: Throwable) {
+//                    Toast.makeText(context, "잠시후 다시 시도해주세요.", Toast.LENGTH_SHORT).show()
+//                }
+//            })
+                btn_hide.setImageResource(R.drawable.btn_hide_done)
+            }
         }
 
-        selReviewInqBinding.btnWriteReply.setOnClickListener {
+        binding.btnWriteReply.setOnClickListener {
             val intent = Intent(activity, SelReplyActivity::class.java)
             startActivity(intent)
 
             Handler(Looper.getMainLooper()).postDelayed({
-                selReviewInqBinding.btnWriteReply.text = "답변 완료"
-                selReviewInqBinding.btnWriteReply.isEnabled = false
+                binding.btnWriteReply.text = "답변 완료"
+                binding.btnWriteReply.isEnabled = false
             }, 1000)
         }
 
-        selReviewInqBinding.btnMore.setOnClickListener {
-            val txt = selReviewInqBinding.selReviewBox.text.toString()
-            val intent = Intent(activity, SelReviewMoreActivity::class.java)
+        // 더보기
+        val more = listOf(binding.btnMore, binding.btnMore2)
+        for (btn_more in more) {
+            btn_more.setOnClickListener {
+                val txt = binding.selReviewBox.text.toString()
+                val intent = Intent(activity, SelReviewMoreActivity::class.java)
 
-            intent.putExtra("review", txt)
-            startActivity(intent)
+                intent.putExtra("review", txt)
+                startActivity(intent)
+            }
         }
 
         return binding.root

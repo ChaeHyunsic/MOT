@@ -53,14 +53,209 @@
                 app:layout_constraintBottom_toBottomOf="@+id/tv_now_grade"
                 app:layout_constraintStart_toEndOf="@+id/tv_now_grade" />
 
-            <LinearLayout
-                android:id="@+id/sel_review_item_layout"
+            <androidx.cardview.widget.CardView
+                android:id="@+id/sel_review_card1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:layout_constraintTop_toBottomOf="@id/tv_now_grade"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="10dp"
+                app:cardCornerRadius="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"/>
+                app:layout_constraintTop_toBottomOf="@+id/tv_total_grade">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/sel_review_nickname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginTop="15dp"
+                        android:text="홍길동"
+                        android:textColor="@color/black"
+                        android:textSize="17sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <RatingBar
+                        android:id="@+id/sel_ratingBar"
+                        style="@style/Widget.AppCompat.RatingBar.Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:progressTint="@color/rating_color"
+                        android:rating="3"
+                        app:layout_constraintStart_toStartOf="@+id/sel_review_nickname"
+                        app:layout_constraintTop_toBottomOf="@+id/sel_review_nickname" />
+
+                    <TextView
+                        android:id="@+id/sel_review_useroom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="패키지1 / 6인 온돌룸, 소형 온돌룸"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="@+id/sel_ratingBar"
+                        app:layout_constraintTop_toBottomOf="@id/sel_ratingBar" />
+
+                    <TextView
+                        android:id="@+id/sel_review_box"
+                        android:layout_width="320dp"
+                        android:layout_height="80dp"
+                        android:layout_marginTop="15dp"
+                        android:background="#F0F0F0"
+                        android:gravity="center_vertical"
+                        android:paddingStart="10dp"
+                        android:text="@string/my_review"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/sel_review_useroom" />
+
+                    <ImageView
+                        android:id="@+id/btn_hide"
+                        android:layout_width="60dp"
+                        android:layout_height="48dp"
+                        android:clickable="true"
+                        android:contentDescription="Hide"
+                        android:padding="17.5dp"
+                        android:src="@drawable/hide"
+                        android:visibility="visible"
+                        app:layout_constraintEnd_toEndOf="@+id/btn_writeReply"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <android.widget.Button
+                        android:id="@+id/btn_writeReply"
+                        android:layout_width="130dp"
+                        android:layout_height="48dp"
+                        android:background="@drawable/btn_review"
+                        android:text="답변 작성"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@+id/sel_review_useroom"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/sel_review_useroom"
+                        app:layout_constraintTop_toBottomOf="@+id/btn_hide" />
+
+                    <ImageView
+                        android:id="@+id/btn_more"
+                        android:layout_width="60dp"
+                        android:layout_height="48dp"
+                        android:clickable="true"
+                        android:contentDescription="buttonMore"
+                        android:src="@drawable/img_more"
+                        app:layout_constraintEnd_toEndOf="@+id/sel_review_box"
+                        app:layout_constraintTop_toBottomOf="@+id/sel_review_box" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/sel_review_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="10dp"
+                app:cardCornerRadius="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sel_review_card1">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/sel_review_nickname2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginTop="15dp"
+                        android:text="춘향이"
+                        android:textColor="@color/black"
+                        android:textSize="17sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <RatingBar
+                        android:id="@+id/sel_ratingBar2"
+                        style="@style/Widget.AppCompat.RatingBar.Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:progressTint="@color/rating_color"
+                        android:rating="4.5"
+                        app:layout_constraintStart_toStartOf="@+id/sel_review_nickname2"
+                        app:layout_constraintTop_toBottomOf="@+id/sel_review_nickname2" />
+
+                    <TextView
+                        android:id="@+id/sel_review_useroom2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="패키지2 / 3인 온돌룸, 소형 온돌룸"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="@+id/sel_ratingBar2"
+                        app:layout_constraintTop_toBottomOf="@id/sel_ratingBar2" />
+
+                    <TextView
+                        android:id="@+id/sel_review_box2"
+                        android:layout_width="320dp"
+                        android:layout_height="80dp"
+                        android:layout_marginTop="15dp"
+                        android:background="#F0F0F0"
+                        android:gravity="center_vertical"
+                        android:paddingStart="10dp"
+                        android:text="@string/my_review"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/sel_review_useroom2" />
+
+                    <ImageView
+                        android:id="@+id/btn_hide2"
+                        android:layout_width="60dp"
+                        android:layout_height="48dp"
+                        android:clickable="true"
+                        android:contentDescription="Hide"
+                        android:padding="17.5dp"
+                        android:src="@drawable/hide"
+                        android:visibility="visible"
+                        app:layout_constraintEnd_toEndOf="@+id/btn_writeReply2"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <android.widget.Button
+                        android:id="@+id/btn_writeReply2"
+                        android:layout_width="130dp"
+                        android:layout_height="48dp"
+                        android:background="@drawable/btn_review"
+                        android:text="답변 작성"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@+id/sel_review_useroom2"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/sel_review_useroom2"
+                        app:layout_constraintTop_toBottomOf="@+id/btn_hide2" />
+
+                    <ImageView
+                        android:id="@+id/btn_more2"
+                        android:layout_width="60dp"
+                        android:layout_height="48dp"
+                        android:clickable="true"
+                        android:contentDescription="buttonMore"
+                        android:src="@drawable/img_more"
+                        app:layout_constraintEnd_toEndOf="@+id/sel_review_box2"
+                        app:layout_constraintTop_toBottomOf="@+id/sel_review_box2" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

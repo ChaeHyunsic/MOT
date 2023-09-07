@@ -5,13 +5,56 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageButton
+            android:id="@+id/backbutton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/white"
+            android:padding="5dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/backbutton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="SpeakableTextPresentCheck" />
+        <ImageButton
+            android:id="@+id/share_btn"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/share_btn"
+            android:backgroundTint="@color/white"
+            app:layout_constraintTop_toTopOf="@id/backbutton"
+            app:layout_constraintEnd_toStartOf="@+id/shopping_basket"
+            android:contentDescription="share_btn"
+            />
+        <ImageButton
+            android:id="@+id/shopping_basket"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/shopping_basket"
+            android:backgroundTint="@color/white"
+            app:layout_constraintTop_toTopOf="@id/backbutton"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="10dp"
+            android:contentDescription="shopping_basket"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
     <ScrollView
         android:id="@+id/scrollView3"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/top_bar">
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -21,55 +64,18 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-            <ImageButton
-                android:id="@+id/backbutton"
-                android:layout_width="48dp"
-                android:layout_height="50dp"
-                android:layout_marginStart="25dp"
-                android:layout_marginTop="40dp"
-                android:backgroundTint="@color/white"
-                android:padding="5sp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/backbutton"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="SpeakableTextPresentCheck" />
 
-            <ImageButton
-                android:id="@+id/share_btn"
-                android:layout_width="48dp"
-                android:layout_height="50dp"
-                android:backgroundTint="@color/white"
-                android:contentDescription="share_btn"
-                android:padding="10dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/share_btn"
-                app:layout_constraintEnd_toStartOf="@+id/shopping_basket"
-                app:layout_constraintTop_toTopOf="@id/backbutton" />
 
-            <ImageButton
-                android:id="@+id/shopping_basket"
-                android:layout_width="48dp"
-                android:layout_height="50dp"
-                android:layout_marginEnd="10dp"
-                android:backgroundTint="@color/white"
-                android:contentDescription="shopping_basket"
-                android:padding="10dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/shopping_basket"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@id/backbutton" />
 
             <ImageView
                 android:id="@+id/room_picture"
                 android:layout_width="410dp"
                 android:layout_height="275dp"
-                android:layout_marginTop="25dp"
                 android:padding="0sp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/room_picture"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/backbutton" />
+                app:layout_constraintTop_toTopOf="parent"/>
 
             <TextView
                 android:id="@+id/lodging_name"
@@ -137,10 +143,11 @@
 
             <TextView
                 android:id="@+id/view_all"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="55dp"
+                android:layout_height="48dp"
                 android:layout_marginTop="10dp"
                 android:text="전체보기"
+                android:clickable="true"
                 android:textColor="@color/black"
                 android:textSize="15sp"
                 android:textStyle="bold"
@@ -153,12 +160,25 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="25dp"
                 android:layout_marginTop="15dp"
-                android:text="해운대 해수욕장 제일가까운 펜션, 단체룸, 투룸, 침실룸, 온돌룸, 개별 취사, 바베큐시설. 1. 해운 대해수욕장 정중앙에 위치 - 해변가에서 ...
-    "
-                android:textColor="#525252"
+                android:maxLines="5"
+                android:ellipsize="end"
+                android:text="해운대 해수욕장 제일가까운 펜션, 단체룸, 투룸, 침실룸, 온돌룸, 개별 취사, 바베큐시설. 1. 해운 대해수욕장 정중앙에 위치 - 해변가에서...
+    "           android:textColor="#525252"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/basic_Info" />
+            <TextView
+                android:id="@+id/long_basicinfo_plus"
+                android:layout_width="365dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="15dp"
+                android:text="해운대 해수욕장 제일가까운 펜션, 단체룸, 투룸, 침실룸, 온돌룸, 개별 취사, 바베큐시설. 1. 해운 대해수욕장 정중앙에 위치 - 해변가에서 ...
+    "           android:textColor="#525252"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/long_basicinfo"
+                android:visibility="gone"/>
 
             <View
                 android:id="@+id/line2"
@@ -169,10 +189,79 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/long_basicinfo" />
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tablayout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/line2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="1500dp"
+                app:tabIndicatorColor="@color/black"
+                app:tabSelectedTextColor="@color/black"
+                tools:tabTextColor="#525252">
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:text="@string/tab1" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:text="@string/tab2" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:text="@string/tab3" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:text="@string/tab4" />
+            </com.google.android.material.tabs.TabLayout>
+            <FrameLayout
+                android:id="@+id/tab_fl"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tablayout"/>
+
+
+
+
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
+
+    <android.widget.Button
+        android:id="@+id/yellow_bar"
+        android:layout_width="380dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="20dp"
+        android:text="예약하기"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:background="@drawable/write_done_shape"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:contentDescription="yellow_bar"/>
+
+
+
+
+
+
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,9 +9,7 @@ import android.view.ViewGroup
 import androidx.activity.result.ActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.Fragment
-import com.example.mot.RoomDetailActivity
 import com.example.mot.databinding.FragmentRoomInfoBinding
-import com.example.seller.RoomSimpleActivity
 
 class RoomInfoFragment: Fragment() {
 

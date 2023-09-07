@@ -45,20 +45,19 @@
 
     <EditText
         android:id="@+id/et_reply_write_box"
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
         android:layout_height="500dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="30dp"
         android:background="@null"
         android:ems="10"
         android:gravity="top"
         android:hint="답변입니다."
-        android:inputType="textPersonName"
+        android:inputType="text"
         android:maxLength="500"
         android:paddingStart="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/tv_replyinfo"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_replyinfo" />
 
     <android.widget.Button

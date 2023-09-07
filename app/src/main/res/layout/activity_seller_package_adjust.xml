@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Seller_package_adjustActivity">
+
+    <ScrollView
+        android:id="@+id/scrollView3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageButton
+                android:id="@+id/x_btn"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/x2"
+                android:backgroundTint="@color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="25dp"
+                android:contentDescription="x_btn"/>
+            <TextView
+                android:id="@+id/main_package_str"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="패키지 수정"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toTopOf="@id/x_btn"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+            <TextView
+                android:id="@+id/select_str"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="선택된 객실"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="25sp"
+                app:layout_constraintStart_toStartOf="@id/click_str"
+                app:layout_constraintTop_toBottomOf="@id/x_btn"
+                android:layout_marginTop="50dp"/>
+            <TextView
+                android:id="@+id/six_ondol_str"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6인 온돌룸"
+                android:textColor="#7E7E7E"
+                android:textSize="15sp"
+                app:layout_constraintTop_toBottomOf="@id/select_str"
+                android:layout_marginTop="20dp"
+                app:layout_constraintStart_toStartOf="@id/click_str"
+                android:visibility="gone"
+                />
+            <TextView
+                android:id="@+id/big_ondol_str"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="대형 온돌룸"
+                android:textColor="#7E7E7E"
+                android:textSize="15sp"
+                app:layout_constraintTop_toBottomOf="@id/select_str"
+                app:layout_constraintStart_toStartOf="@id/package_btn"
+                android:layout_marginTop="60dp"
+                android:visibility="gone"
+                />
+            <TextView
+                android:id="@+id/small_ondol_str"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="소형 온돌룸"
+                android:textColor="#7E7E7E"
+                android:textSize="15sp"
+                app:layout_constraintTop_toBottomOf="@id/select_str"
+                android:layout_marginTop="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="280dp"
+                android:visibility="gone"
+                />
+            <TextView
+                android:id="@+id/three_ondol_str2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3인 온돌룸"
+                android:textColor="#7E7E7E"
+                android:textSize="15sp"
+                app:layout_constraintTop_toBottomOf="@id/select_str"
+                android:layout_marginTop="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="150dp"
+                android:visibility="gone"
+                />
+
+            <ImageButton
+                android:id="@+id/x3_btn"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/x3"
+                android:backgroundTint="@color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                android:background="@android:color/transparent"
+                android:layout_marginStart="100dp"
+                app:layout_constraintTop_toTopOf="@id/six_ondol_str"
+                app:layout_constraintBottom_toBottomOf="@id/six_ondol_str"
+                android:contentDescription="x3_btn"
+                android:visibility="gone"
+
+                />
+            <ImageButton
+                android:id="@+id/x3_btn4"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/x3"
+                android:backgroundTint="@color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                android:background="@android:color/transparent"
+                android:layout_marginStart="100dp"
+                app:layout_constraintTop_toTopOf="@id/big_ondol_str"
+                app:layout_constraintBottom_toBottomOf="@id/big_ondol_str"
+                android:contentDescription="x3_btn"
+                android:visibility="gone"
+                />
+            <ImageButton
+                android:id="@+id/x3_btn2"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/x3"
+                android:backgroundTint="@color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                android:background="@android:color/transparent"
+                android:layout_marginStart="220dp"
+                app:layout_constraintTop_toTopOf="@id/small_ondol_str"
+                app:layout_constraintBottom_toBottomOf="@id/small_ondol_str"
+                android:contentDescription="x3_btn2"
+                android:visibility="gone"
+                />
+            <ImageButton
+                android:id="@+id/x3_btn3"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/x3"
+                android:backgroundTint="@color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                android:background="@android:color/transparent"
+                android:layout_marginStart="335dp"
+                app:layout_constraintTop_toTopOf="@id/three_ondol_str2"
+                app:layout_constraintBottom_toBottomOf="@id/three_ondol_str2"
+                android:contentDescription="x3_btn3"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:id="@+id/click_str"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="*클릭해서 선택해 주세요"
+                android:textColor="#2564DE"
+                android:textSize="13sp"
+                app:layout_constraintTop_toBottomOf="@id/big_ondol_str"
+                app:layout_constraintStart_toStartOf="@id/package_btn"
+                android:layout_marginTop="30dp"
+                />
+
+
+            <android.widget.Button
+                android:id="@+id/package_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="260dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/roundrectangle"
+                android:contentDescription="package_btn"
+                android:drawableTop="@drawable/round_rectangle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/click_str"
+                tools:layout_editor_absoluteX="45dp"
+                tools:layout_editor_absoluteY="395dp" />
+
+            <TextView
+                android:id="@+id/package_str"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="160dp"
+                android:text="6인 온돌 룸"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/package_btn"
+                app:layout_constraintTop_toTopOf="@id/package_btn" />
+
+            <TextView
+                android:id="@+id/room_info_str"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="2dp"
+                android:text="(거실1, 작은 방1, 화장실1)"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@id/package_btn"
+                app:layout_constraintTop_toBottomOf="@id/package_str" />
+
+
+
+            <android.widget.Button
+                android:id="@+id/package_btn2"
+                android:layout_width="wrap_content"
+                android:layout_height="260dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/roundrectangle"
+                android:drawableTop="@drawable/round_rectangle2"
+                app:layout_constraintStart_toStartOf="@+id/package_btn"
+                app:layout_constraintTop_toBottomOf="@id/package_btn"
+                tools:layout_editor_absoluteX="45dp"
+                tools:layout_editor_absoluteY="395dp"
+                android:contentDescription="package_btn2"/>
+
+            <TextView
+                android:id="@+id/package_str2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="160dp"
+                android:text="3인 온돌 룸"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/package_btn2"
+                app:layout_constraintTop_toTopOf="@id/package_btn2" />
+
+            <TextView
+                android:id="@+id/room_info_str2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="2dp"
+                android:text="(거실1, 작은 방1, 화장실1)"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@id/package_btn2"
+                app:layout_constraintTop_toBottomOf="@id/package_str2" />
+
+
+            <android.widget.Button
+                android:id="@+id/package_btn3"
+                android:layout_width="wrap_content"
+                android:layout_height="260dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/roundrectangle"
+                android:drawableTop="@drawable/rectangle2xml"
+                app:layout_constraintTop_toBottomOf="@id/package_btn2"
+                tools:layout_editor_absoluteX="45dp"
+                tools:layout_editor_absoluteY="395dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:contentDescription="package_btn3"/>
+
+            <TextView
+                android:id="@+id/package_str3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="160dp"
+                android:text="소형 온돌 룸"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/package_btn3"
+                app:layout_constraintTop_toTopOf="@id/package_btn3" />
+
+            <TextView
+                android:id="@+id/room_info_str3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="2dp"
+                android:text="(거실1, 작은 방1, 화장실1)"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@id/package_btn3"
+                app:layout_constraintTop_toBottomOf="@id/package_str3" />
+            <android.widget.Button
+                android:id="@+id/package_btn4"
+                android:layout_width="wrap_content"
+                android:layout_height="260dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/roundrectangle"
+                android:drawableTop="@drawable/rectangle3"
+                app:layout_constraintTop_toBottomOf="@id/package_btn3"
+                tools:layout_editor_absoluteX="45dp"
+                tools:layout_editor_absoluteY="395dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:contentDescription="package_btn4"/>
+
+            <TextView
+                android:id="@+id/package_str4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="160dp"
+                android:text="대형 온돌 룸"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/package_btn4"
+                app:layout_constraintTop_toTopOf="@id/package_btn4" />
+
+            <TextView
+                android:id="@+id/room_info_str4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="2dp"
+                android:text="(거실1, 작은 방1, 화장실1)"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@id/package_btn4"
+                app:layout_constraintTop_toBottomOf="@id/package_str4" />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
