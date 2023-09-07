@@ -3,17 +3,17 @@ package com.example.mot
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.mot.databinding.ActivityPrivacyBinding
+import com.example.mot.databinding.ActivityPrivacy1Binding
 
-class PrivacyActivity    : AppCompatActivity() {
+class Privacy1Activity    : AppCompatActivity() {
 
-        private var mBinding: ActivityPrivacyBinding? = null
+        private var mBinding: ActivityPrivacy1Binding? = null
         private val binding get() = mBinding!!
 
         override fun onCreate(savedInstanceState: Bundle?) {
             super.onCreate(savedInstanceState)
 
-            mBinding = ActivityPrivacyBinding.inflate(layoutInflater)
+            mBinding = ActivityPrivacy1Binding.inflate(layoutInflater)
             setContentView(binding.root)
 
             mBinding!!.xBtn.setOnClickListener {

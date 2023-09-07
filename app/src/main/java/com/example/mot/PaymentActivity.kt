@@ -60,13 +60,13 @@ class PaymentActivity    : AppCompatActivity() {
             setContentView(binding.root)
 
             mBinding!!.more.setOnClickListener {
-                val intent =  Intent(this,PrivacyActivity::class.java)
+                val intent =  Intent(this,Privacy1Activity::class.java)
                 startActivity(intent)
                 intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP
             }
 
             mBinding!!.more1.setOnClickListener {
-                val intent =  Intent(this,PrivacyActivity::class.java)
+                val intent =  Intent(this,Privacy2Activity::class.java)
                 startActivity(intent)
                 intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP
             }
